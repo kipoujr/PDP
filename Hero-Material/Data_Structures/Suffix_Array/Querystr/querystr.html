@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="not-ie" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem QUERYSTR</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  		<meta property="og:title" content="SPOJ.com - Problem QUERYSTR">
+    <meta property="fb:app_id" content="321676846207">
+	<meta property="og:type" content="spoj-pl:problem">
+	<meta property="og:url" content="http://www.spoj.com/problems/QUERYSTR/">
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png">
+	<meta property="og:description" content="...">
+	<meta name="description" content="...">
+		<meta property="og:site_name" content="spoj.com">
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="https://stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon">
+	  
+	  <!-- RSS -->
+	  <link href="https://www.spoj.com/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="querystr_files/css.css" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="querystr_files/bootstrap.css" rel="stylesheet">
+  	<link href="querystr_files/font-awesome.css" rel="stylesheet">
+  	<link href="querystr_files/bootstrap-tour.css" rel="stylesheet">
+  	<link href="querystr_files/bootstrap-social.css" rel="stylesheet" type="text/css">
+  	
+	<link href="querystr_files/common.css" rel="stylesheet" type="text/css" id="theme0">
+	<link href="querystr_files/en_new.css" rel="stylesheet" type="text/css" id="theme">
+	
+	<!-- JS -->
+	<script type="text/javascript" async="" src="querystr_files/linkid.js"></script><script async="" src="querystr_files/analytics.js"></script><script id="facebook-jssdk" src="querystr_files/sdk.js"></script><script type="text/javascript" src="querystr_files/jquery-1.js"></script>
+	<script type="text/javascript" src="querystr_files/jquery-ui.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+<script id="_carbonads_projs" type="text/javascript" src="querystr_files/CK7D427E.js"></script><script async="" src="querystr_files/hotjar-334656.js"></script><script id="_bsa_srv-CK7D4KJL_0" type="text/javascript" src="querystr_files/CK7D4KJL.js"></script><script async="" src="querystr_files/modules-3bff6eb80a227a2b1cbd73e79ce83a48.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_customer_chat_bounce_in_v1{animation-duration:250ms;animation-name:fb_bounce_in_v1}.fb_customer_chat_bounce_out_v1{animation-duration:250ms;animation-name:fb_bounce_out_v1}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_in_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_out_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bubble_pop_in{animation-duration:250ms;animation-name:fb_customer_chat_bubble_bounce_in_animation}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_bounce_in_v1{0%{opacity:0;transform:scale(.8, .8);transform-origin:bottom right}80%{opacity:.8;transform:scale(1.03, 1.03)}100%{opacity:1;transform:scale(1, 1)}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_v2_mobile_chat_started{0%{opacity:0;top:20px}100%{opacity:1;top:0}}@keyframes fb_bounce_out_v1{from{opacity:1}to{opacity:0}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}</style></head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+					
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="https://www.spoj.com/" class="navbar-brand">
+						<img src="querystr_files/2015e.png" style="height: 40px;">
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="https://www.spoj.com/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li>
+					          <a href="https://www.spoj.com/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li>
+					          <a href="https://www.spoj.com/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li>
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        <li>
+					          <a href="https://www.spoj.com/contests">CONTESTS</a>
+					        </li>
+											        					        
+						        						      	<li class="dropdown admin">
+						      		
+						      		<a href="#" class="username_dropdown dropdown-toggle" style="color: #a94442 !important;" data-toggle="dropdown">
+						      			<i class="fa fa-th"></i>&nbsp;<span class="caret"></span>
+						      		</a>
+						      		
+						      		<ul class="dropdown-menu text-right pull-right" role="menu" aria-labelledby="dropdownUser">
+																							<li><a href="https://www.spoj.com/problems/my/">Problems Manager</a></li>
+												<li><a href="https://www.spoj.com/comments/problems/">Comments</a></li>
+																																	<li><a href="https://www.spoj.com/uploads">Upload files</a></li>																																																							
+																						
+										</ul>
+						      	</li>
+						      							      	
+						      							      	<li style="margin-right: 0px;">
+						      		<a href="https://www.spoj.com/manageaccount/">
+						      			<span tabindex="0" id="profile-menu" data-trigger="hover" data-container="body" data-toggle="popover" data-html="true" data-placement="left" data-content="You filled 38% of your profile, maybe you want to add some more?" data-original-title="" title=""><i class="fa fa-exclamation-triangle text-danger"></i></span>
+						      		</a>
+						      	</li>
+						      						        
+					        <li class="dropdown profile">
+					        	<a href="#" class="username_dropdown dropdown-toggle" data-toggle="dropdown">
+					        		<img src="querystr_files/d41d8cd98f00b204e9800998ecf8427es20.jpeg" class="avatar small-left-margin" height="20" width="20">
+					        		<!-- kipoujr -->PROFILE&nbsp;<span class="caret"></span>
+					        	</a>	
+			
+									<ul class="dropdown-menu text-right pull-right" role="menu" aria-labelledby="dropdownUser">
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.spoj.com/myaccount"><span class="fa fa-user fa-fw"></span>&nbsp; My profile</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.spoj.com/manageaccount"><span class="fa fa-cogs fa-fw"></span>&nbsp; Manage profile</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.spoj.com/status/kipoujr"><span class="fa fa-history fa-fw"></span>&nbsp; Submissions history</a></li>
+										<li class="divider"></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.spoj.com/logout"><span class="fa fa-sign-out fa-fw"></span>&nbsp; Sign out</a></li>
+									</ul>
+								
+					        </li>
+					        
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type="text/javascript" src="querystr_files/jquery.js"></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="https://www.spoj.com/problems">Problems</a></li>
+	  <li><a href="https://www.spoj.com/problems/classical">classical</a></li>
+	  <li class="active">Query Problem</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+		<li><a href="https://www.spoj.com/status/QUERYSTR,kipoujr/" class="">My status</a></li>		<li><a href="https://www.spoj.com/status/QUERYSTR/" class="">Status</a></li>
+		<li><a href="https://www.spoj.com/ranks/QUERYSTR/" class="">Ranking</a></li>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "3";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="querystr_files/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	
+	</center>
+</div>
+<br>
+
+<h2 id="problem-name" class="text-center">QUERYSTR - Query Problem</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+				<i>no tags</i>&nbsp;
+				</div>
+</div>
+<br>
+
+<div id="problem-body">
+	<p><br>McFn interesed in string problem recently.He found a interesing 
+function and he felt he could use this function to invent a new match 
+algorithm.<br><br>For a string S [1 ... n] and i ¡Ê [1, n], define F (i) is the length of the longest common suffix of S and S [1 ... i]. <br>For
+ example, for the string S [1 ... 11] = zaaxbaacbaa, then F (1) = 0, F 
+(2) = 1, F (3) = 2 (note that S [1 ... 3] = zaa), F (4) = 0, ... ... F 
+(10) = 1, F (11) = 11; <br>For the string S [1 ... n], i ¡Ê [1, n], S [i ... n] is its suffix;</p>
+<h3>Input</h3>
+<p>The first line is a integer T.the number of test cases<br>for each test case<br>The
+ first line is a string S, composed of only lowercase letters,&nbsp; len
+ (s) is the length of s,&nbsp; 1 &lt;= len (s) &lt;= 1000000; <br>Next line, a number N (1 &lt;= N &lt;= 100000), denote that the number of quiries; <br>The next N lines, each line contains a number x (1 &lt;= x &lt;= len (s)).</p>
+<h3>Output</h3>
+<p>For each x the output F (x);</p>
+<h3>Example</h3>
+<pre><strong>Input:</strong><br>1<br>zaaxbaacbaa<br>11<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br><br><strong>Output:</strong>
+0<br>1<br>2<br>0<br>0<br>1<br>3<br>0<br>0<br>1<br>11</pre>
+</div>
+
+<div class="text-center">
+	<a href="https://www.spoj.com/submit/QUERYSTR/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;">
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tbody><tr>
+		<td colspan="2">
+		<ul class="pagination" style="">
+			<li class="disabled"><span>&lt;</span></li>
+		<li class="disabled"><span>Previous</span></li>
+						<li class="active"><span>1</span></li> 
+							<li><a href="https://www.spoj.com/problems/QUERYSTR/cstart=10" class="pager_link">2</a></li> 
+						<li><a href="https://www.spoj.com/problems/QUERYSTR/cstart=10" class="pager_link">Next</a></li>
+		<li><a href="https://www.spoj.com/problems/QUERYSTR/cstart=10" class="pager_link">&gt;</a></li>
+	</ul>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/f27ed2804199c44faf08f53ff9f506f6.jpeg">
+		</td>
+		<td class="comm comm_odd">
+			<a href="https://www.spoj.com/users/rohijulislam">rohijulislam</a>: 
+								<span style="font-size: 10px; color: #666;">2018-05-12 12:49:37</span>
+		<br>
+				<p>Z algo </p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/d3a807844e52916e50ac8d1be893a043.jpeg">
+		</td>
+		<td class="comm comm_even">
+			<a href="https://www.spoj.com/users/sultania23">sultania23</a>: 
+								<span style="font-size: 10px; color: #666;">2017-07-19 15:11:43</span>
+		<br>
+				<p>good problem on  this concept:-
+<br>http://codeforces.com/contest/825/problem/G</p>
+				<b>Last edit: 2017-07-19 15:11:58</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/9c144db4c7847a21cafd2fa3719d0660.jpeg">
+		</td>
+		<td class="comm comm_odd">
+			<a href="https://www.spoj.com/users/antriksh5235">Antriksh Agarwal</a>: 
+								<span style="font-size: 10px; color: #666;">2017-02-24 15:57:44</span>
+		<br>
+				<p>I don't understand just one thing. If I am matching S with 
+S[i...n] how can F[11]=11 because S[11..11] is a single letter ? And, if
+ we are checking S[1..i] with S, how can F[1]=0, because S[1..1] is a 
+single letter present in S as S[1] ? Or the third case, when S[1..i] is 
+checked with S[i..n], F[11]!=11, can never because on i=11, S[1..11] is 
+checked with S[11...11] which is a single character.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/d68e5b2c498d5cd80522d0626bb46704.jpeg">
+		</td>
+		<td class="comm comm_even">
+			<a href="https://www.spoj.com/users/ashishranjan28">ashishranjan28</a>: 
+								<span style="font-size: 10px; color: #666;">2016-09-16 07:33:03</span>
+		<br>
+				<p>use scanf and printf</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/bfb72d5d2c126d04aa74f339a758891e.png">
+		</td>
+		<td class="comm comm_odd">
+			<a href="https://www.spoj.com/users/sravi4701">ravi shankar</a>: 
+								<span style="font-size: 10px; color: #666;">2016-08-19 11:46:18</span>
+		<br>
+				<p>ac in one go ;)</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/4986b4c452ba812abefb622820ae8048.jpeg">
+		</td>
+		<td class="comm comm_even">
+			<a href="https://www.spoj.com/users/zorro_blue">Rameshwar</a>: 
+								<span style="font-size: 10px; color: #666;">2016-06-20 15:46:47</span>
+		<br>
+				<p>Used Z algorithm , getting TLE even with scanf.... Am I missing something in this problem?</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/ee02aa030e96b67cca9e14686f0d6ac6.jpeg">
+		</td>
+		<td class="comm comm_odd">
+			<a href="https://www.spoj.com/users/i_love_coding">i_love_coding</a>: 
+								<span style="font-size: 10px; color: #666;">2016-04-11 22:25:56</span>
+		<br>
+				<p>I am in Love with Strings..:P</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/724ce82b03ca40f3911b9594d7dfbdb3.jpeg">
+		</td>
+		<td class="comm comm_even">
+			<a href="https://www.spoj.com/users/fadhu">janina</a>: 
+								<span style="font-size: 10px; color: #666;">2016-01-27 08:27:43</span>
+		<br>
+				<p>Z works well :)</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/0b71609ad8440f0d98d25a7b0e3b41bb.jpeg">
+		</td>
+		<td class="comm comm_odd">
+			<a href="https://www.spoj.com/users/ercsonu">Sonu Sharma</a>: 
+								<span style="font-size: 10px; color: #666;">2015-09-16 18:33:23</span>
+		<br>
+				<p>Large input size :) use fast i/o</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td style="vertical-align:top;" width="50">
+			<img src="querystr_files/729218a41e5fa1f3a7c45ac2340de282.jpeg">
+		</td>
+		<td class="comm comm_even">
+			<a href="https://www.spoj.com/users/jan25">Abhilash</a>: 
+								<span style="font-size: 10px; color: #666;">2015-09-07 09:25:46</span>
+		<br>
+				<p>precomputing works!</p>
+						</td>
+	</tr>
+			
+</tbody></table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+                <tbody><tr>
+                <td colspan="2" height="20px"></td>
+        </tr>
+        <form method="post" action="/comment/QUERYSTR/add/"></form>
+        <tr> <td style="" colspan="2">Leave a Comment</td> </tr>
+        <tr>
+                <td valign="top"></td>
+                <td><textarea name="content" rows="3" class="form-control"></textarea></td>
+        </tr>
+        <tr>
+                <td colspan="2" style=""><br>
+                        <input value="Publish" class="btn btn-default" type="submit">
+                        <input name="pcode" value="QUERYSTR" type="hidden">
+                </td>
+        </tr>
+<tr>
+<td colspan="2" style="padding-left:5px; color: #999;">
+<br>
+Notes:
+<br>1. Don't post any source code here.
+<br>2. Please be careful, leave short comments only. Don't spam here.
+<br>3. For more discussion (hints, ideas, solutions) please visit our <a href="https://www.spoj.com/forum">forum</a>.
+<br>4. Authors of the problems are allowed to delete the post and use html code here (e.g. to provide some useful links).
+</td>
+</tr>
+        
+        </tbody></table>
+<br>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="https://www.spoj.com/submit/QUERYSTR/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+		
+		<div class="h"><script async="" type="text/javascript" src="querystr_files/carbon.js" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QICTYI62QLCAB4YKQMCKYDT23IFT7I5Z3JCW7DL5QMCK7DKKQKC6BICK3JC6YIKK3EHJNCLSIZ?segment=placement:wwwspojcom;" class="carbon-img" target="_blank" rel="noopener"><img src="querystr_files/1524772006-61060.png" alt="" style="max-width: 130px;" height="100" width="130" border="0"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QICTYI62QLCAB4YKQMCKYDT23IFT7I5Z3JCW7DL5QMCK7DKKQKC6BICK3JC6YIKK3EHJNCLSIZ?segment=placement:wwwspojcom;" class="carbon-text" target="_blank" rel="noopener">Make it easy for your team to meet every milestone–with Asana. Sign up free.</a></span><a href="http://carbonads.net/?utm_source=wwwspojcom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a><img src="querystr_files/B10763732.gif" style="display: none;" height="1" width="1" border="0"></span></div></div>
+		
+		<table style="margin-bottom:10px" class="probleminfo" id="problem-meta" cellspacing="0" cellpadding="0" border="0">
+			<colgroup>
+				<col width="120">
+				<col>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="https://www.spoj.com/users/fameoflight">Hemant Verma</a></td></tr>
+			<tr><td>Date:</td><td>2009-11-15</td></tr>
+			<tr><td>Time limit:</td><td>0.629s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="https://www.spoj.com/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All except: ASM64 NODEJS OBJC PERL6 SQLITE VB.NET </td></tr>
+			<tr><td>Resource:</td><td>Alkhwarizm 2009</td></tr>													</tbody>
+		</table>
+	
+		<!-- BEGIN: Voting for problem -->
+					 <!-- uzytkownik rozwiązał zadanie -->
+				 <!-- uzytkownik spełnia globalne warunki --> 
+					<div class="panel panel-default" id="vote-box" style="">
+						<div class="panel-heading">
+							<h4 class="panel-title">Evaluate this problem<span class="fa fa-bookmark pull-right grey"></span></h4>
+						</div>
+						<div class="panel-body">
+						
+						
+									
+								<p><strong>Nobody has rated this problem yet, maybe you'll be the first?</strong></p>
+					
+															
+								
+								
+								
+		
+															<div id="vote-problem-box">
+									<h5 style="margin-top: 0px;">Concept difficulty</h5>
+									<div class="">
+									<a class="rate-btn btn  btn-xs" data-rate-type="p" data-rate="0">easy</a>
+									<a class="rate-btn btn  btn-xs" data-rate-type="p" data-rate="1">normal</a>
+									<a class="rate-btn btn  btn-xs" data-rate-type="p" data-rate="2">hard</a>
+									<a class="rate-btn btn  btn-xs" data-rate-type="p" data-rate="3">extreme</a>
+									</div>
+								</div>
+									
+															<div id="vote-implementation-box">
+									<h5>Implementation difficulty</h5>
+									<div class="">
+									<a class="rate-btn btn  btn-xs" data-rate-type="i" data-rate="0">easy</a>
+									<a class="rate-btn btn  btn-xs" data-rate-type="i" data-rate="1">normal</a>
+									<a class="rate-btn btn  btn-xs" data-rate-type="i" data-rate="2">hard</a>
+									<a class="rate-btn btn  btn-xs" data-rate-type="i" data-rate="3">extreme</a>
+									</div>
+								</div>
+									
+															<div id="vote-quality-box">
+																		<br>
+									<button class="btn btn-success btn-lg rate-btn" data-rate-type="q" data-rate="1">
+										<span class="fa fa-thumbs-o-up"></span>  Recommend!
+									</button>
+									<button class="btn btn-danger btn-lg rate-btn" data-rate-type="q" data-rate="-1">
+										<span class="fa fa-thumbs-o-down"></span>
+									</button>
+								</div>
+													</div>
+					</div><!-- end #vote-box -->
+												
+				
+		<!-- END: Voting the problem -->
+	
+				
+				<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Own tags</h4>
+				</div>
+				<div class="panel-body">
+			
+					<div id="problem-mytags">
+						<p>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+	</p>					</div>
+					
+					<div class="input-group input-group-sm">
+				      <input class="form-control" placeholder="Tag name" id="problem-mytags-new" type="text">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button" id="problem-mytags-btn-add">Add</button>
+				      </span>
+				    </div><!-- /input-group -->
+				    
+				    
+				    <script type="text/javascript">
+				    $(document).ready(function(){
+				    	$(document).on('click', '#problem-mytags-btn-add', function(){
+				    		$.ajax({
+				    			url: '/?a=tags&act=cpriv',
+				    			method: 'post',
+				    			dataType: 'json',
+				    			data: {'name': $("#problem-mytags-new").val(), 'pid': '5301'},
+				    			success: function(data){
+				    				if(data['result'] == 'success'){
+				    					$('#problem-mytags').html(data['html']);
+				    				}
+				    				$("#problem-mytags-new").val('');
+				    				$("#problem-mytags-new").focus();
+				    			},
+				    			error: function(data){
+				    				//alert('error');
+				    			}
+				    		});
+				    	});
+				    	$(document).on('click', '.mytag', function(){
+				    		
+				    		var tid = $(this).attr('data-id');
+				    		var pid = '5301';
+				    		
+				    		$.ajax({
+				    			url: '/?a=tags&act=spriv',
+				    			method: 'post',
+				    			dataType: 'json',
+				    			data: {'pid': pid, 'tid': tid},
+				    			success: function(data){
+				    				if(data['result'] == 'success'){
+				    					$('#problem-mytags').html(data['html']);
+				    				}
+				    			},
+				    			error: function(data){
+				    				//alert('error');
+				    			}
+				    		});
+				    		
+				    		
+				    		return false;
+				    	});
+				    });
+				    </script>
+				    
+		
+				</div>
+		</div><!-- end .panel.panel-default -->
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=5301&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-10">
+					<p><a href="https://www.spoj.com/info">About</a> | <a href="https://www.spoj.com/tutorials">Tutorial</a> | <a href="https://www.spoj.com/tools">Tools</a> | <a href="https://www.spoj.com/clusters">Clusters</a> | <a href="https://www.spoj.com/credits">Credits</a> | <a href="https://www.spoj.com/sphereengine">API</a> | <a href="https://www.spoj.com/sphereengine-widget">Widgets</a></p>
+					<p>Legal: 
+					   <a href="https://www.spoj.com/legal-tos/" target="_blank">Terms of Service</a> | <a href="https://www.spoj.com/legal-pp/" target="_blank">Privacy Policy</a> | <a href="https://www.spoj.com/legal-gdpr/" target="_blank">GDPR Info</a>
+					</p>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="https://www.spoj.com/rss/"><img src="querystr_files/rss10x10.gif" border="0">&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	© Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com/?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>™ © by <a href="http://sphere-research.com/?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="querystr_files/jquery_002.js"></script>
+	<script type="text/javascript" src="querystr_files/jquery_003.js"></script>
+	
+	<script src="querystr_files/bootstrap.js"></script>
+
+	<script src="querystr_files/md5.js"></script>
+	<script src="querystr_files/bootstrap-tour.js"></script>
+	<script src="querystr_files/tour.js"></script>
+	
+	
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="querystr_files/xaOI6zd9HW9.html" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<!-- Hotjar Tracking Code for http://www.spoj.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:334656,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script src="querystr_files/monetization.js" type="text/javascript"></script>
+<script>
+(function(){
+  if(typeof _bsa !== 'undefined' && _bsa) {
+    // format, zoneKey, segment:value, options
+    _bsa.init('flexbar', 'CK7D4KJL', 'placement:demo');
+  }
+})();
+</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	//window.open('http://incoming.hotjar.com/s/7366', '_blank');
+	</script>
+
+
+
+<iframe style="display: none ! important; width: 1px ! important; height: 1px ! important; opacity: 0 ! important; pointer-events: none ! important;" name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="querystr_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html"></iframe><div id="ads"></div><div style="visibility: hidden;" id="hidden"></div></body></html>

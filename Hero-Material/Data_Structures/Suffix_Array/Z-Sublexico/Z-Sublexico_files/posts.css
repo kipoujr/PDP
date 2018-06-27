@@ -1,0 +1,122 @@
+@CHARSET "ISO-8859-1";
+
+div.topicContainer {
+    margin: 0px auto;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    color: #c59f76;
+}
+
+.topicContainer tr {
+    background-color: #F8F6F4;
+}
+
+.topicContainer tr.deleted {
+    filter: alpha(opacity=45); /*for internet explorer*/
+    moz-opacity:.45;
+    opacity:.45;
+}
+
+.topicContainer h1 {
+    margin: 1px 0px 0px;
+    color: #9C5C39;
+    font-weight:bold;
+}
+
+.topicContainer h1 a {
+    text-decoration: none;
+    margin: 4px auto;
+    color: #9C5C39;
+}
+
+.topicContainer a {
+    text-decoration: none;
+    margin: 4px auto;
+    color: #9C5C39;
+}
+
+.topicContainer td {
+    padding: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+    text-align: left;
+    border-top: solid 1px #c59f76;
+    border-bottom: solid 1px #c59f76;;
+    color: #c59f76;
+}
+
+.topicContainer table {
+    margin: 8px 15px 15px;
+}
+
+
+.topicContainer td.text {
+    vertical-align:top;
+}
+
+.topicContainer td img {
+    padding-bottom: 3px;
+}
+
+.topicContainer tr.unread {
+    background-color: #E8EAFF;
+}
+
+.topicContainer tr.topicTitle td {
+    background-color: #F2ECDB;
+    color:#9C5C39;
+    font-size:12px;
+    padding:2px;
+    padding-left: 10px;
+    border-bottom: solid 1px #F2ECDB;
+}
+
+.topicContainer tr:hover{
+    background-color: #F2F2F2;
+    /* cursor: pointer; */
+}
+
+div.topicBox {
+    border-top: solid 1px #c59f76;
+    background-color: #FFF;
+    width: 85%;
+    margin: 10px auto;
+}
+
+div.topicTitle {
+    display: block;
+    color: #c59f76;
+    background-color: #F2ECDB;
+    text-align: left;
+    padding: 2px;
+    padding-left: 5px;
+    font-weight:bold;
+}
+
+div.topicLeftSide {
+    background-color: #FFF;
+    float:left;
+    border-left: solid 1px #F8F6F4;
+    text-align: left;
+}
+
+.topicLeftSide img {
+    display: block;
+    padding: 1px;
+    border: solid 1px #F8F6F4;
+}
+
+
+div.topicRightSide {
+    cursor: pointer;
+    float:left;
+    cursor: pointer;
+}
+
+.topicContainer div.clearer {
+    clear: both;
+    height: 1px;
+    background-color: #F8F6F4;
+}
+

@@ -1,0 +1,145 @@
+/* 
+================================================
+autosuggest, inquisitor style
+================================================
+*/
+
+body
+{
+	position: relative;
+}
+
+div.reddiv {
+/*    background-color: red;*/
+    padding: 0px;
+    border: solid 1px #333;
+    padding-bottom: 4px;
+}
+
+div.autosuggest
+{
+	position: absolute;
+	background-image: url(img_inquisitor/as_pointer.gif);
+	background-position: top;
+	background-repeat: no-repeat;
+	padding: 10px 0 0 0;
+}
+
+
+div.autosuggest ul
+{
+	list-style: none;
+	margin: 0 0 -4px 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #F8F6F4;
+}
+
+div.autosuggest ul li
+{
+	color: #F8F6F4;
+	padding: 0;
+	margin: 0px; 
+	text-align: left;
+}
+
+div.autosuggest ul li a
+{
+	color: #9C5C39;
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	/*text-shadow: #000 0px 0px 5px;*/
+	position: relative;
+	padding: 0;
+	width: 100%;
+}
+div.autosuggest ul li a:hover
+{
+	background-color: #F8F6F4;
+}
+div.autosuggest ul li.as_highlight a:hover
+{
+	background-color: #D5AF96;
+}
+
+div.autosuggest ul li a span
+{
+	display: block;
+	padding: 3px 6px;
+	font-weight: bold;
+}
+
+div.autosuggest ul li a span small
+{
+	font-weight: normal;
+	color: #C59F76;
+}
+
+div.autosuggest ul li.as_highlight a span small
+{
+	color: #fff;
+}
+
+div.autosuggest ul li.as_highlight a
+{
+	color: #9C5C39;
+	background-color: #D5AF96;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+div.autosuggest ul li.as_highlight a span
+{
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+
+div.autosuggest ul li a .tl,
+div.autosuggest ul li a .tr
+{
+	background-image: transparent;
+	background-repeat: no-repeat;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+div.autosuggest ul li a .tr
+{
+	right: 0;
+}
+
+div.autosuggest ul li.as_highlight a .tl
+{
+	left: 0;
+	background-image: url(img_inquisitor/hl_corner_tl.gif);
+	background-position: bottom left;
+}
+
+div.autosuggest ul li.as_highlight a .tr
+{
+	right: 0;
+	background-image: url(img_inquisitor/hl_corner_tr.gif);
+	background-position: bottom right;
+}
+
+
+
+div.autosuggest ul li.as_warning
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+div.autosuggest ul em
+{
+	font-style: normal;
+	color: #5E9DC7;
+}
+
+div.autosuggest img {   
+    margin-right: 6px;
+}

@@ -1,0 +1,183 @@
+#boxWrapper {
+    width: 717px;
+}
+
+#boxLeft {
+    float: left;
+    width: 487px;
+    display: block;
+}
+
+#boxLeftFull {
+    float: left;
+    width: 717px;
+}
+
+
+#boxRight {
+    float: left;
+    width: 230px;
+}
+
+#boxClearer {
+    clear: both;
+    height: 10px;
+}
+
+div.boxHeader {
+    padding: 3px;
+    padding-left: 6px;
+    text-align: left;
+    font-weight: bold;
+    margin: 10px auto 0 10px;
+    background-color: #F2ECDB;
+    border: solid 1px #d6af86;
+    border-bottom: none;
+    color: #9C5C39;
+}
+
+div.boxBody {
+    margin: 0 auto 0 10px;
+    border: solid 1px #c59f76;
+    border-top: none;
+    background-color: #fff;
+}
+
+div.profileBox {
+    padding: 5px;
+    overflow: hidden;
+    text-align: left;
+}
+
+div.profileBox table {
+    border: none
+}
+
+div.profileBox td {
+    vertical-align: top;
+    color: #888;
+}
+
+div.profileBox hr {
+    border: none;
+    background-color: #ddd;
+    height: 1px;
+    margin: 7px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+div.profileBox td.label {
+    text-align: left;
+    font-weight: bold;
+    padding-left: 6px;
+    height: 15px;
+}
+
+div.profileBox td.value {
+    padding-left: 6px;
+    height: 15px;
+    text-align: left;
+}
+
+div.profileBox img.profileImage {
+    padding: 2px;
+    border: 0;
+}
+
+div.profileBox div.flagDiv {
+    float: right;
+    border: none;
+    background-color: #fff;
+}
+
+div.profileBox div.flagDiv img {
+    border: none;
+}
+
+div.solvedBox {
+    padding: 5px;
+    padding-left: 8px;
+    text-align: left;
+    color: #c59f76;
+}
+
+div.solvedBox hr {
+    border: none;
+    background-color: #c59f76;
+    height: 1px;
+    margin: 7px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+
+div.solvedBox a{
+    padding: 1px;
+    color: #c59f76;
+}
+
+div.solvedBox a:hover{
+    color: #F2ECDB;
+    background-color: #c59f76;
+}
+
+
+div.z10Tabs {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
+    border: 0px;
+    height: 40px;
+    border-bottom: solid 1px #c59f76;
+}
+
+div.z10Tabs div.somespace {
+    display:inline;
+    float:left;
+    width: 15px;
+    height: 30px;
+}
+
+div.z10Tabs div.tab {
+    display:inline;
+    float:left;
+    margin-top: 16px;
+    margin-left: 4px 20px;
+    background-color: #9C5C39;
+    text-decoration:none;
+    font-weight:bold;
+    color: #F8F6F4;
+    cursor:pointer;
+    height: 20px;
+    margin-left: 3px;
+}
+
+div.z10Tabs div.selectedtab {
+    display:inline;
+    float:left;
+    margin-top: 12px;
+    padding: 6px 10px;
+    background-color: #FFF;
+    border: solid 1px #c59f76;
+    border-bottom: solid 1px #fff;
+    text-decoration:none;
+    font-weight:bold;
+    color: #9C5C39;
+    cursor:pointer;
+    height: 18px;
+    margin-left: 3px;
+}
+
+div.z10Tabs div.tab:hover{
+    text-decoration: underline;
+}
+
+div.z10Tabs div.selectedtab:hover{
+    text-decoration: underline;
+}
+
+div.z10Tabs a {
+    margin: 5px;
+}

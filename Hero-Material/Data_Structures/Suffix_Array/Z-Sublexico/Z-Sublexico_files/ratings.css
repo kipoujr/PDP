@@ -1,0 +1,55 @@
+.starHolder {
+    width: 85px;
+}
+
+ul.star { 
+    LIST-STYLE: none; 
+    MARGIN: 0; 
+    PADDING: 0; 
+    WIDTH: 85px; 
+    HEIGHT: 20px; 
+    LEFT: 5px; 
+    TOP: 0px; 
+    POSITION: relative; 
+    FLOAT: left; 
+    BACKGROUND: url('..//images/stars.png') repeat-x; 
+    CURSOR: pointer; 
+    TEXT-ALIGN: left;
+    DISPLAY: block;
+}
+
+.star li { 
+    PADDING: 0; 
+    MARGIN: 0; 
+    FLOAT: left; 
+    DISPLAY: block; 
+    WIDTH: 85px; 
+    HEIGHT: 20px; 
+    TEXT-DECORATION: none; 
+    text-indent: -9000px; 
+    Z-INDEX: 20; 
+    POSITION: absolute; 
+    PADDING: 0; 
+}
+
+.star li.curr { 
+    BACKGROUND: url('../images/stars.png') left 25px; 
+    FONT-SIZE: 1px; 
+}
+
+.star li.currme { 
+    BACKGROUND: url('../images/stars.png') left 50px; 
+    FONT-SIZE: 1px; 
+}
+
+.star li.currmeVote { 
+    BACKGROUND: url('../images/stars.png') left 50px; 
+    FONT-SIZE: 1px; 
+    visibility: hidden;    
+}
+
+div.starValue { 
+    PADDING-TOP: 3px;
+    PADDING-LEFT: 10px;
+    LEFT: 15px; 
+}

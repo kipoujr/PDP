@@ -1,0 +1,77 @@
+
+div.taskText {
+    padding: 5px;
+    text-align: justify;
+    color: #000;
+}
+
+div.taskInfo {
+    padding: 5px;
+    text-align: left;
+    color: #9C5C39;
+}
+
+.taskInfo a, a:hover {
+    /* padding: 1px; */
+    color: #9C5C39;
+}
+
+.taskInfo a:hover {
+    /* padding: 1px; */
+    color: #F2ECDB;
+    background-color: #9C5C39;
+}
+
+.taskInfo td.wide {
+    padding-top: 7px;
+}
+
+.taskInfo td.left {
+    padding-left: 3px;
+    width: 33%;
+    height: 16px;
+    text-align: right;
+    color: #9C5C39;
+    font-weight: bold;
+}
+
+.taskInfo td.right {
+    height: 16px;
+    text-align: left;
+    padding-left: 6px;
+    overflow: hidden;
+
+}
+
+.taskInfo td.calendar {
+    vertical-align: top;
+    height: 70px;
+    font-size: 9px;
+}
+
+.taskInfo h1.calendar {
+    color: #BC7C59;
+    margin: 1px;
+    font-size: 9px;
+}
+
+.taskInfo td.calendar {
+    padding: 2px;
+}
+
+.taskInfo td.calendar a {
+    margin: 0px;
+    font-size: 9px;
+}
+
+.taskInfo td.nothere {
+    background-color: #F3F4F5;
+}
+
+.taskInfo td.comp1 {
+    background-color: #F2ECDB;
+}
+
+.taskInfo td.comp2 {
+    background-color: #F2FCFB;
+}

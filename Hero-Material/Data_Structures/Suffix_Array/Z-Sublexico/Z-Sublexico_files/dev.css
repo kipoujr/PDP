@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+
+/* DEVEL */
+#develDiv {
+    width:100%;
+    clear: both;
+    margin: 0px auto;
+    border-top: solid 2px green;
+    padding-top: 10px;
+    background-color: #AAFFAA;
+    padding: 5px;
+}
+
+#develDivInner .even {
+    background-color: #E3FFE3;
+}
+
+#develDivInner .odd {
+    background-color: #FFFFFF;
+}
+
+#develDivInner table {
+    width: 100%;
+}
+
+#develDivInner td {
+    padding-left: 25px;
+}
+
+#develDiv a {
+    padding: 3px;
+    color: green;
+    font-weight: bold;
+}
+
+#develDiv a:hover{
+    color: white;
+    background-color: green;
+}
+
