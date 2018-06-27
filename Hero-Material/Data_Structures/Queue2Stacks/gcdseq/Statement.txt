@@ -1,0 +1,16 @@
+You are given N (at most 500.000) positive integers (each at most 1.000.000.000).
+Your task is to find the biggest set of consecutive numbers whose GCD is more than 1.
+
+Example:
+Input
+-----
+7
+11 3 6 8 4 17 2
+
+Output
+------
+3
+
+Explanation:
+[6 8 4] have GCD 2.
+There is no other set of 3 consecutive numbers having GCD more than 1.

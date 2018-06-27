@@ -1,0 +1,1440 @@
+@charset "UTF-8";
+/**
+[Name] Colours
+[Section] Carlton
+
+[Description]
+
+Shared colours we reuse where we can.
+
+[Example]
+<%
+  colours = {
+    '$tc_red' => '#d8352a',
+    '$tc_grey' => '#383838',
+    '$conv_grey' => '#727272',
+    '$conv_grey_dark' => '#5d5d5d',
+    '$conv_grey_light' => '#f4f5f7',
+    '$facebook_blue' => '#3a5a93',
+    '$twitter_blue' => '#00b0e9',
+    '$linkedin_blue' => '#0181b2',
+    '$orcid_green' => '#a6ce39',
+    '$rss_orange' => '#eb7f3e',
+    '$top-bar-border' => '#eaeaea',
+    '$google_orange' => '#de4931',
+    '$whatsapp_blue' => '#455a64',
+    '$fb_messenger_blue' => '#0084ff'
+  }
+%>
+
+<ul class="vivus-colour-examples">
+  <% colours.each do |colour| %>
+    <li style="
+      background-color: <%= colour[1] %>;
+      list-style: none;
+      float: left;
+      width: 150px;
+      height: 150px;
+      margin: 0 20px 60px 0;
+      position: relative;">
+      <span style="position: absolute; bottom: -40px;">
+        <%= colour[0] %><br /><%= colour[1] %>
+      </span>
+    </li>
+  <% end %>
+</ul>
+**/
+/**
+[Name]
+[Section] Colours
+
+[Description]
+
+We have a default set of colours we reuse where we can.
+
+[Example]
+<%
+  colours = {
+    '$link_blue' => '#069',
+    '$link_visited' => '#557585',
+    '$link_blue_hover' => '#2d8cd6',
+    '$newsletter_bgcolor' => '#faf7f4',
+    '$newsletter_txt' => '#65635f',
+    '$post_tile_bgcolor' => '#f6f7fa',
+    '$friends_of_tc_red' => '#e50c20',
+    '$eb-red' => '#da352a',
+    '$eb-orange' => '#f5a623',
+    '$eb-green' => '#50e3c2',
+    '$eb-blue' => '#4a90e2',
+    '$authentication_grey' => '#fafafa',
+    '$footer-primary' => '#e43a3c',
+    '$footer-primary-link' => '#fdb3b8',
+    '$footer-dark-red' => '#c03139',
+    '$footer-pink' => '#ffa0a5',
+    '$article_gray' => '#727272',
+  }
+%>
+
+<ul class="vivus-colour-examples">
+  <% colours.each do |colour| %>
+    <li style="
+      background-color: <%= colour[1] %>;
+      list-style: none;
+      float: left;
+      width: 150px;
+      height: 150px;
+      margin: 0 20px 60px 0;
+      position: relative;">
+      <span style="position: absolute; bottom: -40px;">
+        <%= colour[0] %><br /><%= colour[1] %>
+      </span>
+    </li>
+  <% end %>
+</ul>
+**/
+/**
+[Name] Topic Ribbons
+[Section] Placements
+[Description]
+Adds the 'Topic' ribbon to highlight which topic that article is tagged with.
+[Example]
+<section class="wrapper page-area">
+  <div class="blockset blocks-1x1-vertical grid-three">
+    <div class="blocks-1x1 slammed">
+      <div class="page-area container block">
+        <article class="clearfix placed analysis published">
+          <figure>
+            <a class="article-link" href="#">
+              <img src="http://placehold.it/324x324">
+            </a>
+            <figcaption>
+              <span class="caption">Caption text goes here</span>
+              <span class="source" title="Source">Source</span>
+            </figcaption>
+          </figure>
+
+          <header>
+            <!-- The h4.category is the topic ribbon -->
+            <h4 class="category" data-raw="">Check out this sweet topic!</h4>
+            <h2><a href="#">Article Title</a></h2>
+            <p class="byline">
+              <span>By <a href="#">Author Name</a><em>, Institution Name</em></span>
+            </p>
+          </header>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+**/
+@-webkit-keyframes (progress) {
+  100% {
+    background-position: -60px 0; } }
+@keyframes (progress) {
+  100% {
+    background-position: -60px 0; } }
+
+h1 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+[class^="icon-"], [class*=" icon-"] {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+/**
+[Name] Typography - Icons
+[Section] Carlton
+[Description]
+TC icon font. Used for icons.
+**/
+@font-face {
+  font-family: "TCFont-Regular";
+  src: url(/assets/tcfont-regular-7b01787c2f80843cc46c5279f1679930.eot);
+  src: url(/assets/tcfont-regular-7b01787c2f80843cc46c5279f1679930.eot?#iefix) format("embedded-opentype"), url(/assets/tcfont-regular-778f3b4f385b24cf8eb524d4e59d529d.woff) format("woff"), url(/assets/tcfont-regular-5dee10366a07e5385650c5fc9048cc72.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/**
+[Name] Icons
+[Section] Carlton
+[Description]
+Generic icon set using custom font face for glyphs. For information on adding glyphs to the font,
+please read ```/doc/fonts-and-glyphs.md``` in TC.
+
+[Example]
+<% icons = [
+  "comments", "twitter", "email", "facebook", "maximise", "republish", "globe", "delete", "add",
+  "layout", "article", "article-published", "chart", "reader", "readers", "subtract", "comment",
+  "search", "help", "rss", "favourite", "location", "time", "friend-of-tc", "friend-of-tc-outer",
+  "friend-of-tc-heart", "check", "favourite-add", "skype", "phone", "mobile", "private", "public",
+  "topics", "menu", "external-link", "trash", "picture", "image", "edit", "heading", "bold", "italic",
+  "link", "video", "fullscreen", "close-fullscreen", "favourite-minus", "envelope", "simple-check",
+  "calendar", "the-conversation", "lock", "unlock", "audio", "chevron-right", "caret-down",
+  "caret-left", "caret-right", "caret-up", "pastespecial", "linkedin", "pause", "cog", "orcid", "music",
+  "print", "google-plus", "home", "facebook-simple", "tag", "left-guillemet", "whatsapp", "fb-messenger",
+  "youtube"
+]
+%>
+<ul class="vivus-icon-examples">
+  <% icons.each do |icon| %>
+    <li><i class="icon-<%= icon %>"></i> .icon-<%= icon %></li>
+  <% end %>
+</ul>
+**/
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "TCFont-Regular";
+  display: inline-block;
+  font-weight: normal !important;
+  font-style: normal !important;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+  width: 1.231em;
+  font-size: 1.231em; }
+  [class^="icon-"].icon-comments:before, [class*=" icon-"].icon-comments:before {
+    content: "\F000"; }
+  [class^="icon-"].icon-twitter:before, [class*=" icon-"].icon-twitter:before {
+    content: "\F001";
+    color: #00b0e9; }
+  [class^="icon-"].icon-email:before, [class*=" icon-"].icon-email:before {
+    content: "\F002"; }
+  [class^="icon-"].icon-facebook:before, [class*=" icon-"].icon-facebook:before {
+    content: "\F003";
+    color: #3a5a93; }
+  [class^="icon-"].icon-maximise:before, [class*=" icon-"].icon-maximise:before {
+    content: "\F004"; }
+  [class^="icon-"].icon-republish:before, [class*=" icon-"].icon-republish:before {
+    content: "\F005"; }
+  [class^="icon-"].icon-globe:before, [class*=" icon-"].icon-globe:before {
+    content: "\F006"; }
+  [class^="icon-"].icon-delete:before, [class*=" icon-"].icon-delete:before {
+    content: "\F007"; }
+  [class^="icon-"].icon-add:before, [class*=" icon-"].icon-add:before {
+    content: "\F008"; }
+  [class^="icon-"].icon-layout:before, [class*=" icon-"].icon-layout:before {
+    content: "\F009"; }
+  [class^="icon-"].icon-article:before, [class^="icon-"].icon-article-published:before, [class*=" icon-"].icon-article:before, [class*=" icon-"].icon-article-published:before {
+    content: "\F00A"; }
+  [class^="icon-"].icon-article-check:before, [class*=" icon-"].icon-article-check:before {
+    content: "\F00B"; }
+  [class^="icon-"].icon-chart:before, [class*=" icon-"].icon-chart:before {
+    content: "\F00C"; }
+  [class^="icon-"].icon-reader:before, [class*=" icon-"].icon-reader:before {
+    content: "\F00D"; }
+  [class^="icon-"].icon-readers:before, [class*=" icon-"].icon-readers:before {
+    content: "\F00E"; }
+  [class^="icon-"].icon-subtract:before, [class*=" icon-"].icon-subtract:before {
+    content: "\F011"; }
+  [class^="icon-"].icon-comment:before, [class*=" icon-"].icon-comment:before {
+    content: "\F012"; }
+  [class^="icon-"].icon-search:before, [class*=" icon-"].icon-search:before {
+    content: "\F013"; }
+  [class^="icon-"].icon-help:before, [class*=" icon-"].icon-help:before {
+    content: "\F014"; }
+  [class^="icon-"].icon-rss:before, [class*=" icon-"].icon-rss:before {
+    content: "\F015";
+    color: #eb7f3e; }
+  [class^="icon-"].icon-rss-non-coloured:before, [class*=" icon-"].icon-rss-non-coloured:before {
+    content: "\F015"; }
+  [class^="icon-"].icon-favourite:before, [class*=" icon-"].icon-favourite:before {
+    content: "\F016"; }
+  [class^="icon-"].icon-location:before, [class*=" icon-"].icon-location:before {
+    content: "\F017"; }
+  [class^="icon-"].icon-time:before, [class*=" icon-"].icon-time:before {
+    content: "\F018"; }
+  [class^="icon-"].icon-friend-of-tc:before, [class*=" icon-"].icon-friend-of-tc:before {
+    content: "\F019"; }
+  [class^="icon-"].icon-friend-of-tc-outer:before, [class*=" icon-"].icon-friend-of-tc-outer:before {
+    content: "\F021"; }
+  [class^="icon-"].icon-friend-of-tc-heart:before, [class*=" icon-"].icon-friend-of-tc-heart:before {
+    content: "\F022"; }
+  [class^="icon-"].icon-check:before, [class*=" icon-"].icon-check:before {
+    content: "\F023"; }
+  [class^="icon-"].icon-favourite-add:before, [class*=" icon-"].icon-favourite-add:before {
+    content: "\F024"; }
+  [class^="icon-"].icon-followed:before, [class*=" icon-"].icon-followed:before {
+    content: "\F025"; }
+  [class^="icon-"].icon-skype:before, [class*=" icon-"].icon-skype:before {
+    content: "\F026"; }
+  [class^="icon-"].icon-media-enquiries:before, [class^="icon-"].icon-work-phone:before, [class^="icon-"].icon-phone:before, [class*=" icon-"].icon-media-enquiries:before, [class*=" icon-"].icon-work-phone:before, [class*=" icon-"].icon-phone:before {
+    content: "\F027"; }
+  [class^="icon-"].icon-mobile:before, [class*=" icon-"].icon-mobile:before {
+    content: "\F028"; }
+  [class^="icon-"].icon-private:before, [class*=" icon-"].icon-private:before {
+    content: "\F029"; }
+  [class^="icon-"].icon-public:before, [class*=" icon-"].icon-public:before {
+    content: "\F030"; }
+  [class^="icon-"].icon-topics:before, [class*=" icon-"].icon-topics:before {
+    content: "\F031"; }
+  [class^="icon-"].icon-menu:before, [class*=" icon-"].icon-menu:before {
+    content: "\F032"; }
+  [class^="icon-"].icon-external-link:before, [class*=" icon-"].icon-external-link:before {
+    content: "\F033"; }
+  [class^="icon-"].icon-trash:before, [class*=" icon-"].icon-trash:before {
+    content: "\F034"; }
+  [class^="icon-"].icon-picture:before, [class*=" icon-"].icon-picture:before {
+    content: "\F035"; }
+  [class^="icon-"].icon-image:before, [class*=" icon-"].icon-image:before {
+    content: "\F035"; }
+  [class^="icon-"].icon-edit:before, [class*=" icon-"].icon-edit:before {
+    content: "\F036"; }
+  [class^="icon-"].icon-heading:before, [class*=" icon-"].icon-heading:before {
+    content: "\F037"; }
+  [class^="icon-"].icon-bold:before, [class*=" icon-"].icon-bold:before {
+    content: "\F038"; }
+  [class^="icon-"].icon-italic:before, [class*=" icon-"].icon-italic:before {
+    content: "\F039"; }
+  [class^="icon-"].icon-link:before, [class*=" icon-"].icon-link:before {
+    content: "\F040"; }
+  [class^="icon-"].icon-video:before, [class*=" icon-"].icon-video:before {
+    content: "\F041"; }
+  [class^="icon-"].icon-fullscreen:before, [class*=" icon-"].icon-fullscreen:before {
+    content: "\F042"; }
+  [class^="icon-"].icon-close-fullscreen:before, [class*=" icon-"].icon-close-fullscreen:before {
+    content: "\F043"; }
+  [class^="icon-"].icon-favourite-minus:before, [class*=" icon-"].icon-favourite-minus:before {
+    content: "\F044"; }
+  [class^="icon-"].icon-envelope:before, [class*=" icon-"].icon-envelope:before {
+    content: "\F045"; }
+  [class^="icon-"].icon-simple-check:before, [class*=" icon-"].icon-simple-check:before {
+    content: "\F046"; }
+  [class^="icon-"].icon-calendar:before, [class*=" icon-"].icon-calendar:before {
+    content: "\F047"; }
+  [class^="icon-"].icon-the-conversation:before, [class*=" icon-"].icon-the-conversation:before {
+    content: "\F048"; }
+  [class^="icon-"].icon-lock:before, [class*=" icon-"].icon-lock:before {
+    content: "\F050"; }
+  [class^="icon-"].icon-unlock:before, [class*=" icon-"].icon-unlock:before {
+    content: "\F051"; }
+  [class^="icon-"].icon-audio:before, [class*=" icon-"].icon-audio:before {
+    content: "\F052"; }
+  [class^="icon-"].icon-chevron-right:before, [class*=" icon-"].icon-chevron-right:before {
+    content: "\F053"; }
+  [class^="icon-"].icon-caret-down:before, [class*=" icon-"].icon-caret-down:before {
+    content: "\F054"; }
+  [class^="icon-"].icon-caret-left:before, [class*=" icon-"].icon-caret-left:before {
+    content: "\F055"; }
+  [class^="icon-"].icon-caret-right:before, [class*=" icon-"].icon-caret-right:before {
+    content: "\F056"; }
+  [class^="icon-"].icon-caret-up:before, [class*=" icon-"].icon-caret-up:before {
+    content: "\F057"; }
+  [class^="icon-"].icon-pastespecial:before, [class*=" icon-"].icon-pastespecial:before {
+    content: "\F058"; }
+  [class^="icon-"].icon-linkedin:before, [class*=" icon-"].icon-linkedin:before {
+    content: "\F059";
+    color: #0181b2; }
+  [class^="icon-"].icon-pause:before, [class*=" icon-"].icon-pause:before {
+    content: "\F060"; }
+  [class^="icon-"].icon-cog:before, [class*=" icon-"].icon-cog:before {
+    content: "\F061"; }
+  [class^="icon-"].icon-orcid:before, [class*=" icon-"].icon-orcid:before {
+    content: "\F062";
+    color: #a6ce39; }
+  [class^="icon-"].icon-music:before, [class*=" icon-"].icon-music:before {
+    content: "\F063"; }
+  [class^="icon-"].icon-print:before, [class*=" icon-"].icon-print:before {
+    content: "\F064"; }
+  [class^="icon-"].icon-google-plus:before, [class*=" icon-"].icon-google-plus:before {
+    content: "\F065";
+    color: #de4931; }
+  [class^="icon-"].icon-home:before, [class*=" icon-"].icon-home:before {
+    content: "\F066"; }
+  [class^="icon-"].icon-facebook-simple:before, [class*=" icon-"].icon-facebook-simple:before {
+    content: "\F067";
+    color: #3a5a93; }
+  [class^="icon-"].icon-tag:before, [class*=" icon-"].icon-tag:before {
+    content: "\F068"; }
+  [class^="icon-"].icon-left-guillemet:before, [class*=" icon-"].icon-left-guillemet:before {
+    content: "\F069"; }
+  [class^="icon-"].icon-input:before, [class*=" icon-"].icon-input:before {
+    content: "\F070"; }
+  [class^="icon-"].icon-whatsapp:before, [class*=" icon-"].icon-whatsapp:before {
+    content: "\F071";
+    color: #455a64; }
+  [class^="icon-"].icon-fb-messenger:before, [class*=" icon-"].icon-fb-messenger:before {
+    content: "\F072";
+    color: #0084ff; }
+  [class^="icon-"].icon-youtube:before, [class*=" icon-"].icon-youtube:before {
+    content: "\F073";
+    color: #ff0000; }
+  [class^="icon-"].icon-share:before, [class*=" icon-"].icon-share:before {
+    content: "\F074"; }
+  [class^="icon-"].icon-auth-facebook:before, [class*=" icon-"].icon-auth-facebook:before {
+    content: "\F003";
+    color: #3a5a93; }
+  [class^="icon-"].icon-auth-twitter:before, [class*=" icon-"].icon-auth-twitter:before {
+    content: "\F001";
+    color: #00b0e9; }
+  [class^="icon-"].icon-auth-linkedin:before, [class*=" icon-"].icon-auth-linkedin:before {
+    content: "\F059";
+    color: #0181b2; }
+  [class^="icon-"].icon-auth-google:before, [class*=" icon-"].icon-auth-google:before {
+    content: "\F065";
+    color: #de4931; }
+
+.icon-combine .icon-friend-of-tc-heart {
+  position: absolute;
+  margin-top: 0.045em; }
+
+/**
+[Name] Icon combinations
+[Section] Carlton
+[Description]
+Some glyphs are meant to be used in unison.
+
+- ```..icon-combine-heart``` - Combines the icon-friend-of-tc-outer & icon-friend-of-tc-heart
+
+[Example]
+<a href="#" class="button subtle moderately-huge dynamic_donate_link">
+  <span class="icon-combine-heart">
+    <i class="icon-friend-of-tc-outer"></i>
+    <i class="icon-friend-of-tc-heart icon-heart-beating"></i>
+  </span>
+  Make a donation
+</a>
+**/
+span.icon-combine-heart {
+  position: relative;
+  display: inline-block;
+  padding-left: 10px;
+  height: inherit;
+  font-size: inherit; }
+  span.icon-combine-heart i {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0; }
+
+i.icon-conversation-red {
+  color: #e50c20; }
+
+.vivus-icon-examples li {
+  list-style: none;
+  float: left;
+  width: 25%;
+  height: 25px;
+  padding: 10px 0; }
+
+/**
+[Name] Typography - League Gothic
+[Section] Carlton
+[Description]
+League Gothic font. Used for headings in some places.
+**/
+@font-face {
+  font-family: "LeagueGothicRegular";
+  src: url(/assets/league_gothic-ee7c3ac6fcfb162a285700082f0ea9c9.eot);
+  src: url(/assets/league_gothic-ee7c3ac6fcfb162a285700082f0ea9c9.eot?#iefix) format("embedded-opentype"), url(/assets/league_gothic-d6edd0e7d6e924072292f6826057aec3.woff) format("woff"), url(/assets/league_gothic-401fad31e190c6b447d592827bf4a01f.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/**
+[Name] Typography - Libre Baskerville
+[Section] Carlton
+[Description]
+Libre Baskerville. Used for content#show.
+**/
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(/assets/librebaskerville-regular-5c7e409dda84c1449567914bea28e077.eot);
+  src: url(/assets/librebaskerville-regular-5c7e409dda84c1449567914bea28e077.eot?#iefix) format("embedded-opentype"), url(/assets/librebaskerville-regular-e9de7a34bc52de1b55e59f11252d171e.woff) format("woff"), url(/assets/librebaskerville-regular-fafa09d7e0aa6ada5e86bdb82eba4cb9.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(/assets/librebaskerville-bold-d55aa906ea47db9bdfbf18de24221ebd.eot);
+  src: url(/assets/librebaskerville-bold-d55aa906ea47db9bdfbf18de24221ebd.eot?#iefix) format("embedded-opentype"), url(/assets/librebaskerville-bold-3b99ae68a21ad2432e4bc9181c53fe43.woff) format("woff"), url(/assets/librebaskerville-bold-970895fa08dd2455721e7f60cb029817.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(/assets/librebaskerville-italic-80c79c56e49808392d3ae921d2c6ec67.eot);
+  src: url(/assets/librebaskerville-italic-80c79c56e49808392d3ae921d2c6ec67.eot?#iefix) format("embedded-opentype"), url(/assets/librebaskerville-italic-8954f6cb2af42e18f9d5cd4f0d82928b.woff) format("woff"), url(/assets/librebaskerville-italic-9b2c800dc1e3b3688b1f4d1e8f144c2c.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(/assets/librebaskerville-bolditalic-5064ba7deaffe9be7dd3a8c036edff93.eot);
+  src: url(/assets/librebaskerville-bolditalic-5064ba7deaffe9be7dd3a8c036edff93.eot?#iefix) format("embedded-opentype"), url(/assets/librebaskerville-bolditalic-036645a155b6639c122394cf4b5b9fea.woff) format("woff"), url(/assets/librebaskerville-bolditalic-8b401fcb7f50df2ebd574d5839fc7763.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+/**
+[Name] Typography - Meslo
+[Section] Carlton
+[Description]
+Meslo font. Used for code and other monospaced text.
+**/
+@font-face {
+  font-family: "MesloLGMDZ";
+  src: url(/assets/meslolgm-dz-regular-webfont-8cc8d397467dfd3b15bc9f64e9ab42a3.eot);
+  src: url(/assets/meslolgm-dz-regular-webfont-8cc8d397467dfd3b15bc9f64e9ab42a3.eot?#iefix) format("embedded-opentype"), url(/assets/meslolgm-dz-regular-webfont-212451c5410e147872a6155fc027788c.woff) format("woff"), url(/assets/meslolgm-dz-regular-webfont-cb1f3efc805280875a7e272308dec43c.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MesloLGMDZ";
+  src: url(/assets/meslolgm-dz-bold-webfont-01f73275280d444e4fcabce2fe47da3b.eot);
+  src: url(/assets/meslolgm-dz-bold-webfont-01f73275280d444e4fcabce2fe47da3b.eot?#iefix) format("embedded-opentype"), url(/assets/meslolgm-dz-bold-webfont-4ae3fcb502b92c8ecc3d4360dd50bf47.woff) format("woff"), url(/assets/meslolgm-dz-bold-webfont-9859c79034c0d27afa4cae2e2d71ee89.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MesloLGMDZ";
+  src: url(/assets/meslolgm-dz-italic-webfont-57d2399bc2ca3c7f1a3e4d4f49431c4b.eot);
+  src: url(/assets/meslolgm-dz-italic-webfont-57d2399bc2ca3c7f1a3e4d4f49431c4b.eot?#iefix) format("embedded-opentype"), url(/assets/meslolgm-dz-italic-webfont-9775cdbf314c24971031a6bf03bf4165.woff) format("woff"), url(/assets/meslolgm-dz-italic-webfont-c09bfc8b0e5eff99a784b3c7a073ac81.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "MesloLGMDZ";
+  src: url(/assets/meslolgm-dz-bolditalic-webfont-4df02b627e9c14073e502e433b763f02.eot);
+  src: url(/assets/meslolgm-dz-bolditalic-webfont-4df02b627e9c14073e502e433b763f02.eot?#iefix) format("embedded-opentype"), url(/assets/meslolgm-dz-bolditalic-webfont-d38b3c021d3cbe47b717fdbda788c0b7.woff) format("woff"), url(/assets/meslolgm-dz-bolditalic-webfont-800b43cb8ef81860efc2a9cc7d5da496.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+html {
+  -webkit-text-size-adjust: 100%; }
+
+body, textarea, input, select {
+  font-size: 13px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: #383838; }
+
+.text-center {
+  text-align: center; }
+
+span.nobr {
+  white-space: nowrap; }
+
+/**
+[Name] Standard paragraph type
+[Section] Typography
+[Description]
+
+- ```.fine-print``` - a smaller font size for notes of less importance
+
+[Example]
+<p>
+  Oh, I don&rsquo;t have time for this. I have to go and buy a single piece of fruit
+  with a coupon and then return it, making people wait behind me while I complain. Oh,
+  I don&rsquo;t have time for this. I have to go and buy a single
+  piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+</p>
+<p class="fine-print">
+  Fry, you can&rsquo;t just sit here in the dark listening to classical music.
+</p>
+**/
+p {
+  margin-bottom: 18px; }
+  p.fine-print {
+    font-size: 11px !important; }
+
+/**
+[Name] Emphasis
+[Section] Typography
+[Description]
+
+Emphasise text as being important by increasing the weight of the type, or the rendering of italics.
+
+[Example]
+<p>
+   Hi, I&rsquo;m a naughty nurse, <strong>and I really need someone to talk to</strong>.
+   $9.95 a minute. Hello Morbo, <em>how&rsquo;s the family?</em> OK, if everyone&rsquo;s finished
+   being stupid. I don&rsquo;t &lsquo;need&rsquo; to drink.
+</p>
+**/
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+/**
+[Name] Quotations
+[Section] Typography
+[Description]
+
+- ```.left```        - Pull the quote to the left
+- ```.right```       - Pull the quote to the right
+- ```.feature```     - More prominent treatment
+
+[Example]
+<% ['', 'left', 'right', 'feature'].each do |style| %>
+  <blockquote class="<%= style %>">
+    <p>
+      When I was first asked to make a film about my nephew, Hubert Farnsworth,
+      I thought &ldquo;Why should I?&rdquo; Then later, Leela made the film. But
+      if I did make it, you can bet there would have been more topless women on
+      motorcycles. Roll film! I&rsquo;m sorry, guys. I never meant to hurt you.
+      Just to destroy everything you ever believed in. Fatal. Yeah, I do that with my stupidness.
+    </p>
+    <cite>Lorem ipsum dolor sit amet</cite>
+  </blockquote>
+<% end %>
+**/
+blockquote {
+  clear: both;
+  padding: 9px 18px 12px 18px;
+  font-style: italic;
+  margin-bottom: 18px;
+  color: #484848;
+  text-align: center; }
+  blockquote, blockquote p {
+    -ms-hyphens: auto;
+    -ms-hyphenate-limit-chars: 8 4 4;
+    -webkit-hyphens: auto;
+    -webkit-hyphenate-limit-after: 4;
+    -webkit-hyphenate-limit-before: 4; }
+  blockquote > blockquote:last-child {
+    margin-bottom: 0; }
+  blockquote p:last-child {
+    margin-bottom: 0; }
+  blockquote, blockquote.left {
+    text-align: left;
+    border-left: 4px solid #e8e8e8; }
+  blockquote.right {
+    text-align: right;
+    border-right: 4px solid #e8e8e8; }
+  blockquote.feature {
+    color: #383838;
+    position: relative;
+    padding: 30px 0 24px 0;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "LeagueGothicRegular", "League Gothic", Impact, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: left;
+    border-left: none;
+    border-top: 4px solid #e8e8e8;
+    border-bottom: 4px solid #e8e8e8;
+    margin: 18px 0 36px 0; }
+    blockquote.feature p:first-child {
+      text-indent: 50px; }
+    blockquote.feature:before {
+      content: "\201C";
+      position: absolute;
+      top: 62px;
+      left: 0;
+      color: #ddd;
+      font-size: 125px; }
+    blockquote.feature, blockquote.feature p {
+      line-height: 36px; }
+    blockquote.feature cite {
+      font-size: 24px; }
+      blockquote.feature cite:before {
+        content: "\2014   "; }
+  blockquote cite {
+    font-style: normal;
+    color: #aaa; }
+
+h1, h2, h3, h4, h5, h6, blockquote {
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility; }
+
+/**
+[Name] Level 1 heading
+[Section] Typography
+[Description]
+
+- ```.slammed```        - Removes whitespace from the bottom of the heading.
+- ```.page-header```       - Top level headings for static content pages. Adds a 1px bottom border.
+- ```.double-bordered```     - Top level headings for static content pages. Adds a double 1px bottom border.
+
+[Example]
+<% ['', 'slammed', 'page-header', 'double-bordered'].each do |style| %>
+  <h1 class="<%= style %>">h1. Level one heading</h1>
+<% end %>
+**/
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 36px;
+  margin-bottom: 18px; }
+  h1.page-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 36px;
+    padding-bottom: 9px; }
+    h1.page-header span {
+      color: #ccc; }
+  h1.slammed {
+    margin-bottom: 0; }
+  h1.double-bordered {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1px; }
+    h1.double-bordered:after {
+      content: "";
+      display: block;
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee; }
+
+/**
+[Name] Level 2 heading
+[Section] Typography
+[Description]
+
+- ```.slammed```        - Removes whitespace from the bottom of the heading.
+- ```.double-bordered```    - Top level headings for static content pages. Adds a double 1px bottom border.
+
+[Example]
+<% ['', 'slammed', 'double-bordered'].each do |style| %>
+  <h2 class="<%= style %>">h2. Level one heading</h2>
+<% end %>
+**/
+h2 {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 12px; }
+  h2.slammed {
+    margin-bottom: 0; }
+  h2.double-bordered {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1px; }
+    h2.double-bordered:after {
+      content: "";
+      display: block;
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee; }
+
+/**
+[Name] Level 3 heading
+[Section] Typography
+[Description]
+
+- ```.slammed```        - Removes whitespace from the bottom of the heading.
+- ```.bordered```        - Adds a dark, 10px bottom border and more bottom margin.
+- ```.bordered-light```  - Adds a light grey, 1px bottom border and more bottom margin.
+- ```.double-bordered```    - Top level headings for static content pages. Adds a double 1px bottom border.
+
+[Example]
+<% ['', 'slammed', 'bordered', 'bordered-light', 'double-bordered'].each do |style| %>
+  <h3 class="<%= style %>">h3. Level one heading</h3>
+<% end %>
+**/
+h3 {
+  color: #333;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 12px;
+  font-weight: bold; }
+  h3.bordered {
+    font-size: 15px;
+    line-height: 18px;
+    padding-bottom: 8px;
+    border-bottom: 4px solid #ccc;
+    margin-bottom: 12px; }
+    h3.bordered > span {
+      color: #8e8e8e; }
+  h3.thick-light-bordered {
+    padding-bottom: 8px;
+    border-bottom: 4px solid #e6e6e6; }
+    h3.thick-light-bordered > span {
+      color: #8e8e8e; }
+  h3.bordered-light {
+    font-size: 15px;
+    line-height: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 6px; }
+    h3.bordered-light > span {
+      color: #8e8e8e; }
+  h3.slammed {
+    margin-bottom: 0; }
+  h3.double-bordered {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1px; }
+    h3.double-bordered:after {
+      content: "";
+      display: block;
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee; }
+
+/**
+[Name] Level 4 heading
+[Section] Typography
+[Description]
+
+- ```.slammed```        - Removes whitespace from the bottom of the heading.
+- ```.double-bordered```    - Top level headings for static content pages. Adds a double 1px bottom border.
+
+[Example]
+<% ['', 'slammed', 'double-bordered'].each do |style| %>
+  <h4 class="<%= style %>">h4. Level one heading</h4>
+<% end %>
+**/
+h4 {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px; }
+  h4.slammed {
+    margin-bottom: 0; }
+  h4.double-bordered {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1px; }
+    h4.double-bordered:after {
+      content: "";
+      display: block;
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee; }
+
+/**
+[Name] Level 5 heading
+[Section] Typography
+[Description]
+
+- ```.slammed```        - Removes whitespace from the bottom of the heading.
+- ```.double-bordered```    - Top level headings for static content pages. Adds a double 1px bottom border.
+
+[Example]
+<% ['', 'slammed', 'double-bordered'].each do |style| %>
+  <h5 class="<%= style %>">h5. Level one heading</h5>
+<% end %>
+**/
+h5.slammed {
+  margin-bottom: 0; }
+
+h5.double-bordered {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1px; }
+  h5.double-bordered:after {
+    content: "";
+    display: block;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; }
+
+/**
+[Name] Level 6 heading
+[Section] Typography
+[Description]
+
+- ```.slammed```        - Removes whitespace from the bottom of the heading.
+- ```.double-bordered```    - Top level headings for static content pages. Adds a double 1px bottom border.
+
+[Example]
+<% ['', 'slammed', 'double-bordered'].each do |style| %>
+  <h6 class="<%= style %>">h6. Level one heading</h6>
+<% end %>
+**/
+h6 {
+  color: #888; }
+  h6.slammed {
+    margin-bottom: 0; }
+  h6.double-bordered {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1px; }
+    h6.double-bordered:after {
+      content: "";
+      display: block;
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee; }
+
+hr {
+  border: none;
+  clear: both;
+  border-top: 1px solid #ccc;
+  margin-bottom: 18px; }
+
+/**
+[Name] Default anchor styling
+[Section] Typography
+[Description]
+
+- ```.information``` - Solid gray block information link
+- ```:hover``` - Subtle hover highlight.
+- ```:focus``` - Remove outline from anchors.
+- ```:visited``` - Subtly darker colour for visited links.
+- ```:visited:hover``` - Subtle hover highlight (same as :hover)
+
+[Example]
+<% ['', 'information', 'link'].each do |style| %>
+  <a href="#" class="<%= style %>">Default <%= style %> anchor</a>
+<% end %>
+**/
+a, .link {
+  color: #069;
+  text-decoration: none;
+  outline: none; }
+  a:hover, .link:hover {
+    color: #2d8cd6;
+    text-decoration: none; }
+  a:focus, .link:focus {
+    outline: none; }
+  a:visited, .link:visited {
+    color: #557585; }
+    a:visited:hover, .link:visited:hover {
+      color: #069; }
+
+nav ol li, nav ul li {
+  list-style: none;
+  margin-left: 0; }
+
+/**
+[Name] Unordered list
+[Section] Typography
+[Description]
+
+- ```.fine-print```        - Removes whitespace from the bottom of the heading.
+- ```.semantic```        - Removes whitespace from the bottom of the heading.
+
+[Example]
+<% ['', 'fine-print', 'semantic'].each do |style| %>
+  <ul class="<%= style %>">
+    <li>We can&rsquo;t compete with Mom! Her company is big and evil! Ours is small and neutral!</li>
+    <li>Interesting. No, wait, the other thing: tedious.</li>
+    <li>
+      Actually, that&rsquo;s still true.
+      <ul>
+        <li>Too much work. Let&rsquo;s burn it and say we dumped it in the sewer.</li>
+        <li>Good news, everyone! I&rsquo;ve taught the toaster to feel love!</li>
+        <li>Oh God, what have I done?</li>
+      </ul>
+    </li>
+    <li>Now, now. Perfectly symmetrical violence never solved anything.</li>
+    <li>Daddy Bender, we&rsquo;re hungry.</li>
+  </ul>
+  <br /><br />
+<% end %>
+**/
+ul li {
+  margin-left: 0; }
+
+ul.fine-print li {
+  font-size: 11px; }
+
+ul.semantic li {
+  list-style-type: none;
+  margin-left: 0; }
+
+/**
+[Name] Ordered list
+[Section] Typography
+[Description]
+
+- ```.fine-print```        - Removes whitespace from the bottom of the heading.
+- ```.semantic```        - Removes whitespace from the bottom of the heading.
+
+[Example]
+<% ['', 'fine-print', 'semantic'].each do |style| %>
+  <ol class="<%= style %>">
+    <li>We can&rsquo;t compete with Mom! Her company is big and evil! Ours is small and neutral!</li>
+    <li>Interesting. No, wait, the other thing: tedious.</li>
+    <li>
+      Actually, that&rsquo;s still true.
+      <ol>
+        <li>Too much work. Let&rsquo;s burn it and say we dumped it in the sewer.</li>
+        <li>Good news, everyone! I&rsquo;ve taught the toaster to feel love!</li>
+        <li>Oh God, what have I done?</li>
+      </ol>
+    </li>
+    <li>Now, now. Perfectly symmetrical violence never solved anything.</li>
+    <li>Daddy Bender, we&rsquo;re hungry.</li>
+  </ol>
+  <br /><br />
+<% end %>
+**/
+ol li {
+  margin-left: 0; }
+
+ol.fine-print li {
+  font-size: 11px; }
+
+ol.semantic li {
+  list-style-type: none;
+  margin-left: 0; }
+
+/**
+[Name] Definition list
+[Section] Typography
+[Description]
+
+[Example]
+<dl>
+  <dt>Coins</dt><dd>5¢, 10¢, 20¢, 50¢, $1, $2</dd>
+  <dt>Notes</dt><dd>$5, $10, $20, $50, $100</dd>
+</dl>
+**/
+dl dt {
+  float: left;
+  font-weight: bold;
+  clear: left; }
+
+dl dd {
+  float: left;
+  margin-left: 1em;
+  text-align: left; }
+
+/**
+[Name] Fonts
+[Section] Typography
+[Description]
+
+- ```.league-gothic``` - It’s for metrics.
+- ```.meslo```         - It's for draft#edit
+
+[Example]
+<% ['league-gothic', 'meslo'].each do |style| %>
+  <p class="<%= style %>">
+    Fry, you can&rsquo;t just sit here in the dark listening to classical music.
+    And when we woke up, we had these bodies. Yes. You gave me a dollar and some
+    candy. Okay, I like a challenge. Stop it, stop it. It&rsquo;s fine. I will
+    &lsquo;destroy&rsquo; you! THE BIG BRAIN AM WINNING AGAIN! I AM THE GREETEST!
+    NOW I AM LEAVING EARTH, FOR NO RAISEN!
+  </p>
+<% end %>
+**/
+.league-gothic {
+  font-family: "LeagueGothicRegular", "League Gothic", Impact, sans-serif;
+  font-size-adjust: 0.455;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 40px;
+  text-rendering: optimizeLegibility; }
+
+.meslo {
+  font-family: "MesloLGMDZ", "Monaco", monospace; }
+
+figure, .figure {
+  display: block;
+  position: relative; }
+  figure:after, .figure:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ".";
+    clear: both;
+    height: 0; }
+  figure iframe, .figure iframe {
+    display: block; }
+  figure figcaption, figure .figcaption, .figure figcaption, .figure .figcaption {
+    color: #666;
+    display: block;
+    font-size: 11px;
+    line-height: 18px;
+    padding-top: 6px; }
+    figure figcaption a, figure .figcaption a, .figure figcaption a, .figure .figcaption a {
+      font-weight: normal !important; }
+    figure figcaption .attribution, figure .figcaption .attribution, .figure figcaption .attribution, .figure .figcaption .attribution {
+      color: #ccc; }
+    figure figcaption .attribution a, figure .figcaption .attribution a, .figure figcaption .attribution a, .figure .figcaption .attribution a {
+      color: #ccc; }
+      figure figcaption .attribution a:hover, figure figcaption .attribution a:focus, figure .figcaption .attribution a:hover, figure .figcaption .attribution a:focus, .figure figcaption .attribution a:hover, .figure figcaption .attribution a:focus, .figure .figcaption .attribution a:hover, .figure .figcaption .attribution a:focus {
+        color: #069; }
+
+article header p.byline {
+  line-height: 18px;
+  padding: 2px 0;
+  font-size: 11px;
+  margin-bottom: 0;
+  color: #888888; }
+
+.callout {
+  display: block;
+  background: #f9f6e3;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  border-top: 4px solid #f3edca; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 10pt;
+  line-height: 1.65; }
+
+h2 {
+  font-size: 1.15em; }
+
+a {
+  color: #000; }
+  a:visited {
+    color: #000; }
+
+@page {
+  size: A4;
+  margin: 2cm 1cm 1cm; }
+
+#masthead {
+  margin: 30px 0; }
+  #masthead .masthead-home-link {
+    font-weight: bold;
+    margin: 0; }
+    #masthead .masthead-home-link img {
+      width: 220px; }
+  #masthead .masthead-tagline {
+    font-size: 8px;
+    color: #999; }
+  #masthead .masthead-search {
+    display: none; }
+
+#meta:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0; }
+
+#meta #authors, #meta #contributors {
+  display: block;
+  margin: 1em 0 1em 0; }
+  #meta #authors li.author-avatar, #meta #contributors li.author-avatar {
+    margin-bottom: 1em;
+    clear: both; }
+    #meta #authors li.author-avatar:after, #meta #contributors li.author-avatar:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: ".";
+      clear: both;
+      height: 0; }
+    #meta #authors li.author-avatar a, #meta #contributors li.author-avatar a {
+      float: left;
+      width: 350px; }
+  #meta #authors img, #meta #contributors img {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px; }
+  #meta #authors h4, #meta #contributors h4 {
+    padding-top: 8px;
+    margin-bottom: 4px; }
+  #meta #authors h3, #meta #authors p, #meta #contributors h3, #meta #contributors p {
+    font-size: 12px; }
+  #meta #authors h3, #meta #contributors h3 {
+    margin-bottom: 2px; }
+  #meta #authors p, #meta #contributors p {
+    margin: 0; }
+
+#meta #disclosure-statement {
+  display: none; }
+
+#meta .does_not_contribute {
+  display: none; }
+
+article#article header {
+  margin-top: 3em; }
+  article#article header h1 {
+    font-size: 24px; }
+
+article#article + .grid-prepend-four.grid-eight.grid-last {
+  display: none; }
+
+.article-footer {
+  display: none; }
+
+.do-not-print {
+  display: none; }
+
+#topbar,
+.topbar-mobile-newsletter-signup,
+#primary-navigation,
+#editorial-menu,
+#hot-topics,
+#about,
+div.entry-summary,
+#related-content,
+#research,
+#after-article,
+p.more,
+#fdbk_tab,
+#institution-about p.information,
+#newsletter,
+#newsletter-fotc,
+#newsletter-signup,
+#also-by-author,
+#licence,
+#disclosure,
+#partners,
+#funding,
+#comments,
+#editors-picks,
+.jobs-events-list,
+aside.social-media,
+div.social-media {
+  display: none; }
+
+.social-media {
+  display: none; }
+
+#footers {
+  display: none; }
+
+#all-of-the-things {
+  display: none; }
+
+#small-sidebar-open-button,
+#small-sidebar,
+#sm-topbar {
+  display: none; }
+
+.editorial-menu {
+  display: none; }
+
+.content-targeted-share {
+  display: none; }
+
+.content-share,
+.content-republish,
+.content-disclosure-statement,
+.content-partners,
+.content-related-container,
+.content-authors-synopsis,
+.page-addendum,
+.enlarge_hint,
+.fluid-width-video-wrapper,
+figure.magazine,
+.conversation-partners {
+  display: none; }
+
+.content-body {
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 8 4 4;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-after: 4;
+  -webkit-hyphenate-limit-before: 4;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 10pt;
+  line-height: 1.8;
+  padding-bottom: 12px;
+  width: 600px; }
+  .content-body a {
+    white-space: pre-wrap;
+    word-wrap: break-word; }
+  .content-body blockquote {
+    border-left: 8px solid #e8e8e8; }
+  .content-body ul, .content-body ol {
+    padding-left: 2em;
+    margin-bottom: 18px; }
+  .content-body table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #eee;
+    empty-cells: show;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 13px;
+    margin-bottom: 18px;
+    width: 100%; }
+    .content-body table thead th {
+      border: 1px solid #eee;
+      font-weight: bold;
+      padding: 0.5em 1em;
+      vertical-align: top; }
+    .content-body table tbody td {
+      border: 1px solid #eee;
+      padding: 0.5em 1em; }
+  .content-body figure {
+    margin-bottom: 12px;
+    width: 100%; }
+    .content-body figure img {
+      width: 100%; }
+    .content-body figure.content-lead-image, .content-body figure.align-center {
+      width: 100%; }
+    .content-body figure.align-left {
+      clear: left;
+      float: left;
+      margin-right: 20px;
+      width: 220px; }
+    .content-body figure.align-right {
+      clear: right;
+      float: right;
+      margin-left: 20px;
+      margin-right: -150px;
+      width: 300px; }
+    .content-body figure table {
+      margin-bottom: 0; }
+    .content-body figure a, .content-body figure img {
+      display: block;
+      max-width: 100%;
+      text-decoration: none; }
+    .content-body figure figcaption {
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+      color: #727272; }
+      .content-body figure figcaption a {
+        display: inline; }
+
+.content-header h1 {
+  background-color: #fff;
+  color: #333;
+  clear: both;
+  display: inline;
+  font-size: 36px;
+  line-height: normal;
+  margin: 0 0 6px;
+  padding: 4px 0 6px; }
+
+.content-header time {
+  background-color: #fff;
+  color: #727272;
+  display: inline-block;
+  font-size: 11px;
+  padding: 6px 0; }
+
+.content-sidebar {
+  float: right;
+  margin: 0 0 1cm 1cm;
+  width: 180px; }
+
+.content-authors-group {
+  margin: 0 0 18px; }
+  .content-authors-group .author-name {
+    font-weight: bold;
+    font-size: 8pt; }
+  .content-authors-group .role {
+    color: #727272;
+    font-size: 7pt;
+    margin: 0; }
+  .content-authors-group .vcard {
+    list-style: none;
+    margin-bottom: 12px; }
+  .content-authors-group img {
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    display: block;
+    margin: 0 auto 6px;
+    width: 1.5cm; }
+
+.content-lead-image {
+  padding-bottom: 36px;
+  width: 500px; }
+  .content-lead-image img {
+    width: 100%; }
+
+.topic-list .icon-tag {
+  float: left;
+  top: 0;
+  margin-right: 5px; }
+
+.topic-list-item {
+  list-style: none;
+  float: left; }
+  .topic-list-item a {
+    background-color: #eee;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    color: #555;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 6px 6px 0;
+    padding: 0 6px;
+    text-decoration: none;
+    white-space: nowrap; }
+    .topic-list-item a:hover {
+      background-color: #d8352a;
+      color: #fff; }
+
+.magazine {
+  display: none;
+  padding-bottom: 36px; }
+  .has-desktop-magazine .magazine {
+    display: block; }
+
+.magazine-header {
+  padding-top: 0;
+  position: relative; }
+  .magazine-header .image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    -ms-behavior: url(/assets/backgroundsize.min-d8d298e0ea1db97929ce8690fb4c12c7.htc);
+    height: 600px; }
+    .magazine-header .image img {
+      display: none; }
+  .magazine-header .wrapper {
+    height: 100%; }
+
+.magazine-title {
+  height: 100%;
+  position: relative;
+  top: 0;
+  width: 100%; }
+  .magazine-title header {
+    bottom: 20px;
+    position: relative; }
+  .magazine-title .content-header-block {
+    border-left: 24px solid #fff;
+    display: inline-block;
+    left: -12px;
+    line-height: normal;
+    padding: 4px 0 0 0;
+    position: relative; }
+  .magazine-title h1 {
+    background-color: #fff;
+    color: #333;
+    display: inline;
+    font-size: 36px;
+    line-height: normal;
+    margin: 0;
+    padding: 4px 0 6px; }
+  .magazine-title strong {
+    left: -12px;
+    position: relative; }
+  .magazine-title time {
+    background-color: #fff;
+    color: #727272;
+    display: inline-block;
+    font-size: 11px;
+    margin-left: -12px;
+    padding: 6px 12px; }
+
+.content-column-header .content-column-image {
+  float: left; }
+
+.content-column-header .content-column-title {
+  float: left; }
+  .content-column-header .content-column-title h3 {
+    font-size: 18px;
+    margin-top: 20px; }
+
+.post .author-information {
+  clear: both;
+  margin-top: 50px; }
+  .post .author-information header {
+    float: left;
+    margin: 0 30px 0 0; }
+    .post .author-information header h3, .post .author-information header .byline {
+      display: none; }
+    .post .author-information header img {
+      width: 70px; }
+  .post .author-information .author {
+    float: left;
+    margin-left: -30px; }
+    .post .author-information .author .author-link h2 {
+      font-size: 1.1em; }
+    .post .author-information .author .title {
+      margin-top: -5px;
+      margin-bottom: 50px; }
+  .post .author-information #also-by-author {
+    display: none; }
+
+.post #article {
+  clear: both; }
+
+.post .article-nav {
+  display: none; }
+
+.research #meta h4 + p {
+  margin-top: -10px;
+  margin-bottom: 10px; }
+
+.research .research-brief + a.source-link {
+  display: none; }
+

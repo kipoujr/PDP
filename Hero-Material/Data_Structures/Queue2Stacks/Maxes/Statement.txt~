@@ -1,0 +1,30 @@
+You are given an array of N positive integers.
+We define the score of a continuous subarray of length K as the sum of its top M elements.
+Your task is to find the L-th minimum score.
+
+Input
+In the first line, there are 4 positive integers, N K M L.
+N lines follow. The i-th of them contain the i-th element of the array.
+It holds that N<=10^6, K<=N, M<=5, L<=N-K+1, and all elements are at most 2^63.
+
+Output
+The L-th minimum score.
+
+Example
+	Input
+	5 3 2 2
+	7
+	4
+	3
+	9
+	2
+
+	Output
+	12
+
+	Explanation
+	There are 3 different subarrays:
+	[7 4 3] with score 7+4 = 11
+	[4 3 9] with score 4+9 = 13
+	[3 9 2] with score 3+9 = 12
+	The second minimum is 12

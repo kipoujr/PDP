@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="ie ie7 lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8 lt-ie10 lt-ie9 " lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="svg js" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="aN7llGa1A5Oy7/LfatKN9wBsJystX1wnhIMZwLWUP4gYl7dB8e3iBc8pEa6q8ZhjtXBielimB9dpkVfR+Rtx0Q==">
+
+  <meta name="theme-color" content="#d8352a">
+  <meta name="msapplication-navbutton-color" content="#d8352a">
+  <meta charset="utf-8">
+<script type="text/javascript" src="solitary-scientist_files/5b06465c9f"></script><script src="solitary-scientist_files/nr-1071.js"></script><script async="" src="solitary-scientist_files/count.js"></script><script async="" src="solitary-scientist_files/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5b06465c9f","applicationID":"367227","transactionName":"el9cTBRXCl8EFk5QX1dEV1YSFxVbDhM=","queueTime":1,"applicationTime":225,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcEVlFACwUHVlNV"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+  <meta property="fb:app_id" content="127105130696839">
+  <script>
+  if (/iPad/.test(navigator.userAgent)) {
+    // 972px layout + 20px gutter on left & right.
+    document.write('<meta name="viewport" content="width=1012">');
+  } else {
+    document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+  }
+</script><meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="The myth of the lone genius, hero scientist is dangerous for science and society. Here's how to fix it.">
+<meta name="pubdate" content="20171121">
+<meta name="commissioning-region" content="ca">
+<meta name="searchtype" content="analysis">
+<meta name="original-source" content="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835">
+<meta name="news_keywords" content="Culture, Facts, Science">
+
+  <meta name="author" content="Ken Clark">
+
+  <meta name="institution" content="Queen's University, Ontario">
+
+  <meta property="og:site_name" content="The Conversation">
+<meta property="og:title" content="Myth of the genius solitary scientist is dangerous">
+<meta property="og:description" content="The myth of the lone genius, hero scientist is dangerous for science and society. Here's how to fix it.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://images.theconversation.com/files/195523/original/file-20171120-18555-16oaf7a.jpg?ixlib=rb-1.1.0&amp;rect=91%2C126%2C1186%2C592&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop">
+<meta property="og:updated_time" content="2018-06-14T10:29:04Z">
+<meta property="og:url" content="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835">
+<meta property="article:publisher" content="https://facebook.com/TheConversationCanada">
+
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ConversationCA">
+
+
+
+  <script>
+//<![CDATA[
+
+  window.TC = {};
+  window.TC.Config = {"sharejs_init_delay_ms":0};
+
+//]]>
+</script>
+  <!-- refspec 173e156 -->
+  <title>Myth of the genius solitary scientist is dangerous</title>
+  <link rel="stylesheet" media="screen" href="solitary-scientist_files/webpacked-application-a48cb14909d860ddb353.css">
+<link rel="stylesheet" media="screen" href="solitary-scientist_files/webpacked-core-dd42dcf2e5d08ec98634.css">
+
+
+
+
+
+<!--[if lt IE 9]><script src="/javascripts/vendor/shim.js"></script><![endif]-->
+
+<!--[if IE 7]><link rel="stylesheet" media="screen" href="/assets/webpacked-ie/ie7-4b1cf1feff325d9a8300.css" /><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" media="screen" href="/assets/webpacked-ie/ie8-b38f16cb447308688a15.css" /><![endif]-->
+
+<link rel="stylesheet" media="print" href="solitary-scientist_files/webpacked-print-323b96bbb37ef6374977.css">
+
+
+  <link rel="apple-touch-icon-precomposed" href="http://theconversation.com/assets/logo-114x114-65dfe0d7cfa1a27576c4bea09d5070a3.png">
+<link rel="icon" sizes="192x192" href="http://theconversation.com/assets/logo-192x192-0dc138eb03a755cacf6c3df151929282.png">
+<link rel="shortcut icon" href="http://theconversation.com/favicon.ico">
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    var ga = ga || function() {};
+
+    ga('create', 'UA-21436757-1', 'auto');
+
+
+      ga('set', 'dimension1', 'Reader');
+      ga('set', 'dimension2', 'uk');
+      ga('set', 'dimension3', 'ca');
+      ga('set', 'dimension4', 'analysis');
+
+    ga('send', 'pageview');
+</script>
+
+
+    
+    
+    <link rel="canonical" href="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835">
+    <link rel="amphtml" href="https://theconversation.com/amp/myth-of-the-genius-solitary-scientist-is-dangerous-87835">
+
+<style type="text/css">.selector-2heQc {
+  margin-bottom: 30px; }
+  .selector-2heQc label {
+    float: left;
+    font-weight: bold;
+    margin-right: 15px; }
+</style><style type="text/css">@-webkit-keyframes spin-3ZV1o {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin-3ZV1o {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.loader-Tjd3L {
+  -webkit-animation: spin-3ZV1o 0.8s infinite linear;
+  animation: spin-3ZV1o 0.8s infinite linear;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 auto;
+  border: 3px solid #d9f3fc;
+  border-top: 3px solid #33bef2;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms; }
+</style><style type="text/css">.hidden-1nLxb {
+  display: none; }
+
+.switch-2ZlR2 {
+  position: relative;
+  display: inline-block;
+  padding-right: 70px;
+  height: 25px;
+  line-height: 25px;
+  font-weight: bold; }
+
+.toggle-3nSDc {
+  background-color: #fafafa;
+  -webkit-border-radius: 34px;
+  border-radius: 34px;
+  cursor: pointer;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  width: 60px;
+  bottom: 0;
+  right: 0;
+  top: 0; }
+
+.toggle-3nSDc:before {
+  background-color: #FFF;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  content: "";
+  position: absolute;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #ccc;
+  bottom: -2px;
+  height: 25px;
+  left: -2px;
+  width: 25px; }
+
+input:checked + .toggle-3nSDc {
+  background-color: #00be00;
+  border: 1px solid #00be00; }
+
+input:checked + .toggle-3nSDc:before {
+  -webkit-transform: translateX(39px);
+  -ms-transform: translateX(39px);
+  transform: translateX(39px); }
+</style><style type="text/css">.container-1C2LN {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: #fafafa;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px; }
+
+.image-1u3UG {
+  padding: 20px 0;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  width: 20%;
+  text-align: center; }
+  .image-1u3UG img {
+    width: 50%; }
+
+.description-221xI {
+  padding: 20px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 65%; }
+
+.description-region-2opDo {
+  font-size: 16px;
+  font-weight: normal; }
+
+.description-blurb-3-Ral {
+  margin-top: 20px; }
+
+.description-frequency-1Z7lK {
+  color: #999; }
+
+.toggle-switch-1ydsS {
+  padding: 20px 0;
+  background: #f3f3f3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15%; }
+
+.toggle-switch-element-3dEO1 {
+  margin: 0 auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center; }
+
+@media (max-width: 480px) {
+  .container-1C2LN {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .image-1u3UG {
+    width: 100%; }
+  .description-221xI {
+    width: 90%; }
+  .toggle-switch-1ydsS {
+    width: 100%; } }
+</style><script async="" src="solitary-scientist_files/widgets.js"></script><style type="text/css">.international-newsletters-heading-1MLdf {
+  margin: 40px 0 20px; }
+
+.spinner-container-3X8ie {
+  margin: 40px 0;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2); }
+
+@media (max-width: 480px) {
+  .spinner-container-3X8ie {
+    margin: 20px 0;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+</style><style>.fluidvids {width: 100%; max-width: 100%; position: relative;}.fluidvids-item {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}</style></head>
+<body class="region_uk content content-show  refresh-article" data-https="available">
+  <nav class="editorial-menu">
+</nav>
+
+  
+  <span id="small-sidebar-open-button" class="icon-menu"></span>
+  <div id="small-sidebar">
+    <span id="small-sidebar-close-button" class="icon-delete"></span>
+    <nav class="small-sidebar-group small-sidebar-editions">
+      <h3>Editions</h3>
+      <fieldset class="region-select">
+        <select id="small-region-select-dropdown">
+            <option data-code="AFRICA" value="/africa">
+              Africa
+            </option>
+            <option data-code="AU" value="/au">
+              Australia
+            </option>
+            <option data-code="CA" value="/ca">
+              Canada
+            </option>
+            <option data-code="FR" value="/fr">
+              France
+            </option>
+            <option data-code="GLOBAL" value="/global">
+              Global Perspectives
+            </option>
+            <option data-code="ID" value="/id">
+              Indonesia
+            </option>
+            <option data-code="UK" value="/uk" selected="selected">
+              United Kingdom
+            </option>
+            <option data-code="US" value="/us">
+              United States
+            </option>
+        </select>
+      </fieldset>
+    </nav>
+
+    <nav class="small-sidebar-group">
+      <h3>Sections</h3>
+      <ul>
+          <li class="home-page ">
+            <a class="" href="http://theconversation.com/uk">Home<span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="arts ">
+            <a class="" href="http://theconversation.com/uk/arts">Arts <span><span title="and">+</span> Culture</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="business ">
+            <a class="" href="http://theconversation.com/uk/business">Business <span><span title="and">+</span> Economy</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="cities ">
+            <a class="" href="http://theconversation.com/uk/cities">Cities<span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="education ">
+            <a class="" href="http://theconversation.com/uk/education">Education<span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="environment ">
+            <a class="" href="http://theconversation.com/uk/environment">Environment <span><span title="and">+</span> Energy</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="health ">
+            <a class="" href="http://theconversation.com/uk/health">Health <span><span title="and">+</span> Medicine</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="politics ">
+            <a class="" href="http://theconversation.com/uk/politics">Politics <span><span title="and">+</span> Society</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="technology ">
+            <a class="active" href="http://theconversation.com/uk/technology">Science <span><span title="and">+</span> Technology</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="eu-referendum-2016 last">
+            <a class="" href="http://theconversation.com/uk/eu-referendum-2016">Brexit<span class="icon-chevron-right"></span></a>
+          </li>
+      </ul>
+    </nav>
+
+    <nav id="small-sidebar-search" class="small-sidebar-group">
+      <h3>Search</h3>
+      <form action="/search">
+        <input name="q" placeholder="Search analysis, academics…" type="text">
+        <button type="submit"><span class="icon-search"></span></button>
+      </form>
+    </nav>
+
+    <nav class="small-sidebar-group">
+      <h3>Services</h3>
+      <ul>
+          <li>
+            <a href="http://theconversation.com/uk/events">
+              Events<span class="icon-chevron-right"></span>
+</a>          </li>
+        <li>
+          <a href="http://theconversation.com/uk/newsletters">
+            Newsletter<span class="icon-chevron-right"></span>
+</a>        </li>
+
+          <li id="applenews-link">
+            <a href="https://apple.news/T9iWHySTrSN2RXCYW6bD1hQ">Read on Apple News<span class="icon-chevron-right"></span></a>
+          </li>
+
+          <li id="flipboard-link">
+            <a href="https://flipboard.com/@ConversationUK">Read on Flipboard<span class="icon-chevron-right"></span></a>
+          </li>
+      </ul>
+    </nav>
+
+    <nav class="small-sidebar-group">
+      <h3>Information</h3>
+
+      <ul>
+        <li><a href="http://theconversation.com/uk/who-we-are"><span>Who we are</span><span class="icon-chevron-right"></span></a></li>
+        <li><a href="http://theconversation.com/uk/charter"><span>Our charter</span><span class="icon-chevron-right"></span></a></li>
+        <li><a href="http://theconversation.com/uk/team"><span>Our team</span><span class="icon-chevron-right"></span></a></li>
+        <li><a href="http://theconversation.com/uk/partners"><span>Partners and funders</span><span class="icon-chevron-right"></span></a></li>
+        <li><a href="http://theconversation.com/institutions"><span>Contributing institutions</span><span class="icon-chevron-right"></span></a></li>
+        <li><a href="http://theconversation.com/uk/contact-us"><span>Contact us</span><span class="icon-chevron-right"></span></a></li>
+          <li>
+            <a href="https://donate.theconversation.com/uk?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=mobile-sidebar"><span>Donate</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li><a href="http://theconversation.com/uk/friends"><span>Friends of The Conversation</span><span class="icon-chevron-right"></span></a></li>
+        <li><a href="http://theconversation.com/uk/privacy-policy"><span>Privacy policy</span><span class="icon-chevron-right"></span></a></li>
+        <li><a href="http://theconversation.com/uk/terms-and-conditions"><span>Terms and conditions</span><span class="icon-chevron-right"></span></a></li>
+        <li><a href="http://theconversation.com/uk/corrections"><span>Corrections</span><span class="icon-chevron-right"></span></a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="small-sidebar-overlay"></div>
+
+
+  <div id="page-wrapper">
+    <section id="topbar">
+  <div class="wrapper clearfix">
+
+    <a class="topbar-mobile-home-link" href="http://theconversation.com/uk">
+      <img alt="The Conversation" src="solitary-scientist_files/logo-en-2d9cbc0ce65fe7de13f8b2030307de62.svg">
+</a>
+    
+  <nav class="topbar-module">
+    <ul class="topbar-item-list">
+      <li class="topbar-home-link">
+        <a href="http://theconversation.com/uk">
+          <i class="icon-home"></i>
+</a>      </li>
+      <li class="topbar-edition-selector-title topbar-label">Edition:</li>
+    </ul>
+  </nav>
+
+  <nav class="topbar-edition-selector topbar-dropdown topbar-module">
+    <a class="menu-button-open" href="http://theconversation.com/uk" style="display: inline;">Available editions</a><a class="menu-button-close" href="#">Close menu</a>
+    <div class="menu-button-contents">
+      <span class="menu-button-text">
+        <span class="current-region">United Kingdom</span>
+      </span>
+      <i class="icon-caret-down drop-down-caret"></i>
+    </div>
+
+    <ul class="menu">
+        <li class="region africa">
+          <a title="Africa edition" href="http://theconversation.com/africa">Africa</a>
+        </li>
+        <li class="region au">
+          <a title="Australia edition" href="http://theconversation.com/au">Australia</a>
+        </li>
+        <li class="region ca">
+          <a title="Canada edition" href="http://theconversation.com/ca">Canada</a>
+        </li>
+        <li class="region fr">
+          <a title="France edition" href="http://theconversation.com/fr">France</a>
+        </li>
+        <li class="region global">
+          <a title="Global Perspectives edition" href="http://theconversation.com/global">Global Perspectives</a>
+        </li>
+        <li class="region id">
+          <a title="Indonesia edition" href="http://theconversation.com/id">Indonesia</a>
+        </li>
+        <li class="region us">
+          <a title="United States edition" href="http://theconversation.com/us">United States</a>
+        </li>
+    </ul>
+  </nav>
+
+
+      <nav class="topbar-promotional-links topbar-module">
+    <ul class="topbar-item-list">
+
+        <li class="tc-donate">
+          <a href="https://donate.theconversation.com/uk?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=topbar">Donate</a>
+        </li>
+
+        <li class="tc-events">
+          <a href="http://theconversation.com/uk/events">Events</a>
+        </li>
+    </ul>
+  </nav>
+
+
+    <nav class="topbar-account-nav topbar-dropdown topbar-module">
+
+
+    <ul class="topbar-item-list auth">
+      <li class="author-signup">
+        <a href="http://theconversation.com/become-an-author">Become an author</a>
+      </li>
+      <li class="reader-signup">
+        <a href="https://theconversation.com/sign_up?return_to=%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835">Sign up as a reader</a>
+      </li>
+      <li class="reader-signin">
+        <a href="http://theconversation.com/sign_in?return_to=%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835">Sign in</a>
+      </li>
+    </ul>
+</nav>
+
+
+
+    <nav class="topbar-stay-informed topbar-module">
+  <ul class="topbar-button-list">
+    <li class="topbar-button with-label newsletter">
+      <a title="Sign up to receive our daily email newsletter" href="http://theconversation.com/uk/newsletters">
+        <i class="icon-email"></i>
+        <span class="topbar-button-text">
+          Get newsletter
+        </span>
+</a>    </li>
+    <li class="topbar-button facebook">
+      <a title="The Conversation on Facebook" href="https://facebook.com/ConversationUK">
+        <i class="icon-facebook-simple"></i>
+</a>    </li>
+    <li class="topbar-button twitter">
+      <a title="The Conversation on Twitter" href="https://twitter.com/ConversationUK">
+        <i class="icon-twitter"></i>
+</a>    </li>
+    <li class="topbar-button rss">
+      <a title="Feeds from The Conversation" href="http://theconversation.com/uk/feeds">
+        <i class="icon-rss"></i>
+</a>    </li>
+  </ul>
+</nav>
+
+
+  </div>
+</section><div><section class="topbar-mobile-newsletter-signup">
+  <a href="https://theconversation.com/newsletter" class="topbar-mobile-newsletter-signup-subscribe">
+    <i class="icon-email"></i>
+    <span class="topbar-button-text">Get our newsletter</span>
+  </a>
+
+  <a href="#" class="close"><i class="icon-delete"></i></a>
+</section></div>
+
+    
+  <section id="header">
+    <div class="wrapper nocontent">
+      <header id="masthead" class="clearfix">
+  <a class="masthead-home-link" href="http://theconversation.com/uk">
+    <img alt="The Conversation" src="solitary-scientist_files/logo-en-2d9cbc0ce65fe7de13f8b2030307de62.svg">
+</a>
+  <form class="masthead-search" action="/uk/search" accept-charset="UTF-8" method="get"><input name="utf8" value="✓" type="hidden">
+    <fieldset>
+  <legend>Search</legend>
+  <div class="row">
+    <div class="input-wrapper">
+      <label for="q"><i class="icon-search"></i></label>
+      <input name="q" id="q" placeholder="Search analysis, research, academics…" type="text">
+    </div>
+    <button type="submit" class="button" value="Search"></button>
+  </div>
+</fieldset>
+
+</form>
+  <div class="masthead-tagline">
+    Academic rigour, journalistic flair
+  </div>
+</header>
+
+      <nav id="primary-navigation" class=" nocontent">
+  <ol>
+        <li class="arts ">
+          <a class="" title="Arts + Culture" href="http://theconversation.com/uk/arts">Arts <span><span title="and">+</span> Culture</span></a>
+        </li>
+        <li class="business ">
+          <a class="" title="Business + Economy" href="http://theconversation.com/uk/business">Business <span><span title="and">+</span> Economy</span></a>
+        </li>
+        <li class="cities ">
+          <a class="" title="Cities" href="http://theconversation.com/uk/cities">Cities</a>
+        </li>
+        <li class="education ">
+          <a class="" title="Education" href="http://theconversation.com/uk/education">Education</a>
+        </li>
+        <li class="environment ">
+          <a class="" title="Environment + Energy" href="http://theconversation.com/uk/environment">Environment <span><span title="and">+</span> Energy</span></a>
+        </li>
+        <li class="health ">
+          <a class="" title="Health + Medicine" href="http://theconversation.com/uk/health">Health <span><span title="and">+</span> Medicine</span></a>
+        </li>
+        <li class="politics ">
+          <a class="" title="Politics + Society" href="http://theconversation.com/uk/politics">Politics <span><span title="and">+</span> Society</span></a>
+        </li>
+        <li class="technology ">
+          <a class="current" title="Science + Technology" href="http://theconversation.com/uk/technology">Science <span><span title="and">+</span> Technology</span></a>
+        </li>
+        <li class="eu-referendum-2016 last">
+          <a class="" title="Brexit" href="http://theconversation.com/uk/eu-referendum-2016">Brexit</a>
+        </li>
+  </ol>
+</nav>
+
+    </div>
+  </section>
+
+    
+
+    <section id="topics">
+      <div class="wrapper nocontent">
+          <section id="hot-topics" class=" clearfix nocontent">
+    <h3>
+      <a href="http://theconversation.com/uk/topics">
+        <i class="icon-tag"></i> Follow Topics
+</a>    </h3>
+
+    <ol>
+        <li>
+          <a class="nocontent" data-id="8591" href="http://theconversation.com/uk/topics/rosetta-8591">Rosetta</a>
+        </li>
+        <li>
+          <a class="nocontent" data-id="653" href="http://theconversation.com/uk/topics/explainer-653">Explainer</a>
+        </li>
+        <li>
+          <a class="nocontent" data-id="2026" href="http://theconversation.com/uk/topics/digital-economy-2026">Digital economy</a>
+        </li>
+        <li>
+          <a class="nocontent" data-id="16280" href="http://theconversation.com/uk/topics/hubble-25-16280">Hubble 25</a>
+        </li>
+        <li>
+          <a class="nocontent" data-id="13349" href="http://theconversation.com/uk/topics/lhc-13349">LHC</a>
+        </li>
+        <li>
+          <a class="nocontent" data-id="6016" href="http://theconversation.com/uk/topics/future-of-computers-6016">future of computers</a>
+        </li>
+        <li>
+          <a class="nocontent" data-id="1031" href="http://theconversation.com/uk/topics/pluto-1031">Pluto</a>
+        </li>
+        <li>
+          <a class="nocontent" data-id="51337" href="http://theconversation.com/uk/topics/cambridge-analytica-51337">Cambridge Analytica</a>
+        </li>
+    </ol>
+  </section>
+
+      </div>
+    </section>
+
+
+    <div id="outer" style="min-height: 226.8px;">
+      
+
+      
+
+
+
+  <article id="article" class="clearfix has-desktop-magazine has-mobile-magazine" data-id="87835" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+    <figure class="magazine">
+      <div class="image" style="background-image: url(https://images.theconversation.com/files/195523/original/file-20171120-18555-16oaf7a.jpg?ixlib=rb-1.1.0&amp;rect=91%2C126%2C1186%2C592&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop);">
+        <img alt="" class="lazyload" data-src="https://images.theconversation.com/files/195523/original/file-20171120-18555-16oaf7a.jpg?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=496&amp;fit=clip" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-id="195523" itemprop="image">
+      </div>
+
+      <div class="magazine-title">
+        <div class="wrapper">
+          
+  <header class="grid-twelve large-grid-eleven">
+    <div>
+      <div class="content-header-block">
+        <h1 class="entry-title instapaper_title" itemprop="name">
+          <strong>
+            Myth of the genius solitary scientist is&nbsp;dangerous
+          </strong>
+        </h1>
+      </div>
+    </div>
+    <time datetime="2017-11-21T01:12:32Z" itemprop="datePublished" content="2017-11-21T01:12:32Z">November 21, 2017 1.12am GMT</time>
+  </header>
+
+        </div>
+      </div>
+
+        <div class="wrapper">
+          <figcaption>
+            Rick Sanchez of the animated series Rick and Morty embodies 
+the erroneous popular archetype of the scientist as eccentric lone 
+genius.
+            <span class="attribution"><span class="source">(Handout)</span></span>
+          </figcaption>
+        </div>
+    </figure>
+
+
+  <div class="wrapper">
+    <div class="content-header grid-sixteen">
+      
+  <header class="grid-twelve large-grid-eleven">
+    <div>
+      <div class="content-header-block">
+        <h1 class="entry-title instapaper_title" itemprop="name">
+          <strong>
+            Myth of the genius solitary scientist is&nbsp;dangerous
+          </strong>
+        </h1>
+      </div>
+    </div>
+    <time datetime="2017-11-21T01:12:32Z" itemprop="datePublished" content="2017-11-21T01:12:32Z">November 21, 2017 1.12am GMT</time>
+  </header>
+
+    </div>
+
+    <div class="content-sidebar grid-four large-grid-four grid-last">
+      
+        <section class="content-authors">
+  <div class="content-authors-synopsis">
+    <a href="#" class="content-authors-toggle">
+      <i class="icon-caret-down"></i>
+      <i class="icon-caret-up"></i>
+      <span class="nobr">Ken Clark</span>
+    </a>
+  </div>
+
+  <div class="content-authors-group">
+    <h3 class="double-bordered">Author</h3>
+    <ol>
+      <li class="vcard" id="author-197048" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <a rel="author" href="http://theconversation.com/profiles/ken-clark-424536">
+      <img alt="" class=" lazyloaded" data-src="https://cdn.theconversation.com/avatars/424536/width170/file-20171120-18547-75gpqr.jpg" src="solitary-scientist_files/file-20171120-18547-75gpqr.jpg" itemprop="image">
+      <span class="fn author-name" itemprop="name">
+        Ken Clark
+      </span>
+</a>
+    
+
+    <p class="role">
+      Professor of Astroparticle Physics, Queen's University, Ontario
+    </p>
+
+</li>
+
+    </ol>
+  </div>
+</section>
+
+      
+    <section class="content-disclosure-statement">
+      <h3 class="double-bordered">Disclosure statement</h3>
+        <p><span>Ken Clark does not work for, consult, own shares in or 
+receive funding from any company or organisation that would benefit from
+ this article, and has disclosed no relevant affiliations beyond their 
+academic appointment.</span></p>
+    </section>
+
+      
+
+  <section class="content-partners">
+    <h3 class="double-bordered">Partners</h3>
+      <p class="disclosure-logo clearfix"><a class="logo" href="http://theconversation.com/institutions/queens-university-ontario-1154"><img alt="Queen's University, Ontario" src="solitary-scientist_files/logo-1493852816.png"></a></p>
+      <p class="funding-statement"><a href="http://theconversation.com/institutions/queens-university-ontario-1154">Queen's University, Ontario</a> provides funding as a founding partner of The Conversation CA.</p>
+
+
+    <p>The Conversation UK receives funding from Hefce, Hefcw, SAGE, 
+SFC, RCUK, The Nuffield Foundation, The Ogden Trust, The Royal Society, 
+The Wellcome Trust, Esmée Fairbairn Foundation and The Alliance for 
+Useful Evidence, as well as sixty five university members.</p>
+
+<p><a href="http://theconversation.com/uk/partners"><strong>View the full list</strong></a></p>
+  </section>
+
+      
+  <section class="content-republish">
+    <a class="button primary steal-button" data-republish="/share/myth-of-the-genius-solitary-scientist-is-dangerous-87835" href="#republish">Republish this article</a>
+
+    <p>
+      <a class="license-logo" href="http://creativecommons.org/licenses/by-nd/4.0/"><img src="solitary-scientist_files/republish-ca547a7c5135cc6d1a28933dc8b6823c.png" alt="Republish"></a>
+      Republish our articles for free, online or in print, under Creative Commons licence.
+    </p>
+
+
+  </section>
+
+      
+
+    </div>
+
+    <div class="grid-twelve large-grid-eleven">
+      
+
+      
+
+
+      <div class="top">
+        
+  <aside class="grid-two content-share">
+    <ul>
+      <li class="email">
+        <a class="email-button" data-id="87835" target="_blank" href="mailto:?subject=Myth%20of%20the%20genius%20solitary%20scientist%20is%20dangerous%20%E2%80%94%20The%20Conversation&amp;body=Hi.%20I%20found%20an%20article%20that%20you%20might%20like%3A%20%22Myth%20of%20the%20genius%20solitary%20scientist%20is%20dangerous%22%20%E2%80%94%20http%3A%2F%2Ftheconversation.com%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835"><i class="icon-email"></i> <span>Email</span></a>
+      </li>
+
+      <li class="twitter">
+        <a class="twitter-button" data-url="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835" data-id="87835" target="_blank" href="http://twitter.com/intent/tweet?text=Myth+of+the+genius+solitary+scientist+is+dangerous&amp;url=http%3A%2F%2Ftheconversation.com%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835%3Futm_source%3Dtwitter%26utm_medium%3Dtwitterbutton&amp;utm_campaign=none&amp;via=ConversationCA"><i class="icon-twitter"></i> <span>Twitter</span></a><span class="data-count">68</span>
+      </li>
+
+      <li class="facebook">
+        <a class="facebook-button" data-url="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835" data-id="87835" target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftheconversation.com%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835%3Futm_source%3Dfacebook%26utm_medium%3Dfacebookbutton"><i class="icon-facebook"></i> <span>Facebook</span></a><span class="data-count">522</span>
+      </li>
+
+      <li class="linkedin">
+        <a class="linkedin-button" data-url="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835" data-id="87835" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;source=The+Conversation&amp;summary=Picture+a+scientist.+Seriously%2C+right+now.+I%E2%80%99m+not+going+to+discuss+the+nature+of+the+person+that+you+have+in+your+mind+%28although+I+am+going+to+guess%3A+White%3F+Male%3F+Crazy+hair%3F+That%E2%80%99s+not+surprising...&amp;title=Myth+of+the+genius+solitary+scientist+is+dangerous&amp;url=http%3A%2F%2Ftheconversation.com%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835%3Futm_source%3Dlinkedin%26utm_medium%3Dlinkedinbutton"><i class="icon-linkedin"></i> <span>LinkedIn</span></a>
+      </li>
+
+      <li class="whatsapp">
+        <a class="whatsapp-button" data-href="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835" data-action="share/whatsapp/share" data-id="87835" target="_blank" href="whatsapp://send?text=Myth+of+the+genius+solitary+scientist+is+dangerous+http%3A%2F%2Ftheconversation.com%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835%3Futm_source%3Dwhatsapp%26utm_medium%3Dwhatsappbutton"><i class="icon-whatsapp"></i> <span>WhatsApp</span></a>
+      </li>
+
+      <li class="fb-messenger">
+        <a class="fb-messenger-button" data-href="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835" data-action="share/fb-messenger/share" data-id="87835" target="_blank" href="fb-messenger://share?link=http%3A%2F%2Ftheconversation.com%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835%3Futm_source%3Dfb_messenger%26utm_medium%3Dfb_messenger_button"><i class="icon-fb-messenger"></i> <span>Messenger</span></a>
+      </li>
+    <li class="print"><a href="#"><i class="icon-print"></i> Print</a></li></ul>
+  </aside>
+
+      </div>
+
+      
+  <div class="grid-ten large-grid-nine grid-last content-body content entry-content instapaper_body" itemprop="articleBody">
+    <p>Picture a scientist. Seriously, right now. I’m not going to 
+discuss the nature of the person that you have in your mind (although I 
+am going to guess: White? Male? Crazy hair? That’s not surprising, but 
+another topic entirely). I’m more curious about what they are doing. </p>
+
+<p>It’s a relatively safe bet that the scientist in your head is sitting
+ somewhere in front of some very intimidating looking equipment, 
+researching as hard as they can. What’s more important to me is what you
+ don’t see in that image: All of the people worldwide with whom your 
+pretend scientist collaborates. </p>
+
+<p>Unfortunately, this omission can be dangerous, an idea that I will explain later.</p>
+
+<p>First, let’s try to figure out why the archetypal image of a 
+scientist is one who works alone. In fact, for centuries this was close 
+to the truth. Looking back at history you can see that many of the <a href="http://www.newworldencyclopedia.org/entry/Ibn_al-Haytham">greatest scientific minds</a> tended to work mostly in isolation or, at most, with a few indentured graduate students. </p>
+
+<figure class="align-right ">
+            <img alt="" src="solitary-scientist_files/file-20171120-18528-9dhpdr.jpg">
+            <figcaption>
+              <span class="caption">Albert Einstein, seen here in 1947, is the likely inspiration for the stereotypical image of scientists with wild hair.</span>
+              <span class="attribution"><a class="source" href="https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head.jpg">(Orren Jack Turner)</a></span>
+            </figcaption>
+          </figure>
+
+<p>Sir <a href="https://www.britannica.com/biography/Isaac-Newton">Isaac Newton</a>,
+ for example, is credited with much of not only the physics still used 
+today but also the mathematical framework, and famously preferred 
+working alone (although that could have been due to his propensity for 
+viewing his colleagues as enemies).</p>
+
+<p><a href="https://www.britannica.com/biography/James-Clerk-Maxwell">James Clerk Maxwell</a>,
+ father of electromagnetism as we know it today, also tended to work 
+solo. Even Albert Einstein gave us the theory of general relativity (and
+ probably the inspiration for the crazy hair mentioned earlier) working 
+by himself. </p>
+
+<p>So, the “lone genius” model of scientific progress has historical justification, right? Well maybe not. </p>
+
+<h2>Reality of scientific genius</h2>
+
+<p>Newton looked down on his contemporaries (while suspecting them of stealing his work) but regularly communicated with <a href="https://plato.stanford.edu/entries/leibniz/">Gottfried Wilhelm Leibniz</a>,
+ who was also working on the development of calculus. Maxwell studied at
+ several prestigious institutions and interacted with many intelligent 
+people. Even Einstein made the majority of his groundbreaking 
+discoveries while surrounded by people with whom he famously used as 
+sounding boards. </p>
+
+<p>So if this myth has little basis in reality, why do people still believe it?</p>
+
+<p>Think back to the last pop culture representation of a scientist that
+ you saw. I would tend to think of a few favourites like Eleanor Arroway
+ (Contact), Doc Brown (Back to the Future), Peter Venkman 
+(Ghostbusters), Dana Scully (The X-Files), Seth Brundle (The Fly), 
+Hubert Farnsworth (Futurama), and even Rick Sanchez (Rick and Morty).</p>
+
+<p>The one thread that connects all of these characters is that they 
+worked alone. In fact, this is one of the defining characteristics for 
+the majority of them. But this is far from how science has evolved, 
+through many centuries of effort, to function.</p>
+
+<p>Science doesn’t happen in a vacuum (unless your experiment requires 
+vacuum conditions). The whole philosophy of scientific investigation 
+requires every idea to go through validation and scrutiny by many 
+scientists. This process can be a bit time-consuming, and sometimes 
+harsh, however it serves to improve not only the results, but the entire
+ process.</p>
+
+<p>Anything that passes through the fire of criticism from other scientists comes out the other side a vastly improved product.</p>
+
+<figure class="align-center ">
+            <img alt="" src="solitary-scientist_files/file-20171120-18555-1e1uheo.jpg">
+            <figcaption>
+              <span class="caption">Dr. Emmett ‘Doc’ Brown (Christopher 
+Lloyd) of the Back to the Future films remains one of the iconic popular
+ depictions of the lone genius scientist.</span>
+              <span class="attribution"><span class="source">(Handout)</span></span>
+            </figcaption>
+          </figure>
+
+<h2>Dangerous rejection of facts</h2>
+
+<p>Given that collaboration is the norm, you may be asking yourself the 
+eternal question: Who cares? How does the image of a lone scientist hero
+ cause any danger to me? </p>
+
+<p>The problem arises when there is a debate about a scientific topic. 
+Following this structure, debate is a necessary and encouraged part of 
+the scientific process. This debate happens before the idea is released 
+to anyone outside of a few scientists and, while it can become heated at
+ times, takes place with great respect between proponents of different 
+viewpoints.</p>
+
+<p>The danger can come when scientific results are released to the 
+public. Our  society now provides a platform for anyone to comment, 
+regardless of his or her education, experience or even knowledge of the 
+topic at hand. </p>
+
+<p>While this is an excellent method of disseminating knowledge, it can 
+also provide a platform for any opinion — regardless of the weight of 
+data behind it — to be equal to that released in more traditional 
+scientific ways. </p>
+
+<p>Particularly in today’s largely populist climate, people are looking 
+to see the lone scientist hero overthrow the perceived dominance of 
+facts coming from academia.</p>
+
+<p>And herein lies the problem. In this situation, the <a href="https://theconversation.com/eclipse-of-reason-why-do-people-disbelieve-scientists-81068">opinion of a lone commenter may be considered on equal footing</a>
+ with that of tens or hundreds of people who have made the subject their
+ life’s work to ensure their interpretations are correct. </p>
+
+<p>This could give the impression that there is debate about whether 
+evolution is real (it is), or the connection between vaccination and 
+autism (there is none), or whether humans have had an impact on the 
+climate (we most certainly have). Taken to the extreme — which is the 
+only way the internet seems able to take things — these misconceptions 
+can be harmful to everyone.</p>
+
+<h2>Setting the record straight</h2>
+
+<p>So what can be done? Everyone in this scenario has some 
+responsibility to enact change. The scientists have an obligation to 
+present their results in a manner that’s not cloaked behind impenetrable
+ (to anyone but them) jargon, theories, and paywalls. </p>
+
+<p>Particularly in a society in which science is publicly funded, it is 
+the duty of researchers receiving that money to ensure that science can 
+be understood by everyone. Scientists must also walk a fine line not to 
+dismiss “external” viewpoints out of hand. </p>
+
+<p>On the other side, the public has an obligation to consider the 
+reliability of any opinions they read. In this way, discussions can be 
+had which are well-informed and can further lead to the improvement of 
+the final results. </p>
+
+<p>It’s important to make science accessible so that the perception of 
+the “hero scientist” does not cause widespread harm to the results as a 
+whole.</p>
+  </div>
+
+      
+
+      
+    <div class="grid-ten grid-prepend-two large-grid-nine grid-last content-topics topic-list">
+      <i class="icon-tag"></i>
+      <ul>
+          <li class="topic-list-item">
+            <a href="http://theconversation.com/topics/science-1256">Science</a>
+          </li>
+          <li class="topic-list-item">
+            <a href="http://theconversation.com/topics/culture-1909">Culture</a>
+          </li>
+          <li class="topic-list-item">
+            <a href="http://theconversation.com/topics/facts-36391">Facts</a>
+          </li>
+      </ul>
+    </div>
+
+      
+
+      <div class="bottom">
+        
+  <aside class="content-targeted-share grid-ten grid-prepend-two large-grid-nine grid-last">
+    <ul>
+      <li class="twitter">
+        <a class="twitter-button button" data-url="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835" data-id="87835" target="_blank" href="http://twitter.com/intent/tweet?text=Myth+of+the+genius+solitary+scientist+is+dangerous&amp;url=http%3A%2F%2Ftheconversation.com%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835%3Futm_source%3Dtwitter%26utm_medium%3Dtwitterbutton&amp;utm_campaign=none&amp;via=ConversationCA"><i class="icon-twitter"></i> <span>Tweet</span></a><span class="data-count">68</span>
+      </li>
+
+      <li class="facebook">
+        <a class="facebook-button button" data-url="http://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835" data-id="87835" target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftheconversation.com%2Fmyth-of-the-genius-solitary-scientist-is-dangerous-87835%3Futm_source%3Dfacebook%26utm_medium%3Dfacebookbutton"><i class="icon-facebook-simple"></i> <span>Share</span></a><span class="data-count">522</span>
+      </li>
+      <li class="newsletter">
+        <a class="button newsletter-button" href="http://theconversation.com/uk/newsletters">
+          <i class="icon-email"></i>
+          <span class="not-small">Get newsletter</span>
+          <span class="small-only">Newsletter</span>
+</a>      </li>
+    </ul>
+  </aside>
+
+      </div>
+
+      
+
+    </div>
+      
+    <div class="content-donation-call-to-action-view grid-sixteen">
+      <div class="logo grid-two">
+        <i class="icon-the-conversation"></i>
+      </div>
+
+      <div class="large-grid-eight grid-twelve">
+        <h2>The Conversation is a non-profit. Help knowledge-based, <span class="nobr">ethical journalism today.</span></h2>
+      </div>
+
+      <div class="large-grid-prepend-two grid-four grid-last">
+        <div class="actions">
+          <a class="button" href="https://donate.theconversation.com/uk?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=content-donation-call-to-action-5">Make a donation</a>
+        </div>
+      </div>
+    </div>
+
+
+    
+  <div class="grid-sixteen content-related-container">
+      <h3 class="thick-light-bordered slammed">You might also like</h3>
+      <div class="content-related-articles">
+        <div class="related-article grid-four ">
+  <article data-id="81068" class="clearfix placed analysis published">
+      <figure>
+        <a class="article-link" href="http://theconversation.com/eclipse-of-reason-why-do-people-disbelieve-scientists-81068">
+          <img alt="" class=" lazyloaded" data-src="https://images.theconversation.com/files/180803/original/file-20170802-23916-akvsh3.jpg?ixlib=rb-1.1.0&amp;rect=990%2C767%2C3509%2C2229&amp;q=45&amp;auto=format&amp;w=1012&amp;h=668&amp;fit=crop" src="solitary-scientist_files/file-20170802-23916-akvsh3.jpg" data-id="180803">
+</a>          <figcaption>
+            <span class="caption">
+              People reject science such as that about climate change 
+and vaccines, but readily believe scientists about solar eclipses, like 
+this one reflected on the sunglasses of a man dangerously watching in 
+Nicosia, Cyprus, in a 2015 file photo.
+            </span>
+            <span class="source" title="Source">(AP Photo/Petros Karadjias)</span>
+          </figcaption>
+      </figure>
+    <header>
+      <h2><a href="http://theconversation.com/eclipse-of-reason-why-do-people-disbelieve-scientists-81068">Eclipse of reason: Why do people disbelieve scientists?</a></h2>
+    </header>
+  </article>
+</div>
+<div class="related-article grid-four ">
+  <article data-id="70134" class="clearfix placed analysis published">
+      <figure>
+        <a class="article-link" href="http://theconversation.com/trump-has-embraced-pseudoscience-and-its-deceptive-tactics-in-a-post-truth-world-70134">
+          <img alt="" class=" lazyloaded" data-src="https://images.theconversation.com/files/149370/original/image-20161209-31396-85g26h.jpg?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1012&amp;h=668&amp;fit=crop" src="solitary-scientist_files/image-20161209-31396-85g26h.jpg" data-id="149370">
+</a>          <figcaption>
+            <span class="caption">
+              Would he deceive you?
+            </span>
+            <span class="source" title="Source">EPA/MARK LYONS</span>
+          </figcaption>
+      </figure>
+    <header>
+      <h2><a href="http://theconversation.com/trump-has-embraced-pseudoscience-and-its-deceptive-tactics-in-a-post-truth-world-70134">Trump has embraced pseudoscience and its deceptive tactics in a <span class="nobr">post-truth</span>&nbsp;world</a></h2>
+    </header>
+  </article>
+</div>
+<div class="related-article grid-four ">
+  <article data-id="86299" class="clearfix placed analysis published">
+      <figure>
+        <a class="article-link" href="http://theconversation.com/how-to-grow-cannabis-with-modern-science-and-technology-86299">
+          <img alt="" class=" lazyloaded" data-src="https://images.theconversation.com/files/194893/original/file-20171115-19799-rusk8t.jpg?ixlib=rb-1.1.0&amp;rect=83%2C0%2C3410%2C2273&amp;q=45&amp;auto=format&amp;w=1012&amp;h=668&amp;fit=crop" src="solitary-scientist_files/file-20171115-19799-rusk8t.jpg" data-id="194893">
+</a>          <figcaption>
+            <span class="caption">
+              Cannabis plant strains in jars in MediJean’s Health 
+Canada-licensed tissue culture development lab are kept for research as 
+manager Abdul Ahad works in the Richmond, B.C., facility, in this 2014 
+file photo.
+            </span>
+            <span class="source" title="Source">(THE CANADIAN PRESS/Darryl Dyck)</span>
+          </figcaption>
+      </figure>
+    <header>
+      <h2><a href="http://theconversation.com/how-to-grow-cannabis-with-modern-science-and-technology-86299">How to grow cannabis? With modern science and&nbsp;technology</a></h2>
+    </header>
+  </article>
+</div>
+<div class="related-article grid-four grid-last">
+  <article data-id="14496" class="clearfix placed analysis published">
+      <figure>
+        <a class="article-link" href="http://theconversation.com/no-matter-how-strong-the-evidence-on-climate-change-deniers-will-keep-denying-14496">
+          <img alt="" class=" lazyloaded" data-src="https://images.theconversation.com/files/12310/original/hn8r89dd-1340847981.jpg?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1012&amp;h=668&amp;fit=crop" src="solitary-scientist_files/hn8r89dd-1340847981.jpg" data-id="12310">
+</a>          <figcaption>
+            <span class="caption">
+              Sometimes even the clearest signs of change are ignored.
+            </span>
+            <span class="source" title="Source">Flickr/baldeaglebluff</span>
+          </figcaption>
+      </figure>
+    <header>
+      <h2><a href="http://theconversation.com/no-matter-how-strong-the-evidence-on-climate-change-deniers-will-keep-denying-14496">No matter how strong the evidence on climate change, deniers will keep&nbsp;denying</a></h2>
+    </header>
+  </article>
+</div>
+
+      </div>
+  </div>
+
+  </div>
+
+</article>
+
+
+
+<div id="comments-container"><section id="comments" class="comments-section-view wrapper clearfix"><div class="comments-bar grid-sixteen">
+  <div class="comments-side grid-four grid-last"><div class="comments-actions-view grid-four grid-last"><a class="comment-sign-in button primary large" href="#" title="Sign in to comment">Sign in to comment</a></div></div>
+  <div class="comments-count-sort grid-four">
+    <i class="icon-comment"></i>
+    <span class="comment-count"><span><span class="number-of-comments">5</span> Comments</span></span>
+  </div>
+  <div class="comments-main grid-eight">
+    <div class="comment-sorting"><div class="tabbed-button-group minimal">
+  <a class=" button comment-sort on" href="#oldest">
+    Oldest
+  </a>
+
+  <a class=" button comment-sort" href="#newest">
+    Newest
+  </a>
+</div></div>
+    <p class="information prominent closed">Comments on this article are now closed.</p>
+  <ol class="comments-list-view"><li class="yet-another-spinner centered hidden" style="display: none;"></li></ol><div class="comments-show-all">
+  <a href="#" class="primary button large">
+    Show all comments
+  </a>
+</div></div>
+
+</div></section></div>
+
+  <div class="page-addendum">
+  <div class="wrapper">
+    <div class="grid-eight">
+      <div class="addendum-block most-popular">
+  <h3 class="thick-light-bordered slammed">Most popular on The Conversation</h3>
+  
+      <ul>
+          <li><a href="http://theconversation.com/in-defence-of-wasps-why-squashing-them-comes-with-a-sting-in-the-tale-60729">In defence of wasps: why squashing them comes with a sting in the&nbsp;tale</a></li>
+          <li><a href="http://theconversation.com/people-with-depression-use-language-differently-heres-how-to-spot-it-90877">People with depression use language differently – here’s how to spot&nbsp;it</a></li>
+          <li><a href="http://theconversation.com/why-that-clean-swimming-pool-smell-is-actually-bad-for-your-health-73936">Why that ‘clean swimming pool’ smell is actually bad for your&nbsp;health</a></li>
+          <li><a href="http://theconversation.com/were-not-prepared-for-the-genetic-revolution-thats-coming-96574">We’re not prepared for the genetic revolution that’s&nbsp;coming</a></li>
+          <li><a href="http://theconversation.com/does-eating-at-night-make-you-fat-96804">Does eating at night make you&nbsp;fat?</a></li>
+      </ul>
+      <ul>
+          <li><a href="http://theconversation.com/activated-charcoal-doesnt-detox-the-body-four-reasons-you-should-avoid-it-97899">Activated charcoal doesn’t detox the body – four reasons you should avoid&nbsp;it</a></li>
+          <li><a href="http://theconversation.com/heres-how-we-could-build-a-colony-on-an-alien-world-54923">Here’s how we could build a colony on an alien&nbsp;world</a></li>
+          <li><a href="http://theconversation.com/happiness-at-work-doesnt-just-depend-on-your-employer-97036">Happiness at work doesn’t just depend on your&nbsp;employer</a></li>
+          <li><a href="http://theconversation.com/alzheimers-disease-why-insulin-is-a-new-suspect-97222">Alzheimer’s disease: why insulin is a new&nbsp;suspect</a></li>
+          <li><a href="http://theconversation.com/how-russia-is-using-international-students-as-a-weapon-in-the-new-cold-war-95450">How Russia is using international students as a weapon in the new Cold&nbsp;War</a></li>
+      </ul>
+</div>
+
+    </div>
+
+    <div class="grid-four">
+      <div class="addendum-block jobs-events-list events">
+  <h3 class="thick-light-bordered slammed">Events</h3>
+
+  <ul>
+    <li class="event">
+      <p>
+        <a rel="nofollow" target="_blank" href="http://theconversation.com/uk/events/albert-wolters-public-lecture-with-professor-elizabeth-loftus-5508">
+          <span class="name">ALBERT WOLTERS PUBLIC LECTURE WITH PROFESSOR ELIZABETH LOFTUS</span>
+          —
+          <span class="location">Reading, Reading</span>
+</a>      </p>
+    </li>
+    <li class="event">
+      <p>
+        <a rel="nofollow" target="_blank" href="http://theconversation.com/uk/events/york-festival-of-ideas-4846">
+          <span class="name">York Festival of Ideas</span>
+          —
+          <span class="location">York, York</span>
+</a>      </p>
+    </li>
+    <li class="event">
+      <p>
+        <a rel="nofollow" target="_blank" href="http://theconversation.com/uk/events/9th-international-sustainability-transitions-conference-5046">
+          <span class="name">9th International Sustainability Transitions Conference</span>
+          —
+          <span class="location">Manchester, Manchester</span>
+</a>      </p>
+    </li>
+    <li class="event">
+      <p>
+        <a rel="nofollow" target="_blank" href="http://theconversation.com/uk/events/uk-membrane-showcase-5671">
+          <span class="name">UK Membrane Showcase</span>
+          —
+          <span class="location">Manchester, Manchester</span>
+</a>      </p>
+    </li>
+    <li class="event">
+      <p>
+        <a rel="nofollow" target="_blank" href="http://theconversation.com/uk/events/health-and-wellbeing-in-sexual-minority-people-inaugural-lecture-with-prof-catherine-meads-5707">
+          <span class="name">Health and wellbeing in sexual minority people: Inaugural lecture with Prof Catherine Meads</span>
+          —
+          <span class="location">Cambridge, Cambridgeshire</span>
+</a>      </p>
+    </li>
+  </ul>
+  <a class="view-more" href="http://theconversation.com/uk/events">
+    <i class="icon-the-conversation"></i>
+    <span class="action">More events</span>
+</a></div>
+
+    </div>
+
+    <div class="grid-four grid-last">
+      <div class="addendum-block research-and-expert-database">
+  <h3 class="thick-light-bordered">Expert Database <i class="icon-the-conversation"></i></h3>
+
+  <form class="for formtastic expert_search_form" novalidate="novalidate" id="new_expert_search_form" action="/experts/search" accept-charset="UTF-8" method="get"><input name="utf8" value="✓" type="hidden">
+    <fieldset class="inputs"><ol>
+      <li class="string input required stringish" id="expert_search_form_term_input"><label for="expert_search_form_term" class="label">Find experts with <span class="nobr">knowledge in:</span><abbr title="required">*</abbr></label><input placeholder="e.g. Cyber Security" id="expert_search_form_term" name="expert_search_form[term]" type="text">
+
+</li>
+</ol></fieldset>
+    <fieldset class="actions"><ol>
+      <li class="action input_action " id="expert_search_form_submit_action"><input name="commit" value="Search" class="find-experts button large primary" type="submit"></li>
+</ol></fieldset></form></div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="solitary-scientist_files/content_tracker_hook.js" id="theconversation_tracker_hook" data-counter="https://counter.theconversation.com/content/87835/count" async="async"></script>
+
+
+
+    </div>
+
+    
+  <div id="footers">
+    
+    <section class="footer-primary">
+  <header class="en">
+    <div class="wrapper nocontent">
+      <h2>The Conversation</h2>
+    </div>
+  </header>
+
+  <div class="wrapper nocontent">
+    <section class="community footer-link-list grid-five large-grid-four">
+      <h6>Community</h6>
+      <nav>
+        <ul>
+          <li><a href="http://theconversation.com/uk/community-standards">Community standards</a></li>
+          <li><a href="http://theconversation.com/uk/republishing-guidelines">Republishing guidelines</a></li>
+            <li><a href="http://theconversation.com/uk/friends">Friends of The Conversation</a></li>
+            <li><a href="http://theconversation.com/experts">Research and Expert Database</a></li>
+
+            <li>
+              <a href="https://analytics.theconversation.com/uk">
+                <i class="icon icon-the-conversation"></i> Analytics
+</a>            </li>
+
+            <li>
+              <a href="http://theconversation.com/uk/events">
+                <i class="icon icon-the-conversation"></i> Events
+</a>            </li>
+          <li><a href="http://theconversation.com/uk/feeds"><i class="icon icon-rss-non-coloured"></i> Our feeds</a></li>
+
+            <li>
+              <a href="https://donate.theconversation.com/uk?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=footer">
+                <i class="icon icon-friend-of-tc"></i> Donate
+</a>            </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="company footer-link-list grid-five large-grid-seven">
+      <h6>Company</h6>
+      <nav>
+        <ul>
+          <li><a href="http://theconversation.com/uk/who-we-are">Who we are</a></li>
+          <li><a href="http://theconversation.com/uk/charter">Our charter</a></li>
+          <li><a href="http://theconversation.com/uk/team">Our team</a></li>
+            <li><a href="http://theconversation.com/columns/uk-blog-486">Our blog</a></li>
+          <li><a href="http://theconversation.com/uk/partners">Partners and funders</a></li>
+          <li><a href="http://theconversation.com/institutions">Contributing institutions</a></li>
+          <li><a href="http://theconversation.com/uk/resources-for-media">Resource for media</a></li>
+          <li><a href="http://theconversation.com/uk/contact-us">Contact us</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="footer-subscription grid-six large-grid-five grid-last">
+      <h6>Stay informed and subscribe to our free daily newsletter and get the latest analysis and commentary directly in your inbox.</h6>
+
+      <div class="newsletter-signup-form">
+  <form action="/subscriptions" method="post" class="subscription-newsletter-form">
+    <input name="subscribe[location]" id="subscribe_location" value="footer" type="hidden">
+    <input name="subscribe[newsletter_list_id]" id="subscribe_newsletter_list_id" value="2" type="hidden">
+
+    <input name="submit" value="Subscribe" class="subscribe button primary" type="submit">
+
+    <div class="field-wrapper">
+      <label class="subscribe-email-label" for="subscribe_email">
+        Email address
+      </label>
+
+      <div class="subscription-newsletter-status">
+        <i class="success-icon">✔</i>
+        <i class="icon-delete failure-icon"></i>
+        <img class="spinner-icon" src="solitary-scientist_files/spinner-9643e2633c59d728d78b58f465f2fb9c.gif" alt="Spinner">
+      </div>
+
+      <input name="subscribe[email]" id="subscribe_email" placeholder="Your email address" class="email" spellcheck="false" type="email">
+    </div>
+  </form>
+</div>
+
+      <div class="sitewide-social-media">
+        <h6>Follow us on social media</h6>
+
+        <ul>
+          <li class="facebook">
+            <a title="The Conversation on Facebook" href="https://facebook.com/ConversationUK">
+              <i class="icon-facebook-simple"></i>
+</a>          </li>
+          <li>
+            <a title="The Conversation on Twitter" href="https://twitter.com/ConversationUK">
+              <i class="icon-twitter"></i>
+</a>          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</section>
+
+    <footer id="footer">
+  <div class="wrapper nocontent">
+    <nav>
+      <a href="http://theconversation.com/uk/privacy-policy">Privacy policy</a>
+      <a href="http://theconversation.com/uk/terms-and-conditions">Terms and conditions</a>
+      <a href="http://theconversation.com/uk/corrections">Corrections</a>
+    </nav>
+    <p class="copyright">
+      <span>Copyright © 2010–2018</span><span class="comma">, </span><span><a href="http://theconversation.com/uk/who-we-are">The Conversation Trust (UK) Limited</a></span>
+    </p>
+  </div>
+</footer>
+
+  </div>
+
+  </div>
+
+  <script src="solitary-scientist_files/vendor-9d33a7e7b156fa9893de.js"></script>
+  <script src="solitary-scientist_files/application-3fef75c1544fbf41716c.js"></script>
+
+  <script>
+//<![CDATA[
+
+  TC.locale = "en-GB";
+  TC.localePath = "/assets/en-GB-5c05e8cff9b500bd41dbec8005ed9fcf.json";
+  TC.init = function() {
+    TC.time = new TC.TimeFormatter(TC.locale);
+    TC.currentUser = new TC.User(null);
+      TC.page = new TC.ContentPage({
+    content_id: 87835,
+    content_slug: "myth-of-the-genius-solitary-scientist-is-dangerous-87835",
+    comments_closed_at: "",
+    search_referrer: {
+      adapter: "",
+      query: "",
+      rank: "",
+      region: "uk",
+    },
+  });
+
+  }
+
+//]]>
+</script>
+<script>
+//<![CDATA[
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{107:function(e,t,n){"use
+ strict";Object.defineProperty(t,"__esModule",{value:!0});var 
+o="function"==typeof Symbol&&"symbol"==typeof 
+Symbol.iterator?function(e){return typeof e}:function(e){return 
+e&&"function"==typeof 
+Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof 
+e};function r(e,t){if(t&&"object"===(void 0===t?"undefined":o(t))){var 
+n="",r=encodeURIComponent;for(var i in 
+t)n+="&"+r(i)+"="+r(t[i]);if(!n)return 
+e;e=e+(-1!==e.indexOf("?")?"&":"?")+n.slice(1)}return 
+e}t.default=function(e,t,n,i,a){i&&"object"===(void 
+0===i?"undefined":o(i))&&(a||(i._t=new 
+Date),i=r("",i).slice(1)),t.queryStringParams&&(e=r(e,t.queryStringParams));try{var
+ s;(s=XMLHttpRequest?new XMLHttpRequest:new 
+ActiveXObject("MSXML2.XMLHTTP.3.0")).open(i?"POST":"GET",e,1),t.crossDomain||s.setRequestHeader("X-Requested-With","XMLHttpRequest"),s.withCredentials=!!t.withCredentials,i&&s.setRequestHeader("Content-type","application/x-www-form-urlencoded"),s.overrideMimeType&&s.overrideMimeType("application/json");var
+ l=t.customHeaders;if(l)for(var c in 
+l)s.setRequestHeader(c,l[c]);s.onreadystatechange=function(){s.readyState>3&&n&&n(s.responseText,s)},s.send(i)}catch(e){console&&console.log(e)}}},108:function(e,t,n){"use
+ 
+strict";Object.defineProperty(t,"__esModule",{value:!0}),t.defaults=function(e){return
+ r.call(i.call(arguments,1),function(t){if(t)for(var n in t)void 
+0===e[n]&&(e[n]=t[n])}),e},t.extend=function(e){return 
+r.call(i.call(arguments,1),function(t){if(t)for(var n in 
+t)e[n]=t[n]}),e};var 
+o=[],r=o.forEach,i=o.slice},109:function(e,t,n){"use 
+strict";Object.defineProperty(t,"__esModule",{value:!0});var 
+o,r=function(){function e(e,t){for(var n=0;n<t.length;n++){var 
+o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in 
+o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return 
+function(t,n,o){return 
+n&&e(t.prototype,n),o&&e(t,o),t}}(),i=function(e){if(e&&e.__esModule)return
+ e;var t={};if(null!=e)for(var n in 
+e)Object.prototype.hasOwnProperty.call(e,n)&&(t[n]=e[n]);return 
+t.default=e,t}(n(108)),a=n(107),s=(o=a)&&o.__esModule?o:{default:o};var 
+l=function(){function e(t){var n=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{};!function(e,t){if(!(e instanceof 
+t))throw new TypeError("Cannot call a class as a 
+function")}(this,e),this.init(t,n),this.type="backend"}return 
+r(e,[{key:"init",value:function(e){var t=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{};this.services=e,this.options=i.defaults(t,this.options||{},{loadPath:"/locales/{{lng}}/{{ns}}.json",addPath:"/locales/add/{{lng}}/{{ns}}",allowMultiLoading:!1,parse:JSON.parse,crossDomain:!1,ajax:s.default})}},{key:"readMulti",value:function(e,t,n){var
+ o=this.options.loadPath;"function"==typeof 
+this.options.loadPath&&(o=this.options.loadPath(e,t));var 
+r=this.services.interpolator.interpolate(o,{lng:e.join("+"),ns:t.join("+")});this.loadUrl(r,n)}},{key:"read",value:function(e,t,n){var
+ o=this.options.loadPath;"function"==typeof 
+this.options.loadPath&&(o=this.options.loadPath([e],[t]));var 
+r=this.services.interpolator.interpolate(o,{lng:e,ns:t});this.loadUrl(r,n)}},{key:"loadUrl",value:function(e,t){var
+ 
+n=this;this.options.ajax(e,this.options,function(o,r){if(r.status>=500&&r.status<600)return
+ t("failed loading "+e,!0);if(r.status>=400&&r.status<500)return 
+t("failed loading "+e,!1);var i=void 0,a=void 
+0;try{i=n.options.parse(o,e)}catch(t){a="failed parsing "+e+" to 
+json"}if(a)return 
+t(a,!1);t(null,i)})}},{key:"create",value:function(e,t,n,o){var 
+r=this;"string"==typeof e&&(e=[e]);var 
+i={};i[n]=o||"",e.forEach(function(e){var 
+n=r.services.interpolator.interpolate(r.options.addPath,{lng:e,ns:t});r.options.ajax(n,r.options,function(e,t){},i)})}}]),e}();l.type="backend",t.default=l},2:function(e,t,n){"use
+ strict";var o=n(25),r=n(55),i=n.n(r),a=n(28),s=function(){function 
+e(e,t){for(var n=0;n<t.length;n++){var 
+o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in 
+o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return 
+function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}();var 
+l=function(){function e(){!function(e,t){if(!(e instanceof t))throw new 
+TypeError("Cannot call a class as a function")}(this,e)}return 
+s(e,null,[{key:"init",value:function(e,t,n,r){o.a.use(i.a).init({backend:{loadPath:e,crossDomain:n},lng:t},function(e){e&&e.length&&Object(a.a)("/no_js_locale?message="+e[0]);try{r()}catch(e){throw
+ 
+Object(a.a)("/js_init_failure?message="+e),e}})}},{key:"t",value:function(){return
+ o.a.t.apply(o.a,arguments)||(arguments.length<=0?void 
+0:arguments[0])}}]),e}();t.a=l},25:function(e,t,n){"use strict";var 
+o=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var 
+n=arguments[t];for(var o in 
+n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e};var 
+r={type:"logger",log:function(e){this.output("log",e)},warn:function(e){this.output("warn",e)},error:function(e){this.output("error",e)},output:function(e,t){var
+ 
+n;console&&console[e]&&(n=console)[e].apply(n,function(e){if(Array.isArray(e)){for(var
+ t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return 
+Array.from(e)}(t))}},i=new(function(){function e(t){var 
+n=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{};!function(e,t){if(!(e instanceof 
+t))throw new TypeError("Cannot call a class as a 
+function")}(this,e),this.init(t,n)}return 
+e.prototype.init=function(e){var t=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{};this.prefix=t.prefix||"i18next:",this.logger=e||r,this.options=t,this.debug=t.debug},e.prototype.setDebug=function(e){this.debug=e},e.prototype.log=function(){for(var
+ e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];return 
+this.forward(t,"log","",!0)},e.prototype.warn=function(){for(var 
+e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];return 
+this.forward(t,"warn","",!0)},e.prototype.error=function(){for(var 
+e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];return 
+this.forward(t,"error","")},e.prototype.deprecate=function(){for(var 
+e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];return 
+this.forward(t,"warn","WARNING DEPRECATED: 
+",!0)},e.prototype.forward=function(e,t,n,o){return 
+o&&!this.debug?null:("string"==typeof e[0]&&(e[0]=""+n+this.prefix+" 
+"+e[0]),this.logger[t](e))},e.prototype.create=function(t){return new 
+e(this.logger,o({prefix:this.prefix+":"+t+":"},this.options))},e}());var
+ a=function(){function e(){!function(e,t){if(!(e instanceof t))throw new
+ TypeError("Cannot call a class as a 
+function")}(this,e),this.observers={}}return 
+e.prototype.on=function(e,t){var n=this;e.split(" 
+").forEach(function(e){n.observers[e]=n.observers[e]||[],n.observers[e].push(t)})},e.prototype.off=function(e,t){var
+ 
+n=this;this.observers[e]&&this.observers[e].forEach(function(){if(t){var
+ o=n.observers[e].indexOf(t);o>-1&&n.observers[e].splice(o,1)}else 
+delete n.observers[e]})},e.prototype.emit=function(e){for(var 
+t=arguments.length,n=Array(t>1?t-1:0),o=1;o<t;o++)n[o-1]=arguments[o];this.observers[e]&&[].concat(this.observers[e]).forEach(function(e){e.apply(void
+ 
+0,n)});this.observers["*"]&&[].concat(this.observers["*"]).forEach(function(t){var
+ o;t.apply(t,(o=[e]).concat.apply(o,n))})},e}();function s(e){return 
+null==e?"":""+e}function l(e,t,n){function o(e){return 
+e&&e.indexOf("###")>-1?e.replace(/###/g,"."):e}function 
+r(){return!e||"string"==typeof e}for(var i="string"!=typeof 
+t?[].concat(t):t.split(".");i.length>1;){if(r())return{};var 
+a=o(i.shift());!e[a]&&n&&(e[a]=new n),e=e[a]}return 
+r()?{}:{obj:e,k:o(i.shift())}}function c(e,t,n){var 
+o=l(e,t,Object);o.obj[o.k]=n}function u(e,t){var 
+n=l(e,t),o=n.obj,r=n.k;if(o)return o[r]}function p(e){return 
+e.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")}var 
+f={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","/":"&#x2F;"};function
+ h(e){return"string"==typeof e?e.replace(/[&<>"'\/]/g,function(e){return
+ f[e]}):e}var g=Object.assign||function(e){for(var 
+t=1;t<arguments.length;t++){var n=arguments[t];for(var o in 
+n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return 
+e};function d(e,t){if("function"!=typeof t&&null!==t)throw new 
+TypeError("Super expression must either be null or a function, not 
+"+typeof 
+t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):function(e,t){for(var
+ n=Object.getOwnPropertyNames(t),o=0;o<n.length;o++){var 
+r=n[o],i=Object.getOwnPropertyDescriptor(t,r);i&&i.configurable&&void 
+0===e[r]&&Object.defineProperty(e,r,i)}}(e,t))}var 
+y=function(e){function t(){var n=arguments.length>0&&void 
+0!==arguments[0]?arguments[0]:{},o=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{ns:["translation"],defaultNS:"translation"};!function(e,t){if(!(e
+ instanceof t))throw new TypeError("Cannot call a class as a 
+function")}(this,t);var r=function(e,t){if(!e)throw new 
+ReferenceError("this hasn't been initialised - super() hasn't been 
+called");return!t||"object"!=typeof t&&"function"!=typeof 
+t?e:t}(this,e.call(this));return r.data=n,r.options=o,r}return 
+d(t,e),t.prototype.addNamespaces=function(e){this.options.ns.indexOf(e)<0&&this.options.ns.push(e)},t.prototype.removeNamespaces=function(e){var
+ 
+t=this.options.ns.indexOf(e);t>-1&&this.options.ns.splice(t,1)},t.prototype.getResource=function(e,t,n){var
+ o=(arguments.length>3&&void 
+0!==arguments[3]?arguments[3]:{}).keySeparator||this.options.keySeparator;void
+ 0===o&&(o=".");var r=[e,t];return n&&"string"!=typeof 
+n&&(r=r.concat(n)),n&&"string"==typeof 
+n&&(r=r.concat(o?n.split(o):n)),e.indexOf(".")>-1&&(r=e.split(".")),u(this.data,r)},t.prototype.addResource=function(e,t,n,o){var
+ r=arguments.length>4&&void 
+0!==arguments[4]?arguments[4]:{silent:!1},i=this.options.keySeparator;void
+ 0===i&&(i=".");var 
+a=[e,t];n&&(a=a.concat(i?n.split(i):n)),e.indexOf(".")>-1&&(o=t,t=(a=e.split("."))[1]),this.addNamespaces(t),c(this.data,a,o),r.silent||this.emit("added",e,t,n,o)},t.prototype.addResources=function(e,t,n){for(var
+ o in n)"string"==typeof 
+n[o]&&this.addResource(e,t,o,n[o],{silent:!0});this.emit("added",e,t,n)},t.prototype.addResourceBundle=function(e,t,n,o,r){var
+ 
+i=[e,t];e.indexOf(".")>-1&&(o=n,n=t,t=(i=e.split("."))[1]),this.addNamespaces(t);var
+ a=u(this.data,i)||{};o?function e(t,n,o){for(var r in n)r in 
+t?"string"==typeof t[r]||t[r]instanceof String||"string"==typeof 
+n[r]||n[r]instanceof 
+String?o&&(t[r]=n[r]):e(t[r],n[r],o):t[r]=n[r];return 
+t}(a,n,r):a=g({},a,n),c(this.data,i,a),this.emit("added",e,t,n)},t.prototype.removeResourceBundle=function(e,t){this.hasResourceBundle(e,t)&&delete
+ 
+this.data[e][t],this.removeNamespaces(t),this.emit("removed",e,t)},t.prototype.hasResourceBundle=function(e,t){return
+ void 
+0!==this.getResource(e,t)},t.prototype.getResourceBundle=function(e,t){return
+ 
+t||(t=this.options.defaultNS),"v1"===this.options.compatibilityAPI?g({},this.getResource(e,t)):this.getResource(e,t)},t.prototype.toJSON=function(){return
+ 
+this.data},t}(a),v={processors:{},addPostProcessor:function(e){this.processors[e.name]=e},handle:function(e,t,n,o,r){var
+ i=this;return 
+e.forEach(function(e){i.processors[e]&&(t=i.processors[e].process(t,n,o,r))}),t}};function
+ b(e){return 
+e.interpolation={unescapeSuffix:"HTML"},e.interpolation.prefix=e.interpolationPrefix||"__",e.interpolation.suffix=e.interpolationSuffix||"__",e.interpolation.escapeValue=e.escapeInterpolation||!1,e.interpolation.nestingPrefix=e.reusePrefix||"$t(",e.interpolation.nestingSuffix=e.reuseSuffix||")",e}function
+ m(e){return(e.interpolationPrefix||e.interpolationSuffix||void 
+0!==e.escapeInterpolation)&&(e=b(e)),e.nsSeparator=e.nsseparator,e.keySeparator=e.keyseparator,e.returnObjects=e.returnObjectTrees,e}var
+ x=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var 
+n=arguments[t];for(var o in 
+n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return 
+e},w="function"==typeof Symbol&&"symbol"==typeof 
+Symbol.iterator?function(e){return typeof e}:function(e){return 
+e&&"function"==typeof 
+Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof 
+e};function O(e,t){if("function"!=typeof t&&null!==t)throw new 
+TypeError("Super expression must either be null or a function, not 
+"+typeof 
+t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):function(e,t){for(var
+ n=Object.getOwnPropertyNames(t),o=0;o<n.length;o++){var 
+r=n[o],i=Object.getOwnPropertyDescriptor(t,r);i&&i.configurable&&void 
+0===e[r]&&Object.defineProperty(e,r,i)}}(e,t))}var 
+S=function(e){function t(n){var o=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{};!function(e,t){if(!(e instanceof 
+t))throw new TypeError("Cannot call a class as a function")}(this,t);var
+ r,a,s=function(e,t){if(!e)throw new ReferenceError("this hasn't been 
+initialised - super() hasn't been called");return!t||"object"!=typeof 
+t&&"function"!=typeof t?e:t}(this,e.call(this));return 
+r=n,a=s,["resourceStore","languageUtils","pluralResolver","interpolator","backendConnector"].forEach(function(e){r[e]&&(a[e]=r[e])}),s.options=o,s.logger=i.create("translator"),s}return
+ 
+O(t,e),t.prototype.changeLanguage=function(e){e&&(this.language=e)},t.prototype.exists=function(e){var
+ t=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{interpolation:{}};return"v1"===this.options.compatibilityAPI&&(t=m(t)),void
+ 0!==this.resolve(e,t)},t.prototype.extractFromKey=function(e,t){var 
+n=t.nsSeparator||this.options.nsSeparator;void 0===n&&(n=":");var 
+o=t.keySeparator||this.options.keySeparator||".",r=t.ns||this.options.defaultNS;if(n&&e.indexOf(n)>-1){var
+ 
+i=e.split(n);(n!==o||n===o&&this.options.ns.indexOf(i[0])>-1)&&(r=i.shift()),e=i.join(o)}return"string"==typeof
+ r&&(r=[r]),{key:e,namespaces:r}},t.prototype.translate=function(e){var 
+t=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{};if("object"!==(void 
+0===t?"undefined":w(t))?t=this.options.overloadTranslationOptionHandler(arguments):"v1"===this.options.compatibilityAPI&&(t=m(t)),void
+ 0===e||null===e||""===e)return"";"number"==typeof 
+e&&(e=String(e)),"string"==typeof e&&(e=[e]);var 
+n=t.keySeparator||this.options.keySeparator||".",o=this.extractFromKey(e[e.length-1],t),r=o.key,i=o.namespaces,a=i[i.length-1],s=t.lng||this.language,l=t.appendNamespaceToCIMode||this.options.appendNamespaceToCIMode;if(s&&"cimode"===s.toLowerCase())return
+ l?a+(t.nsSeparator||this.options.nsSeparator)+r:r;var 
+c=this.resolve(e,t),u=Object.prototype.toString.apply(c),p=void 
+0!==t.joinArrays?t.joinArrays:this.options.joinArrays;if(c&&"string"!=typeof
+ c&&["[object Number]","[object Function]","[object 
+RegExp]"].indexOf(u)<0&&(!p||"[object 
+Array]"!==u)){if(!t.returnObjects&&!this.options.returnObjects)return 
+this.logger.warn("accessing an object - but returnObjects options is not
+ 
+enabled!"),this.options.returnedObjectHandler?this.options.returnedObjectHandler(r,c,t):"key
+ '"+r+" ("+this.language+")' returned an object instead of 
+string.";if(t.keySeparator||this.options.keySeparator){var f="[object 
+Array]"===u?[]:{};for(var h in 
+c)Object.prototype.hasOwnProperty.call(c,h)&&(f[h]=this.translate(""+r+n+h,x({},t,{joinArrays:!1,ns:i})));c=f}}else
+ if(p&&"[object 
+Array]"===u)(c=c.join(p))&&(c=this.extendTranslation(c,r,t));else{var 
+g=!1,d=!1;if(this.isValidLookup(c)||void 
+0===t.defaultValue||(g=!0,c=t.defaultValue),this.isValidLookup(c)||(d=!0,c=r),d||g){this.logger.log("missingKey",s,a,r,c);var
+ 
+y=[],v=this.languageUtils.getFallbackCodes(this.options.fallbackLng,t.lng||this.language);if("fallback"===this.options.saveMissingTo&&v&&v[0])for(var
+ 
+b=0;b<v.length;b++)y.push(v[b]);else"all"===this.options.saveMissingTo?y=this.languageUtils.toResolveHierarchy(t.lng||this.language):y.push(t.lng||this.language);this.options.saveMissing&&(this.options.missingKeyHandler?this.options.missingKeyHandler(y,a,r,c):this.backendConnector&&this.backendConnector.saveMissing&&this.backendConnector.saveMissing(y,a,r,c)),this.emit("missingKey",y,a,r,c)}c=this.extendTranslation(c,r,t),d&&c===r&&this.options.appendNamespaceToMissingKey&&(c=a+":"+r),d&&this.options.parseMissingKeyHandler&&(c=this.options.parseMissingKeyHandler(c))}return
+ c},t.prototype.extendTranslation=function(e,t,n){var 
+o=this;n.interpolation&&this.interpolator.init(x({},n,{interpolation:x({},this.options.interpolation,n.interpolation)}));var
+ r=n.replace&&"string"!=typeof 
+n.replace?n.replace:n;this.options.interpolation.defaultVariables&&(r=x({},this.options.interpolation.defaultVariables,r)),e=this.interpolator.interpolate(e,r,n.lng||this.language),!1!==n.nest&&(e=this.interpolator.nest(e,function(){return
+ 
+o.translate.apply(o,arguments)},n)),n.interpolation&&this.interpolator.reset();var
+ i=n.postProcess||this.options.postProcess,a="string"==typeof 
+i?[i]:i;return void 
+0!==e&&a&&a.length&&!1!==n.applyPostProcessor&&(e=v.handle(a,e,t,n,this)),e},t.prototype.resolve=function(e){var
+ t=this,n=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{},o=void 0;return"string"==typeof 
+e&&(e=[e]),e.forEach(function(e){if(!t.isValidLookup(o)){var 
+r=t.extractFromKey(e,n),i=r.key,a=r.namespaces;t.options.fallbackNS&&(a=a.concat(t.options.fallbackNS));var
+ s=void 0!==n.count&&"string"!=typeof n.count,l=void 
+0!==n.context&&"string"==typeof 
+n.context&&""!==n.context,c=n.lngs?n.lngs:t.languageUtils.toResolveHierarchy(n.lng||t.language);a.forEach(function(e){t.isValidLookup(o)||c.forEach(function(r){if(!t.isValidLookup(o)){var
+ a=i,c=[a],u=void 
+0;s&&(u=t.pluralResolver.getSuffix(r,n.count)),s&&l&&c.push(a+u),l&&c.push(a+=""+t.options.contextSeparator+n.context),s&&c.push(a+=u);for(var
+ p=void 
+0;p=c.pop();)t.isValidLookup(o)||(o=t.getResource(r,e,p,n))}})})}}),o},t.prototype.isValidLookup=function(e){return!(void
+ 
+0===e||!this.options.returnNull&&null===e||!this.options.returnEmptyString&&""===e)},t.prototype.getResource=function(e,t,n){var
+ o=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};return 
+this.resourceStore.getResource(e,t,n,o)},t}(a);function j(e){return 
+e.charAt(0).toUpperCase()+e.slice(1)}var k=function(){function 
+e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot 
+call a class as a 
+function")}(this,e),this.options=t,this.whitelist=this.options.whitelist||!1,this.logger=i.create("languageUtils")}return
+ 
+e.prototype.getScriptPartFromCode=function(e){if(!e||e.indexOf("-")<0)return
+ null;var t=e.split("-");return 
+2===t.length?null:(t.pop(),this.formatLanguageCode(t.join("-")))},e.prototype.getLanguagePartFromCode=function(e){if(!e||e.indexOf("-")<0)return
+ e;var t=e.split("-");return 
+this.formatLanguageCode(t[0])},e.prototype.formatLanguageCode=function(e){if("string"==typeof
+ e&&e.indexOf("-")>-1){var 
+t=["hans","hant","latn","cyrl","cans","mong","arab"],n=e.split("-");return
+ this.options.lowerCaseLng?n=n.map(function(e){return 
+e.toLowerCase()}):2===n.length?(n[0]=n[0].toLowerCase(),n[1]=n[1].toUpperCase(),t.indexOf(n[1].toLowerCase())>-1&&(n[1]=j(n[1].toLowerCase()))):3===n.length&&(n[0]=n[0].toLowerCase(),2===n[1].length&&(n[1]=n[1].toUpperCase()),"sgn"!==n[0]&&2===n[2].length&&(n[2]=n[2].toUpperCase()),t.indexOf(n[1].toLowerCase())>-1&&(n[1]=j(n[1].toLowerCase())),t.indexOf(n[2].toLowerCase())>-1&&(n[2]=j(n[2].toLowerCase()))),n.join("-")}return
+ 
+this.options.cleanCode||this.options.lowerCaseLng?e.toLowerCase():e},e.prototype.isWhitelisted=function(e){return("languageOnly"===this.options.load||this.options.nonExplicitWhitelist)&&(e=this.getLanguagePartFromCode(e)),!this.whitelist||!this.whitelist.length||this.whitelist.indexOf(e)>-1},e.prototype.getFallbackCodes=function(e,t){if(!e)return[];if("string"==typeof
+ e&&(e=[e]),"[object Array]"===Object.prototype.toString.apply(e))return
+ e;if(!t)return e.default||[];var n=e[t];return 
+n||(n=e[this.getScriptPartFromCode(t)]),n||(n=e[this.formatLanguageCode(t)]),n||(n=e.default),n||[]},e.prototype.toResolveHierarchy=function(e,t){var
+ 
+n=this,o=this.getFallbackCodes(t||this.options.fallbackLng||[],e),r=[],i=function(e){e&&(n.isWhitelisted(e)?r.push(e):n.logger.warn("rejecting
+ non-whitelisted language code: "+e))};return"string"==typeof 
+e&&e.indexOf("-")>-1?("languageOnly"!==this.options.load&&i(this.formatLanguageCode(e)),"languageOnly"!==this.options.load&&"currentOnly"!==this.options.load&&i(this.getScriptPartFromCode(e)),"currentOnly"!==this.options.load&&i(this.getLanguagePartFromCode(e))):"string"==typeof
+ 
+e&&i(this.formatLanguageCode(e)),o.forEach(function(e){r.indexOf(e)<0&&i(n.formatLanguageCode(e))}),r},e}();var
+ 
+P=[{lngs:["ach","ak","am","arn","br","fil","gun","ln","mfe","mg","mi","oc","tg","ti","tr","uz","wa"],nr:[1,2],fc:1},{lngs:["af","an","ast","az","bg","bn","ca","da","de","dev","el","en","eo","es","es_ar","et","eu","fi","fo","fur","fy","gl","gu","ha","he","hi","hu","hy","ia","it","kn","ku","lb","mai","ml","mn","mr","nah","nap","nb","ne","nl","nn","no","nso","pa","pap","pms","ps","pt","pt_br","rm","sco","se","si","so","son","sq","sv","sw","ta","te","tk","ur","yo"],nr:[1,2],fc:2},{lngs:["ay","bo","cgg","fa","id","ja","jbo","ka","kk","km","ko","ky","lo","ms","sah","su","th","tt","ug","vi","wo","zh"],nr:[1],fc:3},{lngs:["be","bs","dz","hr","ru","sr","uk"],nr:[1,2,5],fc:4},{lngs:["ar"],nr:[0,1,2,3,11,100],fc:5},{lngs:["cs","sk"],nr:[1,2,5],fc:6},{lngs:["csb","pl"],nr:[1,2,5],fc:7},{lngs:["cy"],nr:[1,2,3,8],fc:8},{lngs:["fr"],nr:[1,2],fc:9},{lngs:["ga"],nr:[1,2,3,7,11],fc:10},{lngs:["gd"],nr:[1,2,3,20],fc:11},{lngs:["is"],nr:[1,2],fc:12},{lngs:["jv"],nr:[0,1],fc:13},{lngs:["kw"],nr:[1,2,3,4],fc:14},{lngs:["lt"],nr:[1,2,10],fc:15},{lngs:["lv"],nr:[1,2,0],fc:16},{lngs:["mk"],nr:[1,2],fc:17},{lngs:["mnk"],nr:[0,1,2],fc:18},{lngs:["mt"],nr:[1,2,11,20],fc:19},{lngs:["or"],nr:[2,1],fc:2},{lngs:["ro"],nr:[1,2,20],fc:20},{lngs:["sl"],nr:[5,1,2,3],fc:21}],L={1:function(e){return
+ Number(e>1)},2:function(e){return Number(1!=e)},3:function(e){return 
+0},4:function(e){return 
+Number(e%10==1&&e%100!=11?0:e%10>=2&&e%10<=4&&(e%100<10||e%100>=20)?1:2)},5:function(e){return
+ 
+Number(0===e?0:1==e?1:2==e?2:e%100>=3&&e%100<=10?3:e%100>=11?4:5)},6:function(e){return
+ Number(1==e?0:e>=2&&e<=4?1:2)},7:function(e){return 
+Number(1==e?0:e%10>=2&&e%10<=4&&(e%100<10||e%100>=20)?1:2)},8:function(e){return
+ Number(1==e?0:2==e?1:8!=e&&11!=e?2:3)},9:function(e){return 
+Number(e>=2)},10:function(e){return 
+Number(1==e?0:2==e?1:e<7?2:e<11?3:4)},11:function(e){return 
+Number(1==e||11==e?0:2==e||12==e?1:e>2&&e<20?2:3)},12:function(e){return
+ Number(e%10!=1||e%100==11)},13:function(e){return 
+Number(0!==e)},14:function(e){return 
+Number(1==e?0:2==e?1:3==e?2:3)},15:function(e){return 
+Number(e%10==1&&e%100!=11?0:e%10>=2&&(e%100<10||e%100>=20)?1:2)},16:function(e){return
+ Number(e%10==1&&e%100!=11?0:0!==e?1:2)},17:function(e){return 
+Number(1==e||e%10==1?0:1)},18:function(e){return 
+Number(0==e?0:1==e?1:2)},19:function(e){return 
+Number(1==e?0:0===e||e%100>1&&e%100<11?1:e%100>10&&e%100<20?2:3)},20:function(e){return
+ Number(1==e?0:0===e||e%100>0&&e%100<20?1:2)},21:function(e){return 
+Number(e%100==1?1:e%100==2?2:e%100==3||e%100==4?3:0)}};var 
+N=function(){function e(t){var n,o=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{};!function(e,t){if(!(e instanceof 
+t))throw new TypeError("Cannot call a class as a 
+function")}(this,e),this.languageUtils=t,this.options=o,this.logger=i.create("pluralResolver"),this.rules=(n={},P.forEach(function(e){e.lngs.forEach(function(t){n[t]={numbers:e.nr,plurals:L[e.fc]}})}),n)}return
+ 
+e.prototype.addRule=function(e,t){this.rules[e]=t},e.prototype.getRule=function(e){return
+ 
+this.rules[this.languageUtils.getLanguagePartFromCode(e)]},e.prototype.needsPlural=function(e){var
+ t=this.getRule(e);return 
+t&&t.numbers.length>1},e.prototype.getSuffix=function(e,t){var 
+n=this,o=this.getRule(e);if(o){if(1===o.numbers.length)return"";var 
+r=o.noAbs?o.plurals(t):o.plurals(Math.abs(t)),i=o.numbers[r];this.options.simplifyPluralSuffix&&2===o.numbers.length&&1===o.numbers[0]&&(2===i?i="plural":1===i&&(i=""));var
+ a=function(){return 
+n.options.prepend&&i.toString()?n.options.prepend+i.toString():i.toString()};return"v1"===this.options.compatibilityJSON?1===i?"":"number"==typeof
+ 
+i?"_plural_"+i.toString():a():"v2"===this.options.compatibilityJSON||2===o.numbers.length&&1===o.numbers[0]?a():2===o.numbers.length&&1===o.numbers[0]?a():this.options.prepend&&r.toString()?this.options.prepend+r.toString():r.toString()}return
+ this.logger.warn("no plural rule found for: 
+"+e),""},e}(),C=Object.assign||function(e){for(var 
+t=1;t<arguments.length;t++){var n=arguments[t];for(var o in 
+n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e};var 
+E=function(){function e(){var t=arguments.length>0&&void 
+0!==arguments[0]?arguments[0]:{};!function(e,t){if(!(e instanceof 
+t))throw new TypeError("Cannot call a class as a 
+function")}(this,e),this.logger=i.create("interpolator"),this.init(t,!0)}return
+ e.prototype.init=function(){var e=arguments.length>0&&void 
+0!==arguments[0]?arguments[0]:{};arguments[1]&&(this.options=e,this.format=e.interpolation&&e.interpolation.format||function(e){return
+ 
+e},this.escape=e.interpolation&&e.interpolation.escape||h),e.interpolation||(e.interpolation={escapeValue:!0});var
+ t=e.interpolation;this.escapeValue=void 
+0===t.escapeValue||t.escapeValue,this.prefix=t.prefix?p(t.prefix):t.prefixEscaped||"{{",this.suffix=t.suffix?p(t.suffix):t.suffixEscaped||"}}",this.formatSeparator=t.formatSeparator?t.formatSeparator:t.formatSeparator||",",this.unescapePrefix=t.unescapeSuffix?"":t.unescapePrefix||"-",this.unescapeSuffix=this.unescapePrefix?"":t.unescapeSuffix||"",this.nestingPrefix=t.nestingPrefix?p(t.nestingPrefix):t.nestingPrefixEscaped||p("$t("),this.nestingSuffix=t.nestingSuffix?p(t.nestingSuffix):t.nestingSuffixEscaped||p(")"),this.resetRegExp()},e.prototype.reset=function(){this.options&&this.init(this.options)},e.prototype.resetRegExp=function(){var
+ e=this.prefix+"(.+?)"+this.suffix;this.regexp=new RegExp(e,"g");var 
+t=""+this.prefix+this.unescapePrefix+"(.+?)"+this.unescapeSuffix+this.suffix;this.regexpUnescape=new
+ RegExp(t,"g");var 
+n=this.nestingPrefix+"(.+?)"+this.nestingSuffix;this.nestingRegexp=new 
+RegExp(n,"g")},e.prototype.interpolate=function(e,t,n){var o=this,r=void
+ 0,i=void 0;function a(e){return e.replace(/\$/g,"$$$$")}var 
+l=function(e){if(e.indexOf(o.formatSeparator)<0)return u(t,e);var 
+r=e.split(o.formatSeparator),i=r.shift().trim(),a=r.join(o.formatSeparator).trim();return
+ 
+o.format(u(t,i),a,n)};for(this.resetRegExp();r=this.regexpUnescape.exec(e);)i=l(r[1].trim()),e=e.replace(r[0],i),this.regexpUnescape.lastIndex=0;for(;r=this.regexp.exec(e);)"string"!=typeof(i=l(r[1].trim()))&&(i=s(i)),i||(this.logger.warn("missed
+ to pass in variable "+r[1]+" for interpolating 
+"+e),i=""),i=this.escapeValue?a(this.escape(i)):a(i),e=e.replace(r[0],i),this.regexp.lastIndex=0;return
+ e},e.prototype.nest=function(e,t){var n=arguments.length>2&&void 
+0!==arguments[2]?arguments[2]:{},o=void 0,r=void 0,i=C({},n);function 
+a(e){if(e.indexOf(",")<0)return e;var t=e.split(",");e=t.shift();var 
+n=t.join(",");n=(n=this.interpolate(n,i)).replace(/'/g,'"');try{i=JSON.parse(n)}catch(t){this.logger.error("failed
+ parsing options string in nesting for key "+e,t)}return 
+e}for(i.applyPostProcessor=!1;o=this.nestingRegexp.exec(e);){if((r=t(a.call(this,o[1].trim()),i))&&o[0]===e&&"string"!=typeof
+ r)return r;"string"!=typeof r&&(r=s(r)),r||(this.logger.warn("missed to
+ resolve "+o[1]+" for nesting 
+"+e),r=""),e=e.replace(o[0],r),this.regexp.lastIndex=0}return 
+e},e}(),R=Object.assign||function(e){for(var 
+t=1;t<arguments.length;t++){var n=arguments[t];for(var o in 
+n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return 
+e},T=function(){return function(e,t){if(Array.isArray(e))return 
+e;if(Symbol.iterator in Object(e))return function(e,t){var 
+n=[],o=!0,r=!1,i=void 0;try{for(var 
+a,s=e[Symbol.iterator]();!(o=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);o=!0);}catch(e){r=!0,i=e}finally{try{!o&&s.return&&s.return()}finally{if(r)throw
+ i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure 
+non-iterable instance")}}();function M(e,t){if("function"!=typeof 
+t&&null!==t)throw new TypeError("Super expression must either be null or
+ a function, not "+typeof 
+t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):function(e,t){for(var
+ n=Object.getOwnPropertyNames(t),o=0;o<n.length;o++){var 
+r=n[o],i=Object.getOwnPropertyDescriptor(t,r);i&&i.configurable&&void 
+0===e[r]&&Object.defineProperty(e,r,i)}}(e,t))}var 
+_=function(e){function t(n,o,r){var a=arguments.length>3&&void 
+0!==arguments[3]?arguments[3]:{};!function(e,t){if(!(e instanceof 
+t))throw new TypeError("Cannot call a class as a function")}(this,t);var
+ s=function(e,t){if(!e)throw new ReferenceError("this hasn't been 
+initialised - super() hasn't been called");return!t||"object"!=typeof 
+t&&"function"!=typeof t?e:t}(this,e.call(this));return 
+s.backend=n,s.store=o,s.services=r,s.options=a,s.logger=i.create("backendConnector"),s.state={},s.queue=[],s.backend&&s.backend.init&&s.backend.init(r,a.backend,a),s}return
+ M(t,e),t.prototype.queueLoad=function(e,t,n){var 
+o=this,r=[],i=[],a=[],s=[];return e.forEach(function(e){var 
+n=!0;t.forEach(function(t){var 
+a=e+"|"+t;o.store.hasResourceBundle(e,t)?o.state[a]=2:o.state[a]<0||(1===o.state[a]?i.indexOf(a)<0&&i.push(a):(o.state[a]=1,n=!1,i.indexOf(a)<0&&i.push(a),r.indexOf(a)<0&&r.push(a),s.indexOf(t)<0&&s.push(t)))}),n||a.push(e)}),(r.length||i.length)&&this.queue.push({pending:i,loaded:{},errors:[],callback:n}),{toLoad:r,pending:i,toLoadLanguages:a,toLoadNamespaces:s}},t.prototype.loaded=function(e,t,n){var
+ 
+o=this,r=e.split("|"),i=T(r,2),a=i[0],s=i[1];t&&this.emit("failedLoading",a,s,t),n&&this.store.addResourceBundle(a,s,n),this.state[e]=t?-1:2,this.queue.forEach(function(n){var
+ 
+r,i,c,u,p,f;r=n.loaded,i=s,u=l(r,[a],Object),p=u.obj,f=u.k,p[f]=p[f]||[],c&&(p[f]=p[f].concat(i)),c||p[f].push(i),function(e,t){for(var
+ 
+n=e.indexOf(t);-1!==n;)e.splice(n,1),n=e.indexOf(t)}(n.pending,e),t&&n.errors.push(t),0!==n.pending.length||n.done||(o.emit("loaded",n.loaded),n.done=!0,n.errors.length?n.callback(n.errors):n.callback())}),this.queue=this.queue.filter(function(e){return!e.done})},t.prototype.read=function(e,t,n){var
+ o=arguments.length>3&&void 
+0!==arguments[3]?arguments[3]:0,r=this,i=arguments.length>4&&void 
+0!==arguments[4]?arguments[4]:250,a=arguments[5];return 
+e.length?this.backend[n](e,t,function(s,l){s&&l&&o<5?setTimeout(function(){r.read.call(r,e,t,n,o+1,2*i,a)},i):a(s,l)}):a(null,{})},t.prototype.load=function(e,t,n){var
+ o=this;if(!this.backend)return this.logger.warn("No backend was added 
+via i18next.use. Will not load resources."),n&&n();var 
+r=R({},this.backend.options,this.options.backend);"string"==typeof 
+e&&(e=this.services.languageUtils.toResolveHierarchy(e)),"string"==typeof
+ t&&(t=[t]);var i=this.queueLoad(e,t,n);if(!i.toLoad.length)return 
+i.pending.length||n(),null;r.allowMultiLoading&&this.backend.readMulti?this.read(i.toLoadLanguages,i.toLoadNamespaces,"readMulti",null,null,function(e,t){e&&o.logger.warn("loading
+ namespaces "+i.toLoadNamespaces.join(", ")+" for languages 
+"+i.toLoadLanguages.join(", ")+" via multiloading 
+failed",e),!e&&t&&o.logger.log("successfully loaded namespaces 
+"+i.toLoadNamespaces.join(", ")+" for languages 
+"+i.toLoadLanguages.join(", ")+" via 
+multiloading",t),i.toLoad.forEach(function(n){var 
+r=n.split("|"),i=T(r,2),a=i[0],s=i[1],l=u(t,[a,s]);if(l)o.loaded(n,e,l);else{var
+ c="loading namespace "+s+" for language "+a+" via multiloading 
+failed";o.loaded(n,c),o.logger.error(c)}})}):i.toLoad.forEach(function(e){o.loadOne(e)})},t.prototype.reload=function(e,t){var
+ n=this;this.backend||this.logger.warn("No backend was added via 
+i18next.use. Will not load resources.");var 
+o=R({},this.backend.options,this.options.backend);"string"==typeof 
+e&&(e=this.services.languageUtils.toResolveHierarchy(e)),"string"==typeof
+ 
+t&&(t=[t]),o.allowMultiLoading&&this.backend.readMulti?this.read(e,t,"readMulti",null,null,function(o,r){o&&n.logger.warn("reloading
+ namespaces "+t.join(", ")+" for languages "+e.join(", ")+" via 
+multiloading failed",o),!o&&r&&n.logger.log("successfully reloaded 
+namespaces "+t.join(", ")+" for languages "+e.join(", ")+" via 
+multiloading",r),e.forEach(function(e){t.forEach(function(t){var 
+i=u(r,[e,t]);if(i)n.loaded(e+"|"+t,o,i);else{var a="reloading namespace 
+"+t+" for language "+e+" via multiloading 
+failed";n.loaded(e+"|"+t,a),n.logger.error(a)}})})}):e.forEach(function(e){t.forEach(function(t){n.loadOne(e+"|"+t,"re")})})},t.prototype.loadOne=function(e){var
+ t=this,n=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:"",o=e.split("|"),r=T(o,2),i=r[0],a=r[1];this.read(i,a,"read",null,null,function(o,r){o&&t.logger.warn(n+"loading
+ namespace "+a+" for language "+i+" 
+failed",o),!o&&r&&t.logger.log(n+"loaded namespace "+a+" for language 
+"+i,r),t.loaded(e,o,r)})},t.prototype.saveMissing=function(e,t,n,o){this.backend&&this.backend.create&&this.backend.create(e,t,n,o),e&&e[0]&&this.store.addResource(e[0],t,n,o)},t}(a),H=Object.assign||function(e){for(var
+ t=1;t<arguments.length;t++){var n=arguments[t];for(var o in 
+n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return 
+e};function A(e,t){if("function"!=typeof t&&null!==t)throw new 
+TypeError("Super expression must either be null or a function, not 
+"+typeof 
+t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):function(e,t){for(var
+ n=Object.getOwnPropertyNames(t),o=0;o<n.length;o++){var 
+r=n[o],i=Object.getOwnPropertyDescriptor(t,r);i&&i.configurable&&void 
+0===e[r]&&Object.defineProperty(e,r,i)}}(e,t))}var 
+D=function(e){function t(n,o,r){var a=arguments.length>3&&void 
+0!==arguments[3]?arguments[3]:{};!function(e,t){if(!(e instanceof 
+t))throw new TypeError("Cannot call a class as a function")}(this,t);var
+ s=function(e,t){if(!e)throw new ReferenceError("this hasn't been 
+initialised - super() hasn't been called");return!t||"object"!=typeof 
+t&&"function"!=typeof t?e:t}(this,e.call(this));return 
+s.cache=n,s.store=o,s.services=r,s.options=a,s.logger=i.create("cacheConnector"),s.cache&&s.cache.init&&s.cache.init(r,a.cache,a),s}return
+ A(t,e),t.prototype.load=function(e,t,n){var 
+o=this;if(!this.cache)return n&&n();var 
+r=H({},this.cache.options,this.options.cache),i="string"==typeof 
+e?this.services.languageUtils.toResolveHierarchy(e):e;r.enabled?this.cache.load(i,function(e,t){if(e&&o.logger.error("loading
+ languages "+i.join(", ")+" from cache failed",e),t)for(var r in 
+t)if(Object.prototype.hasOwnProperty.call(t,r))for(var a in 
+t[r])if(Object.prototype.hasOwnProperty.call(t[r],a)&&"i18nStamp"!==a){var
+ 
+s=t[r][a];s&&o.store.addResourceBundle(r,a,s)}n&&n()}):n&&n()},t.prototype.save=function(){this.cache&&this.options.cache&&this.options.cache.enabled&&this.cache.save(this.store.data)},t}(a);function
+ I(e){return"string"==typeof e.ns&&(e.ns=[e.ns]),"string"==typeof 
+e.fallbackLng&&(e.fallbackLng=[e.fallbackLng]),"string"==typeof 
+e.fallbackNS&&(e.fallbackNS=[e.fallbackNS]),e.whitelist&&e.whitelist.indexOf("cimode")<0&&e.whitelist.push("cimode"),e}var
+ V=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var 
+n=arguments[t];for(var o in 
+n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return 
+e};function U(e,t){if(!e)throw new ReferenceError("this hasn't been 
+initialised - super() hasn't been called");return!t||"object"!=typeof 
+t&&"function"!=typeof t?e:t}function q(e,t){if("function"!=typeof 
+t&&null!==t)throw new TypeError("Super expression must either be null or
+ a function, not "+typeof 
+t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):function(e,t){for(var
+ n=Object.getOwnPropertyNames(t),o=0;o<n.length;o++){var 
+r=n[o],i=Object.getOwnPropertyDescriptor(t,r);i&&i.configurable&&void 
+0===e[r]&&Object.defineProperty(e,r,i)}}(e,t))}function K(){}var 
+F=new(function(e){function t(){var n=arguments.length>0&&void 
+0!==arguments[0]?arguments[0]:{},o=arguments[1];!function(e,t){if(!(e 
+instanceof t))throw new TypeError("Cannot call a class as a 
+function")}(this,t);var 
+r=U(this,e.call(this));if(r.options=I(n),r.services={},r.logger=i,r.modules={external:[]},o&&!r.isInitialized&&!n.isClone){var
+ a;if(!r.options.initImmediate)return 
+a=r.init(n,o),U(r,a);setTimeout(function(){r.init(n,o)},0)}return 
+r}return q(t,e),t.prototype.init=function(e,t){var n=this;function 
+o(e){return e?"function"==typeof e?new e:e:null}if("function"==typeof 
+e&&(t=e,e={}),e||(e={}),"v1"===e.compatibilityAPI?this.options=V({},{debug:!1,initImmediate:!0,ns:["translation"],defaultNS:["translation"],fallbackLng:["dev"],fallbackNS:!1,whitelist:!1,nonExplicitWhitelist:!1,load:"all",preload:!1,simplifyPluralSuffix:!0,keySeparator:".",nsSeparator:":",pluralSeparator:"_",contextSeparator:"_",saveMissing:!1,saveMissingTo:"fallback",missingKeyHandler:!1,postProcess:!1,returnNull:!0,returnEmptyString:!0,returnObjects:!1,joinArrays:!1,returnedObjectHandler:function(){},parseMissingKeyHandler:!1,appendNamespaceToMissingKey:!1,appendNamespaceToCIMode:!1,overloadTranslationOptionHandler:function(e){return{defaultValue:e[1]}},interpolation:{escapeValue:!0,format:function(e,t,n){return
+ 
+e},prefix:"{{",suffix:"}}",formatSeparator:",",unescapePrefix:"-",nestingPrefix:"$t(",nestingSuffix:")",defaultVariables:void
+ 0}},I(function(e){return 
+e.resStore&&(e.resources=e.resStore),e.ns&&e.ns.defaultNs?(e.defaultNS=e.ns.defaultNs,e.ns=e.ns.namespaces):e.defaultNS=e.ns||"translation",e.fallbackToDefaultNS&&e.defaultNS&&(e.fallbackNS=e.defaultNS),e.saveMissing=e.sendMissing,e.saveMissingTo=e.sendMissingTo||"current",e.returnNull=!e.fallbackOnNull,e.returnEmptyString=!e.fallbackOnEmpty,e.returnObjects=e.returnObjectTrees,e.joinArrays="\n",e.returnedObjectHandler=e.objectTreeKeyHandler,e.parseMissingKeyHandler=e.parseMissingKey,e.appendNamespaceToMissingKey=!0,e.nsSeparator=e.nsseparator||":",e.keySeparator=e.keyseparator||".","sprintf"===e.shortcutFunction&&(e.overloadTranslationOptionHandler=function(e){for(var
+ 
+t=[],n=1;n<e.length;n++)t.push(e[n]);return{postProcess:"sprintf",sprintf:t}}),e.whitelist=e.lngWhitelist,e.preload=e.preload,"current"===e.load&&(e.load="currentOnly"),"unspecific"===e.load&&(e.load="languageOnly"),e.backend=e.backend||{},e.backend.loadPath=e.resGetPath||"locales/__lng__/__ns__.json",e.backend.addPath=e.resPostPath||"locales/add/__lng__/__ns__",e.backend.allowMultiLoading=e.dynamicLoad,e.cache=e.cache||{},e.cache.prefix="res_",e.cache.expirationTime=6048e5,e.cache.enabled=e.useLocalStorage,(e=b(e)).defaultVariables&&(e.interpolation.defaultVariables=e.defaultVariables),e}(e)),{}):"v1"===e.compatibilityJSON?this.options=V({},{debug:!1,initImmediate:!0,ns:["translation"],defaultNS:["translation"],fallbackLng:["dev"],fallbackNS:!1,whitelist:!1,nonExplicitWhitelist:!1,load:"all",preload:!1,simplifyPluralSuffix:!0,keySeparator:".",nsSeparator:":",pluralSeparator:"_",contextSeparator:"_",saveMissing:!1,saveMissingTo:"fallback",missingKeyHandler:!1,postProcess:!1,returnNull:!0,returnEmptyString:!0,returnObjects:!1,joinArrays:!1,returnedObjectHandler:function(){},parseMissingKeyHandler:!1,appendNamespaceToMissingKey:!1,appendNamespaceToCIMode:!1,overloadTranslationOptionHandler:function(e){return{defaultValue:e[1]}},interpolation:{escapeValue:!0,format:function(e,t,n){return
+ 
+e},prefix:"{{",suffix:"}}",formatSeparator:",",unescapePrefix:"-",nestingPrefix:"$t(",nestingSuffix:")",defaultVariables:void
+ 
+0}},I(function(e){return(e=b(e)).joinArrays="\n",e}(e)),{}):this.options=V({},{debug:!1,initImmediate:!0,ns:["translation"],defaultNS:["translation"],fallbackLng:["dev"],fallbackNS:!1,whitelist:!1,nonExplicitWhitelist:!1,load:"all",preload:!1,simplifyPluralSuffix:!0,keySeparator:".",nsSeparator:":",pluralSeparator:"_",contextSeparator:"_",saveMissing:!1,saveMissingTo:"fallback",missingKeyHandler:!1,postProcess:!1,returnNull:!0,returnEmptyString:!0,returnObjects:!1,joinArrays:!1,returnedObjectHandler:function(){},parseMissingKeyHandler:!1,appendNamespaceToMissingKey:!1,appendNamespaceToCIMode:!1,overloadTranslationOptionHandler:function(e){return{defaultValue:e[1]}},interpolation:{escapeValue:!0,format:function(e,t,n){return
+ 
+e},prefix:"{{",suffix:"}}",formatSeparator:",",unescapePrefix:"-",nestingPrefix:"$t(",nestingSuffix:")",defaultVariables:void
+ 
+0}},this.options,I(e)),this.format=this.options.interpolation.format,t||(t=K),!this.options.isClone){this.modules.logger?i.init(o(this.modules.logger),this.options):i.init(null,this.options);var
+ r=new k(this.options);this.store=new 
+y(this.options.resources,this.options);var 
+a=this.services;a.logger=i,a.resourceStore=this.store,a.resourceStore.on("added
+ 
+removed",function(e,t){a.cacheConnector.save()}),a.languageUtils=r,a.pluralResolver=new
+ 
+N(r,{prepend:this.options.pluralSeparator,compatibilityJSON:this.options.compatibilityJSON,simplifyPluralSuffix:this.options.simplifyPluralSuffix}),a.interpolator=new
+ E(this.options),a.backendConnector=new 
+_(o(this.modules.backend),a.resourceStore,a,this.options),a.backendConnector.on("*",function(e){for(var
+ 
+t=arguments.length,o=Array(t>1?t-1:0),r=1;r<t;r++)o[r-1]=arguments[r];n.emit.apply(n,[e].concat(o))}),a.backendConnector.on("loaded",function(e){a.cacheConnector.save()}),a.cacheConnector=new
+ 
+D(o(this.modules.cache),a.resourceStore,a,this.options),a.cacheConnector.on("*",function(e){for(var
+ 
+t=arguments.length,o=Array(t>1?t-1:0),r=1;r<t;r++)o[r-1]=arguments[r];n.emit.apply(n,[e].concat(o))}),this.modules.languageDetector&&(a.languageDetector=o(this.modules.languageDetector),a.languageDetector.init(a,this.options.detection,this.options)),this.translator=new
+ 
+S(this.services,this.options),this.translator.on("*",function(e){for(var
+ 
+t=arguments.length,o=Array(t>1?t-1:0),r=1;r<t;r++)o[r-1]=arguments[r];n.emit.apply(n,[e].concat(o))}),this.modules.external.forEach(function(e){e.init&&e.init(n)})}var
+ 
+s;["getResource","addResource","addResources","addResourceBundle","removeResourceBundle","hasResourceBundle","getResourceBundle"].forEach(function(e){n[e]=function(){var
+ 
+t;return(t=n.store)[e].apply(t,arguments)}}),"v1"===this.options.compatibilityAPI&&((s=this).lng=function(){return
+ i.deprecate("i18next.lng() can be replaced by i18next.language for 
+detected language or i18next.languages for languages ordered by 
+translation 
+lookup."),s.services.languageUtils.toResolveHierarchy(s.language)[0]},s.preload=function(e,t){i.deprecate("i18next.preload()
+ can be replaced with 
+i18next.loadLanguages()"),s.loadLanguages(e,t)},s.setLng=function(e,t,n){return
+ i.deprecate("i18next.setLng() can be replaced with 
+i18next.changeLanguage() or i18next.getFixedT() to get a translation 
+function with fixed language or namespace."),"function"==typeof 
+t&&(n=t,t={}),t||(t={}),!0===t.fixLng&&n?n(null,s.getFixedT(e)):s.changeLanguage(e,n)},s.addPostProcessor=function(e,t){i.deprecate("i18next.addPostProcessor()
+ can be replaced by i18next.use({ type: 'postProcessor', name: 'name', 
+process: fc })"),s.use({type:"postProcessor",name:e,process:t})});var 
+l=function(){n.changeLanguage(n.options.lng,function(e,o){n.isInitialized=!0,n.logger.log("initialized",n.options),n.emit("initialized",n.options),t(e,o)})};return
+ 
+this.options.resources||!this.options.initImmediate?l():setTimeout(l,0),this},t.prototype.loadResources=function(){var
+ e=this,t=arguments.length>0&&void 
+0!==arguments[0]?arguments[0]:K;if(this.options.resources)t(null);else{if(this.language&&"cimode"===this.language.toLowerCase())return
+ t();var 
+n=[],o=function(t){t&&e.services.languageUtils.toResolveHierarchy(t).forEach(function(e){n.indexOf(e)<0&&n.push(e)})};if(this.language)o(this.language);else
+ 
+this.services.languageUtils.getFallbackCodes(this.options.fallbackLng).forEach(function(e){return
+ 
+o(e)});this.options.preload&&this.options.preload.forEach(function(e){return
+ 
+o(e)}),this.services.cacheConnector.load(n,this.options.ns,function(){e.services.backendConnector.load(n,e.options.ns,t)})}},t.prototype.reloadResources=function(e,t){e||(e=this.languages),t||(t=this.options.ns),this.services.backendConnector.reload(e,t)},t.prototype.use=function(e){return"backend"===e.type&&(this.modules.backend=e),"cache"===e.type&&(this.modules.cache=e),("logger"===e.type||e.log&&e.warn&&e.error)&&(this.modules.logger=e),"languageDetector"===e.type&&(this.modules.languageDetector=e),"postProcessor"===e.type&&v.addPostProcessor(e),"3rdParty"===e.type&&this.modules.external.push(e),this},t.prototype.changeLanguage=function(e,t){var
+ 
+n=this,o=function(e){e&&(n.language=e,n.languages=n.services.languageUtils.toResolveHierarchy(e),n.translator.changeLanguage(e),n.services.languageDetector&&n.services.languageDetector.cacheUserLanguage(e)),n.loadResources(function(o){!function(e,o){o&&(n.emit("languageChanged",o),n.logger.log("languageChanged",o)),t&&t(e,function(){return
+ 
+n.t.apply(n,arguments)})}(o,e)})};e||!this.services.languageDetector||this.services.languageDetector.async?!e&&this.services.languageDetector&&this.services.languageDetector.async?this.services.languageDetector.detect(o):o(e):o(this.services.languageDetector.detect())},t.prototype.getFixedT=function(e,t){var
+ n=this,o=function e(t){var o=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:{},r=V({},o);return 
+r.lng=r.lng||e.lng,r.lngs=r.lngs||e.lngs,r.ns=r.ns||e.ns,n.t(t,r)};return"string"==typeof
+ e?o.lng=e:o.lngs=e,o.ns=t,o},t.prototype.t=function(){var e;return 
+this.translator&&(e=this.translator).translate.apply(e,arguments)},t.prototype.exists=function(){var
+ e;return 
+this.translator&&(e=this.translator).exists.apply(e,arguments)},t.prototype.setDefaultNamespace=function(e){this.options.defaultNS=e},t.prototype.loadNamespaces=function(e,t){var
+ n=this;if(!this.options.ns)return t&&t();"string"==typeof 
+e&&(e=[e]),e.forEach(function(e){n.options.ns.indexOf(e)<0&&n.options.ns.push(e)}),this.loadResources(t)},t.prototype.loadLanguages=function(e,t){"string"==typeof
+ e&&(e=[e]);var n=this.options.preload||[],o=e.filter(function(e){return
+ n.indexOf(e)<0});if(!o.length)return 
+t();this.options.preload=n.concat(o),this.loadResources(t)},t.prototype.dir=function(e){if(e||(e=this.languages&&this.languages.length>0?this.languages[0]:this.language),!e)return"rtl";return["ar","shu","sqr","ssh","xaa","yhd","yud","aao","abh","abv","acm","acq","acw","acx","acy","adf","ads","aeb","aec","afb","ajp","apc","apd","arb","arq","ars","ary","arz","auz","avl","ayh","ayl","ayn","ayp","bbz","pga","he","iw","ps","pbt","pbu","pst","prp","prd","ur","ydd","yds","yih","ji","yi","hbo","men","xmn","fa","jpr","peo","pes","prs","dv","sam"].indexOf(this.services.languageUtils.getLanguagePartFromCode(e))>=0?"rtl":"ltr"},t.prototype.createInstance=function(){return
+ new t(arguments.length>0&&void 
+0!==arguments[0]?arguments[0]:{},arguments[1])},t.prototype.cloneInstance=function(){var
+ e=this,n=arguments.length>0&&void 
+0!==arguments[0]?arguments[0]:{},o=arguments.length>1&&void 
+0!==arguments[1]?arguments[1]:K,r=V({},this.options,n,{isClone:!0}),i=new
+ 
+t(r,o);return["store","services","language"].forEach(function(t){i[t]=e[t]}),i.translator=new
+ S(i.services,i.options),i.translator.on("*",function(e){for(var 
+t=arguments.length,n=Array(t>1?t-1:0),o=1;o<t;o++)n[o-1]=arguments[o];i.emit.apply(i,[e].concat(n))}),i.init(r,o),i},t}(a));t.a=F,F.changeLanguage.bind(F),F.cloneInstance.bind(F),F.createInstance.bind(F),F.dir.bind(F),F.exists.bind(F),F.getFixedT.bind(F),F.init.bind(F),F.loadLanguages.bind(F),F.loadNamespaces.bind(F),F.loadResources.bind(F),F.off.bind(F),F.on.bind(F),F.setDefaultNamespace.bind(F),F.t.bind(F),F.use.bind(F)},28:function(e,t,n){"use
+ strict";t.a=function(e){var t=!1;window.XMLHttpRequest?t=new 
+XMLHttpRequest:window.ActiveXObject&&(t=new 
+ActiveXObject("Microsoft.XMLHTTP")),!1!==t&&(t.open("GET",e,!0),t.send())}},424:function(e,t,n){"use
+ 
+strict";n.r(t),n(2).a.init(TC.localePath,TC.locale,!1,TC.init)},55:function(e,t,n){e.exports=n(109).default}},[[424,0]]]);
+//]]>
+</script>
+<script src="solitary-scientist_files/runtime-35cf524207974d2ad30a.js"></script>
+
+  
+
+
+<iframe scrolling="no" allowtransparency="true" src="solitary-scientist_files/widget_iframe.html" title="Twitter settings iframe" style="display: none;" frameborder="0"></iframe><iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" title="Twitter analytics iframe" frameborder="0"></iframe></body></html>

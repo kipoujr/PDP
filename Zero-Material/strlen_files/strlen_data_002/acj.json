@@ -1,0 +1,29 @@
+OX_1381503485({
+  "ads":{
+    "chain":1,
+    "medium":"w",
+    "record_tmpl":"https://delivery-europe-west-1.openx.net/{medium}/1.0/{rtype}?ph=94ef58655625200a8cfc5b15afcd0b94ad52d590&ts={txn_state}",
+    "pixels":"https://eu-u.openx.net/w/1.0/pd?plm=1&ph=94ef58655625200a8cfc5b15afcd0b94ad52d590&gdpr=1",
+    "oxt": 89.099,
+    "adunits" : [
+      {
+        "auid":"540091098",
+        "chain_timeout":"",
+        "chain":[
+          {
+            "is_fallback":1,
+            "ad_id":"0",
+            "adv_acct_id":"",
+            "width":"300",
+            "height":"250",
+            "html":"<!-- PubMatic ad tag (Javascript) : .2 174571.4 programiz.com ROW tier1 desktop PG Middle Desktop 300x250 | https://programiz.com/ | 300 x 250 Sidekick -->\n<script type=\"text/javascript\">\n\t\tvar pubId=38381;\n\t\tvar siteId=289455;\n\t\tvar kadId=1422520;\n\t\tvar kadwidth=300;\n\t\tvar kadheight=250;\n\t\tvar kadtype=1;\n\t\tvar kadGdpr=1; <!-- set to 1 if inventory is GDPR compliant -->\n\t\tvar kadGdprConsent = \"INSERT_USER_GDPR_CONSENT_STRING_DATA_FROM_CMP_HERE\";\n\t\tvar kadpageurl= \"https%3A%2F%2Fprogramiz.com%2F\";\n</script>\n<script type=\"text/javascript\" src=\"https://ads.pubmatic.com/AdServer/js/showad.js\"></script>",
+            "target":"_blank",
+            "ts":"2DAABBgABAAECAAIBAAsAAgAAAGMcGApMeWx6T0NmWHhuHBaN3vXJ8piSgeUBFs2629Li0vyk_QEAHBaT9q3T3a3aqbwBFoWOmLT-jr7QkQEAFvLas7ILFQIALBwVAgAAHCa0i4mDBBUEFQQmoouJgwQW0KoJAAAA",
+            "type":"html",
+            "ad_url":"<!-- PubMatic ad tag (Javascript) : .2 174571.4 programiz.com ROW tier1 desktop PG Middle Desktop 300x250 | https://programiz.com/ | 300 x 250 Sidekick -->\n<script type=\"text/javascript\">\n\t\tvar pubId=38381;\n\t\tvar siteId=289455;\n\t\tvar kadId=1422520;\n\t\tvar kadwidth=300;\n\t\tvar kadheight=250;\n\t\tvar kadtype=1;\n\t\tvar kadGdpr=1; <!-- set to 1 if inventory is GDPR compliant -->\n\t\tvar kadGdprConsent = \"INSERT_USER_GDPR_CONSENT_STRING_DATA_FROM_CMP_HERE\";\n\t\tvar kadpageurl= \"https%3A%2F%2Fprogramiz.com%2F\";\n</script>\n<script type=\"text/javascript\" src=\"https://ads.pubmatic.com/AdServer/js/showad.js\"></script>"
+          }
+        ]
+      }
+    ]
+  }
+});

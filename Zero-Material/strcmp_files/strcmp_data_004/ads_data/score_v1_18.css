@@ -1,0 +1,119 @@
+HTML, BODY {
+  font-family: "Arial", san-serif;
+  font-weight: 700;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+IMG {
+  border: none;
+}
+
+#adContent {
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.poweredByGoogle {
+  background-image: url(https://googleads.g.doubleclick.net/pagead/images/powered-by-google.png);
+  background-repeat: no-repeat;
+  height: 17px;
+}
+
+.core {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.core A {
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.core-img IMG {
+  height: 100%;
+  margin: auto;
+  display: block;
+}
+
+.core-title {
+  text-align:-webkit-match-parent;
+}
+
+.core-title .sponsored {
+  font: 300 12px "Roboto";
+  color: #848484;
+  padding-bottom: 3px;
+  line-height: inherit;
+}
+
+.core-title A {
+  display: block;
+  text-decoration: none;
+}
+
+.core-title:hover {
+  text-decoration: underline;
+}
+
+.core-body {
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 1.2;
+  max-height: 100%;
+  padding: 4px;
+}
+
+.core-ad-pill {
+  white-space: nowrap;
+  display: inline-block;
+  bottom: 8px;
+  position: absolute;
+  left: 4px;
+}
+
+.core-ad-pill.rtl {
+  left: auto;
+  right: 4px;
+}
+
+.core-ad-pill .ad-badge {
+  background-color: #b3b3b3;
+  color: #ffffff;
+  font: 500 11px/13px "Roboto";
+  border-radius: 2px;
+  padding: 0 2px;
+  text-decoration-color: #b3b3b3;
+  margin-right: 4px;
+  float: left;
+}
+
+.core-ad-pill.rtl .ad-badge {
+  margin-right: auto;
+  margin-left: 4px;
+  float: right;
+}
+
+.core-ad-pill .url-or-advertiser {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font: 300 11px "Roboto";
+  color: #b3b3b3;
+  display: block;
+  vertical-align: middle;
+  width: auto;
+  text-decoration: none;
+}
+
+.core-ad-pill.rtl .url-or-advertiser {
+  direction: ltr;
+  text-align: right;
+}
+

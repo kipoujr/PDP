@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>STL - Καλλίνικος</title>
+    <link rel="stylesheet" href="Kallinikos_STL_files/bootstrap.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="Kallinikos_STL_files/font-awesome.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Kallinikos_STL_files/main.css">
+    <link rel="stylesheet" href="Kallinikos_STL_files/css.css">
+    <link rel="icon" type="image/png" href="https://kallinikos.github.io/assets/logo.png">
+    <meta name="viewport" id="vp" content="width=device-width, initial-scale=1">
+  <script src="Kallinikos_STL_files/embed.js" data-timestamp="1529009218685"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><link rel="prefetch" href="Kallinikos_STL_files/a_data/lounge.css"><link rel="prefetch" href="Kallinikos_STL_files/a_data/common.js"><link rel="prefetch" href="Kallinikos_STL_files/a_data/lounge.js"><link rel="prefetch" href="Kallinikos_STL_files/a_data/config.js"><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script src="Kallinikos_STL_files/alfie.js" async="" charset="UTF-8"></script></head>
+  <body><div id="MathJax_Message" style="display: none;"></div>
+    <header> 
+  <div id="logo"><a href="https://kallinikos.github.io/">Καλλίνικος</a></div>
+  <div id="motto">τύφλα να 'χει το e-maxx</div>
+</header>
+
+    <aside>
+  <a href="https://kallinikos.github.io/">Αρχική</a> <br>
+  <a href="https://github.com/kallinikos/kallinikos.github.io">Πηγαίος κώδικας</a> <br>
+  <a href="https://github.com/kallinikos/algorithms">Υλοποιήσεις</a> <br>
+</aside>
+
+    <section>
+      <script async="" src="Kallinikos_STL_files/MathJax.js"></script>
+<div class="content">
+  <div id="post">
+    <h1><a href="https://kallinikos.github.io/" class="home"><i class="fa fa-home" aria-hidden="true"></i></a><i class="fa fa-caret-right" aria-hidden="true"></i>STL</h1>
+    <p>Standard Template Library (STL)</p>
+
+<ul id="markdown-toc">
+  <li><a href="#%CF%83%CF%87%CE%AD%CF%83%CE%B7-%CF%84%CE%B7%CF%82-c-%CE%BC%CE%B5-%CF%84%CE%B7%CE%BD-c" id="markdown-toc-σχέση-της-c-με-την-c">Σχέση της C με την C++</a>    <ul>
+      <li><a href="#standard-%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82" id="markdown-toc-standard-βιβλιοθήκες">standard βιβλιοθήκες</a></li>
+    </ul>
+  </li>
+  <li><a href="#stl" id="markdown-toc-stl">STL</a></li>
+  <li><a href="#stl-containers" id="markdown-toc-stl-containers">STL containers</a>    <ul>
+      <li><a href="#iterators" id="markdown-toc-iterators">iterators</a></li>
+    </ul>
+  </li>
+  <li><a href="#initializer-list" id="markdown-toc-initializer-list">initializer list</a></li>
+  <li><a href="#pair" id="markdown-toc-pair">pair</a></li>
+  <li><a href="#vector" id="markdown-toc-vector">vector</a></li>
+  <li><a href="#string" id="markdown-toc-string">string</a></li>
+  <li><a href="#list" id="markdown-toc-list">list</a></li>
+  <li><a href="#priority_queue" id="markdown-toc-priority_queue">priority_queue</a></li>
+  <li><a href="#set" id="markdown-toc-set">set</a></li>
+  <li><a href="#map" id="markdown-toc-map">map</a></li>
+  <li><a href="#unordered_map" id="markdown-toc-unordered_map">unordered_map</a></li>
+  <li><a href="#multiset-multimap-%CE%BA%CE%B1%CE%B9-unordered_multimap" id="markdown-toc-multiset-multimap-και-unordered_multimap">multiset, multimap και unordered_multimap</a></li>
+  <li><a href="#%CF%83%CF%8D%CE%BD%CE%BF%CF%88%CE%B7-%CF%84%CF%89%CE%BD-%CE%BB%CE%B5%CE%B9%CF%84%CE%BF%CF%85%CF%81%CE%B3%CE%B9%CF%8E%CE%BD-%CF%84%CF%89%CE%BD-container" id="markdown-toc-σύνοψη-των-λειτουργιών-των-container">Σύνοψη των λειτουργιών των container</a></li>
+  <li><a href="#algorithm" id="markdown-toc-algorithm">algorithm</a>    <ul>
+      <li><a href="#sort" id="markdown-toc-sort">sort()</a></li>
+      <li><a href="#min-%CE%BA%CE%B1%CE%B9-max" id="markdown-toc-min-και-max">min() και max()</a></li>
+      <li><a href="#lower_bound-upper_bound-equal_range-%CE%BA%CE%B1%CE%B9-binary_search" id="markdown-toc-lower_bound-upper_bound-equal_range-και-binary_search">lower_bound(), upper_bound(), equal_range() και binary_search()</a></li>
+    </ul>
+  </li>
+  <li><a href="#%CF%80%CE%BB%CE%B5%CE%BF%CE%BD%CE%B5%CE%BA%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%B1-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%B5%CE%B9%CE%BF%CE%BD%CE%B5%CE%BA%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%B1-%CF%84%CF%89%CE%BD-containers-%CF%84%CE%B7%CF%82-stl" id="markdown-toc-πλεονεκτήματα-και-μειονεκτήματα-των-containers-της-stl">Πλεονεκτήματα και μειονεκτήματα των containers της STL</a></li>
+</ul>
+
+<h2 id="σχέση-της-c-με-την-c">Σχέση της C με την C++</h2>
+
+<p>Θα ξεκινήσουμε αυτήν την παράγραφο με μια εισαγωγή σχετικά με την 
+σχέση μεταξύ C και C++. Μπορούμε άτυπα να χωρίσουμε την C++ σε δύο μέρη,
+ τα οποία θα ονομάζουμε συναρτησιακό και αντικειμενοστραφές μέρος. Στους
+ διαγωνισμούς ασχολούμαστε μόνο με το συναρτησιακό μέρος. Ο όρος 
+«συναρτησιακός προγραμματισμός» προκύπτει από την χρήση συναρτήσεων και 
+τελεστών (που είναι και αυτοί συναρτήσεις) σχεδόν σε κάθε γραμμή των 
+προγραμμάτων μας.</p>
+
+<p>Η σχέση που συνδέει τις δύο γλώσσες C και C++ είναι σχέση εξέλιξης, 
+διότι η C++ είναι ουσιαστικά η μετεξέλιξη της C. Δηλαδή, η C++ προέκυψε 
+από την συναρτησιακή γλώσσα προγραμματισμού C με προσθήκη του 
+αντικειμενοστραφούς μέρους. Η γλώσσα C φυσικά υπάρχει αυτούσια και 
+χρησιμοποιείται ευρέως, ενώ μάλιστα ό,τι ξέρεις από το συναρτησιακό 
+μέρος της C++ ισχύει κανονικά και στην γλώσσα C, με ελάχιστες 
+εξαιρέσεις. Επομένως μέχρι στιγμής γνωρίζεις να προγραμματίζεις με δύο 
+γλώσσες, την C και την C++! Αλήθεια, δοκίμασε να γράψεις ένα πρόγραμμα 
+σε C!</p>
+
+<h4 id="standard-βιβλιοθήκες">standard βιβλιοθήκες</h4>
+<p>Όπως ξέρουμε η γλώσσα C++ (και η C) περιέχει ελάχιστες εντολές. Η 
+λειτουργικότητα και το πλήθος των δυνατοτήτων της εξασφαλίζεται μέσω των
+ βιβλιοθηκών που περιέχουν έτοιμες συναρτήσεις. Τέτοιες βιβλιοθήκες 
+μπορούν να δημιουργηθούν από τον καθένα, με βάση τις ήδη υπάρχουσες. Για
+ να τις χρησιμοποιήσει ένας άλλος προγραμματιστής πρέπει να τις 
+προμηθευτεί και να τις εγκαταστήσει στο προγραμματιστικό του περιβάλλον.
+ Για να υπάρχει όμως ένα κοινό πλαίσιο αναφοράς και δυνατοτήτων, η C και
+ η C++ συνοδεύονται πάντα από τις standard βιβλιοθήκες τους.</p>
+
+<p>Καθώς όμως η C++ είναι η μετεξέλιξη της C και το συναρτησιακό κομμάτι
+ της C++ ταυτίζεται με την γλώσσα C, μπορούμε να χρησιμοποιήσουμε σε ένα
+ πρόγραμμα C++ και τις βιβλιοθήκες της C! Σε κάθε λοιπόν 
+προγραμματιστικό περιβάλλον C++ είναι διαθέσιμες οι standard βιβλιοθήκες
+ της C και της C++. Αυτό όμως δεν ισχύει ανάποδα, δηλαδή σε 
+προγραμματιστικό περιβάλλον C είναι διαθέσιμες μόνο οι βιβλιοθήκες της 
+C. Για να συμπεριλάβουμε μια βιβλιοθήκη χρησιμοποιούμε την εντολή <code class="highlighter-rouge">#include</code>. Για να συμπεριλάβουμε μια βιβλιοθήκη της c πρέπει να βάλουμε ένα μικρό c μπροστά από το όνομα της:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cstdio&gt; //βιβλιοθήκη stdio
+#include &lt;cmath&gt;  //βιβλιοθήκη math
+</span></code></pre></div></div>
+
+<p>Για να συμπεριλάβουμε μια βιβλιοθήκη της C++ χρησιμοποιούμε την ίδια σύνταξη, χωρίς όμως το μικρό c.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Πρόσεξε ότι μαζί με τις δηλώσεις των βιβλιοθηκών γράψαμε και την εντολή <code class="highlighter-rouge">using namespace std;</code>
+ Όλο το περιεχόμενο των βιβλιοθηκών της C++ βρίσκεται δηλωμένο μέσα στο 
+namespace std. Αυτό γίνεται για διάφορους λόγους που ξεφεύγουν από τους 
+σκοπούς αυτού του βιβλίου. Με την εντολή αυτή δηλώνουμε ότι θα 
+χρησιμοποιούμε σε όλο μας το πρόγραμμα τα περιεχόμενα των βιβλιοθηκών 
+της C++ που δηλώσαμε.
+Οι standard βιβλιοθήκες των C και C++ είναι αχανείς. Εμείς όμως θα 
+χρησιμοποιούμε ένα μικρό μέρος αυτών. Σου προτείνω να ανατρέξεις στο 
+εγχειρίδιο της standard βιβλιοθήκης της C++ για να εντοπίσεις μόνος σου 
+τις βιβλιοθήκες που είναι χρήσιμες για εσένα.</p>
+
+<h2 id="stl">STL</h2>
+<p>H standard βιβλιοθήκη της C++ ονομάζεται STL, συντομογραφία για το 
+standard template library. Καθώς το επιπλέον μέρος που διαθέτει η C++ 
+αλλά όχι η C είναι ο αντικειμενοστραφής προγραμματισμός, είναι λογικό η 
+STL να περιέχει στοιχεία αντικειμενοστραφούς προγραμματισμού. Αυτός 
+είναι και ο λόγος που δεν μπορούμε να την χρησιμοποιήσουμε σε 
+προγράμματα της C και τελικά, η STL γίνεται ο λόγος για τον οποίον 
+χρησιμοποιούμε C++ και όχι C στους διαγωνισμούς. Αρκετά όμως με την C, 
+ας επανέλθουμε στο θέμα μας.
+Η STL μας παρέχει έτοιμες υλοποιημένες συναρτήσεις, με βασικότερη την 
+συνάρτηση <code class="highlighter-rouge">sort()</code> που ταξινομεί 
+πίνακες με βέλτιστη πολυπλοκότητα. Οι υπόλοιπες συναρτήσεις που περιέχει
+ είναι απλές και εύκολες για να τις υλοποιήσουμε μόνοι μας, είναι απλά 
+συντομεύσεις και δεν θα αναλυθούν. Θα αναφερθούν μόνο οι συναρτήσεις <code class="highlighter-rouge">swap()</code>, <code class="highlighter-rouge">min()</code>, <code class="highlighter-rouge">max()</code>, <code class="highlighter-rouge">prev()</code>, <code class="highlighter-rouge">next()</code>,
+ των οποίων η χρήση θα προτιμάται έναντι δικού μας κώδικα.
+Εκτός όμως από συναρτήσεις, η STL παρέχει και έτοιμες δομές δεδομένων, η
+ γνώση των οποίων είναι απαραίτητη. Έτσι κλείνει η εισαγωγή περί 
+standard βιβλιοθηκών και ξεκινάει το ζουμί αυτού του άρθρου.</p>
+
+<h2 id="stl-containers">STL containers</h2>
+<p>Τα containers είναι κλάσεις σχεδιασμένες για να αποθηκεύουν δεδομένα.
+ Για απλότητα μπορείς να θεωρήσεις ότι μια κλάση είναι ένα 
+κατασκευαστικό σχέδιο, ένα καλούπι. Με βάση λοιπόν μια κλάση μπορούμε να
+ φτιάξουμε ένα αντικείμενο. Για παράδειγμα, χρησιμοποιώντας την κλάση 
+vector, θα φτιάξουμε ένα αντικείμενο τύπου vector, δηλαδή έναν πίνακα.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;vector&gt; //περιλαμβάνουμε την αντίστοιχη βιβλιοθήκη
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span> <span class="c1">//απαραίτητο
+</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pinakas</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Θα λέμε ότι ο pinakas είναι ένα αντικείμενο τύπου vector, ή πιο απλά ο <code class="highlighter-rouge">pinakas</code>
+ είναι ένα vector. Θα μελετήσουμε τα vector διεξοδικά στην συνέχεια 
+αυτού του άρθρου. Ο κάθε τύπος container απαιτεί διαφορετικές 
+παραμέτρους για να δημιουργηθεί. Όπως βλέπουμε παραπάνω, ο vector 
+χρειάζεται τον τύπο δεδομένων που θα κρατάει (int). Οι παράμετροι 
+δηλώνονται εντός των &lt;&gt; και αν είναι περισσότεροι του ενός 
+χωρίζονται με κόμματα.</p>
+
+<p>Κάτι ακόμα που είναι σημαντικό και πρέπει να προσέξουμε είναι ότι δεν
+ ορίσαμε το μέγεθος του πίνακα! Αυτό δεν είναι λάθος γιατί το vector και
+ όλα τα υπόλοιπα containers με τα οποία θα ασχοληθούμε είναι δυναμικά, 
+δηλαδή το μέγεθός τους αυξομειώνεται αυτόματα για να χωράνε όλα τα 
+στοιχεία τους.</p>
+
+<p>Τα containers έχουν σχεδιαστεί ώστε οι κοινές λειτουργίες τους να 
+έχουν το ίδιο όνομα. Έτσι σε όλα τα container υπάρχει η λειτουργία <code class="highlighter-rouge">size()</code>
+ που επιστρέφει το μέγεθος του container, δηλαδή τον αριθμό των 
+στοιχείων που περιέχει. Για να χρησιμοποιήσουμε μια λειτουργία του 
+container χρησιμοποιούμε τον τελεστή <code class="highlighter-rouge">.</code> όπως στο παράδειγμα:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;set&gt;
+#include &lt;vector&gt;
+#include &lt;cstdio&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">empty</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">double</span><span class="o">&gt;</span> <span class="n">full</span><span class="o">=</span><span class="p">{</span><span class="mf">90.009</span><span class="p">,</span><span class="mf">12.32</span><span class="p">,</span><span class="mf">8.65</span><span class="p">,</span><span class="mf">20000.0</span><span class="p">};</span> <span class="c1">//αρχικοποίηση
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">empty</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="n">full</span><span class="p">.</span><span class="n">size</span><span class="p">());</span> <span class="c1">// τυπώνει 0 4
+</span>	<span class="n">empty</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span> <span class="c1">//εκχώρηση
+</span>	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">empty</span><span class="p">.</span><span class="n">size</span><span class="p">());</span> <span class="c1">// τυπώνει 5
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>Όπως βλέπουμε από το παραπάνω παράδειγμα, μπορούμε να αρχικοποιήσουμε
+ ένα container χρησιμοποιώντας initializer lists. Το εκπληκτικό όμως 
+είναι ότι μπορούμε να εκχωρήσουμε κατευθείαν δεδομένα στο container με 
+τον τελεστή =, κάτι που απαγορευόταν στους απλούς πίνακες.</p>
+
+<p>Κάθε container περιλαμβάνει την λειτουργία <code class="highlighter-rouge">empty()</code>, που επιστρέφει true αν το container είναι άδειο (δηλαδή έχει μέγεθος 0). Επίσης, κάθε container περιλαμβάνει την λειτουργία <code class="highlighter-rouge">clear()</code>, που διαγράφει όλα τα αποθηκευμένα στοιχεία, <code class="highlighter-rouge">erase()</code> που διαγράφει συγκεκριμένα στοιχεία και <code class="highlighter-rouge">insert()</code> ή <code class="highlighter-rouge">push_front</code>/<code class="highlighter-rouge">push_back()</code> για την εισαγωγή στοιχείων.</p>
+
+<h4 id="iterators">iterators</h4>
+<p>Σε κάποια containers επιτρέπεται η απευθείας πρόσβαση σε στοιχείο με 
+τον ίδιο ακριβώς τρόπο που γίνεται και στους απλούς πίνακες. Για 
+ορισμένες λειτουργίες όμως, ή για containers που δεν επιτρέπουν την 
+άμεση προσπέλαση υπάρχει ένας τύπος δεδομένων που ονομάζεται <code class="highlighter-rouge">iterator</code>
+ και αποθηκεύει την θέση ενός στοιχείου σε ένα container. Το iterator 
+είναι το ανάλογο ενός δείκτη στον μηχανισμό των απλών πινάκων. Για να 
+δηλώνουμε ένα iterator θα χρησιμοποιούμε το keyword auto. Με την χρήση 
+του auto απαιτείται ωστόσο η κατευθείαν αρχικοποίηση της μεταβλητής 
+αλλιώς το πρόγραμμα δεν μεταγλωττίζεται. Κάθε container διαθέτει τις 
+λειτουργίες <code class="highlighter-rouge">begin()</code> και <code class="highlighter-rouge">end()</code>. Η <code class="highlighter-rouge">begin()</code> επιστρέφει ένα iterator για το πρώτο στοιχείο του container, ενώ η <code class="highlighter-rouge">end()</code> για το υποθετικό στοιχείο που βρίσκεται μετά το τελευταίο.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">auto</span> <span class="n">first</span><span class="o">=</span><span class="n">myvector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">after_end</span><span class="o">=</span><span class="n">myvector</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Η μεταβλητή <code class="highlighter-rouge">first</code> είναι ένα 
+iterator που δείχνει στο πρώτο στοιχείο και όχι το πρώτο στοιχείο. Για 
+να πάρουμε την τιμή του πρώτου στοιχείου θα κάνουμε dereference τον 
+iterator first:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">*</span><span class="n">first</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Προσοχή: απαγορεύεται να κάνουμε dereference το iterator <code class="highlighter-rouge">after_end</code>,
+ επειδή πολύ απλά δεν δείχνει σε κάποιο υπαρκτό στοιχείο. Επίσης μερικά 
+containers δεν επιτρέπουν την τροποποίηση στοιχείου μέσω των iterators! 
+Αυτό σημαίνει ότι το παρακάτω δεν επιτρέπεται για όλα τα container:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="n">first</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// compilation error αν δεν επιτρέπεται η τροποποίηση
+</span></code></pre></div></div>
+
+<p>Τα iterators είναι φτιαγμένα με βάση τους δείκτες. Έτσι μπορούμε 
+ακόμα να προχωρήσουμε ένα iterator ώστε να δείχνει στο επόμενο στοιχείο 
+με τον τελεστή ++. Ομοίως μπορούμε να χρησιμοποιήσουμε τον τελεστή –:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first</span><span class="o">++</span><span class="p">;</span>
+<span class="o">++</span><span class="n">first</span><span class="p">;</span>
+<span class="n">first</span><span class="o">--</span><span class="p">;</span>
+<span class="o">--</span><span class="n">first</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Για την θέση του ++ και του – ισχύουν οι γνωστοί κανόνες. Αν πάλι 
+θέλουμε να πάρουμε ένα iterator που δείχνει στο επόμενο ή στο 
+προηγούμενο στοιχείο, χωρίς όμως να προχωρήσουμε το iterator που έχουμε 
+χρησιμοποιούμε τις συναρτήσεις <code class="highlighter-rouge">prev()</code> και <code class="highlighter-rouge">next()</code>.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="o">*</span><span class="n">next</span><span class="p">(</span><span class="n">first</span><span class="p">),</span><span class="o">*</span><span class="n">prev</span><span class="p">(</span><span class="n">last</span><span class="p">));</span>
+<span class="c1">// τυπώνει το 2ο και το τελευταίο στοιχείο του container
+</span></code></pre></div></div>
+
+<p>Το γεγονός ότι η λειτουργία <code class="highlighter-rouge">end()</code>
+ επιστρέφει ένα μη έγκυρο iterator αποτελεί μια πολύ συχνή αιτία 
+σφαλμάτων όταν δουλεύουμε με την STL. Θα δούμε όμως παρακάτω ότι τα 
+containers είναι πλήρως εναρμονισμένα με τους υλοποιημένους αλγόριθμους 
+σε μορφή συναρτήσεων που περιέχει η STL.
+Για να προσπελάσουμε κάθε στοιχείο ενός container, αρκεί να ορίσουμε 
+έναν iterator με την τιμή <code class="highlighter-rouge">begin()</code> και να τον προχωράμε βήμα βήμα μέχρι να πετύχουμε το στοιχείο <code class="highlighter-rouge">end()</code>. Αυτό γίνεται εύκολα με ένα loop</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span><span class="o">=</span><span class="n">myvector</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span><span class="o">!=</span><span class="n">myvector</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">*</span><span class="n">it</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Το παραπάνω μπορεί να γραφτεί και πιο σύντομα:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span><span class="o">:</span><span class="n">myvector</span><span class="p">)</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="n">it</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Στην πρώτη περίπτωση όμως το <code class="highlighter-rouge">it</code> είναι ένας iterator, επομένως απαιτείται η χρήση του τελεστή <code class="highlighter-rouge">*</code> για να παίρνουμε την τιμή στου στοιχείου μέσα στο loop. Στην δεύτερη περίπτωση, το <code class="highlighter-rouge">it</code> είναι μια μεταβλητή στην οποία εκχωρούνται διαδοχικά τα στοιχεία του myvector, οπότε δεν βάζουμε τελεστή <code class="highlighter-rouge">*</code>.</p>
+
+<p>Το vector επιτρέπει την τροποποίηση των στοιχείων του, οπότε θα 
+μπορούσαμε να χρησιμοποιήσουμε τον iterator για να εκχωρήσουμε μία άλλη 
+τιμή στην θέση στην οποία δείχνει.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span><span class="o">=</span><span class="n">myvector</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span><span class="o">!=</span><span class="n">myvector</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">*</span><span class="n">it</span><span class="p">);</span>
+	<span class="o">*</span><span class="n">it</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Αυτό όμως δεν δουλεύει στην δεύτερη περίπτωση, γιατί όπως είπαμε στην μεταβλητή <code class="highlighter-rouge">it</code> εκχωρούνται διαδοχικά όλα τα στοιχεία του <code class="highlighter-rouge">myvector</code>. Δηλαδή η μεταβλητή <code class="highlighter-rouge">it</code> είναι ένα αντίγραφο του εκάστοτε στοιχείου, οπότε μια εκχώρηση θα επηρέαζε μόνο την <code class="highlighter-rouge">it</code> και όχι τα στοιχεία του <code class="highlighter-rouge">myvector</code>. Αν θέλουμε να επηρεάζονται και τα στοιχεία του <code class="highlighter-rouge">myvector</code> θα χρησιμοποιήσουμε μια αναφορά:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">it</span><span class="o">:</span><span class="n">myvector</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">it</span><span class="p">);</span>
+	<span class="n">it</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// το myvector έχει μηδενιστεί
+</span></code></pre></div></div>
+
+<h2 id="initializer-list">initializer list</h2>
+<p>Αυτή είναι μια βοηθητική δομή δεδομένων που χρησιμοποιείται στην 
+C++11 και νεότερες εκδόσεις. Για να δηλώσουμε μια initializer list 
+χρησιμοποιούμε {} και μέσα σε αυτές βάζουμε στοιχεία χωρισμένα με κόμμα.
+ Μπορούμε μάλιστα να εκχωρήσουμε μια initializer list σε μεταβλητή 
+εύκολα ως εξής:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">auto</span> <span class="n">initlist</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">};</span>
+</code></pre></div></div>
+
+<p>Η initializer list δεν έχει μεθόδους. Είναι όπως είπαμε βοηθητική 
+δομή που χρησιμεύει για την αρχικοποίηση άλλων δομών, για παράδειγμα 
+ενός πίνακα. Τα container της STL είναι σχεδιασμένα για να δέχονται 
+initializer lists και έτσι ο κώδικάς μας γίνεται απλούστερος. Η χρήση 
+και η σπουδαιότητα της δομής αυτής θα φανεί άμεσα, στις επόμενες δομές 
+δεδομένων.</p>
+
+<h2 id="pair">pair</h2>
+<p>Η πιο απλή δεδομένων που υπάρχει στην STL είναι το <code class="highlighter-rouge">pair</code>.
+ Ουσιαστικά είναι ένα ζευγάρι μεταβλητών οποιουδήποτε τύπου. Για να τα 
+χρησιμοποιήσουμε πρέπει να συμπεριλάβουμε το αρχείο vector ή το αρχείο 
+algorithm. Για την δήλωσή τους απαιτούνται ως παράμετροι οι τύποι των 
+δύο μεταβλητών, ενώ μπορούμε να τα αρχικοποιήσουμε με δύο τρόπους.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pair</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span><span class="p">,</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">pair1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">23232121212121</span><span class="p">,</span><span class="sc">'f'</span><span class="p">};</span> <span class="c1">//initializer list
+</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pair2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Για να προσπελάσουμε (εγγράψουμε ή αναγνώσουμε) το πρώτο στοιχείο χρησιμοποιούμε το πεδίο <code class="highlighter-rouge">first</code> του pair, ενώ για το δεύτερο το <code class="highlighter-rouge">second</code>. Προσοχή, τα <code class="highlighter-rouge">first</code> και <code class="highlighter-rouge">second</code> δεν είναι λειτουργίες και για αυτό δεν συντάσσονται με παρενθέσεις.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pair1</span><span class="p">.</span><span class="n">first</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">pair1</span><span class="p">.</span><span class="n">second</span><span class="o">=</span><span class="sc">'a'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Μπορούμε να συγκρίνουμε δύο pairs που έχουν μεταβλητές του ίδιου 
+τύπου με τους τελεστές ==, !=, &lt;, &lt;=, &gt; , &gt;=. Κατά την 
+σύγκριση αρχικά λαμβάνονται υπόψη μόνο τα πεδία first. Αν τα δύο πεδία 
+είναι ίσα, τότε συγκρίνονται τα πεδία second, αλλιώς επιστρέφεται το 
+αποτέλεσμα της σύγκρισης για τα πεδία first.</p>
+
+<h2 id="vector">vector</h2>
+<p>Το vector (στα ελληνικά διάνυσμα) είναι ουσιαστικά ένας πίνακας. 
+Χρησιμοποιείται με τον ίδιο τρόπο που χρησιμοποιούνται και οι απλοί 
+πίνακες της C++, έχει τα ίδια μειονεκτήματα και πλεονεκτήματα με αυτούς.
+ Η διαφορά έγκειται στο δυναμικό τους μέγεθος. Τα vectors ορίζονται 
+χωρίς να δοθεί μέγεθος, αλλά μόνο ο τύπος δεδομένων που αποθηκεύουν. Για
+ να εισαχθεί ένα στοιχείο στο τέλος του vector χρησιμοποιείται η εντολή <code class="highlighter-rouge">push_back()</code>.
+ Ισχύουν (όπως και σε κάθε άλλο container που θα δούμε παρακάτω) όλοι οι
+ γενικοί κανόνες που είπαμε πριν. Ακολουθεί ένα παράδειγμα με την χρήση 
+τους:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;cmath&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">pinakas2d</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Give n, number of points in plane &gt;&gt; "</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">scanf</span><span class="p">(</span><span class="s">"%d%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+		<span class="n">pinakas2d</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">});</span>
+	<span class="p">}</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Which is the central point? (Type a number from 0 to %d) &gt;&gt;"</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">center</span><span class="p">;</span>
+	<span class="k">do</span> <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">center</span><span class="p">);</span>
+	<span class="k">while</span> <span class="p">(</span><span class="n">center</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">center</span><span class="o">&gt;=</span><span class="n">n</span><span class="p">);</span>
+	
+	<span class="kt">int</span> <span class="n">x0</span><span class="o">=</span><span class="n">pinakas2d</span><span class="p">[</span><span class="n">center</span><span class="p">].</span><span class="n">first</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">y0</span><span class="o">=</span><span class="n">pinakas2d</span><span class="p">[</span><span class="n">center</span><span class="p">].</span><span class="n">second</span><span class="p">;</span>
+	<span class="c1">// 1ος τρόπος
+</span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"Distnce from point %d to point %d is: %.2lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">center</span><span class="p">,</span>
+		<span class="n">hypot</span><span class="p">(</span><span class="n">pinakas2d</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">first</span><span class="o">-</span><span class="n">x0</span><span class="p">,</span><span class="n">pinakas2d</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">second</span><span class="o">-</span><span class="n">y0</span><span class="p">));</span>
+		
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="c1">//2ος τρόπος
+</span>	<span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">it</span><span class="o">:</span><span class="n">pinakas2d</span><span class="p">)</span> <span class="c1">//χρησιμοποιούμε &amp; για ταχύτητα, δεν γίνεται διαδοχική εκχώρηση των pairs στο it.
+</span>	<span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"Distnce from point %d to point %d is: %.2lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">center</span><span class="p">,</span>
+		<span class="n">hypot</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="n">first</span><span class="o">-</span><span class="n">x0</span><span class="p">,</span><span class="n">it</span><span class="p">.</span><span class="n">second</span><span class="o">-</span><span class="n">y0</span><span class="p">));</span>
+		<span class="n">i</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+		
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="string">string</h2>
+<p>Το string είναι μια εύχρηστη δομή που μας επιτρέπει να αποθηκεύουμε 
+κείμενο. Χρησιμοποιεί δομή vector για να αποθηκεύει τους χαρακτήρες, 
+οπότε ισχύουν όλα όσα ξέρουμε για τα vector. Ταυτόχρονα προσφέρει τις 
+χρήσιμες μεθόδους <code class="highlighter-rouge">replace()</code>, που αντικαθιστά μέρος του string με ένα άλλο, <code class="highlighter-rouge">find()</code> που εκτελεί γραμμική αναζήτηση για εύρεση substring και <code class="highlighter-rouge">substring()</code>
+ που επιστρέφει ένα μέρος του string ως καινούριο string. Επίσης, οι 
+λογικοί τελεστές ==, !=, &gt;, &lt;, &gt;=, &lt;= μπορούν να επιδράσουν 
+σε αυτά και να συγκρίνουν λεξικογραφικά δύο strings, ενώ οι τελεστές + ,
+ = και += για να ενώσουν δύο string, και να κάνουν απλή εκχώρηση και 
+προσθετική εκχώρηση αντίστοιχα.</p>
+
+<h2 id="list">list</h2>
+<p>Η λίστα υποστηρίζει όλες τις λειτουργίες που υποστηρίζει και το 
+vector. Έτσι, υπάρχουν οι ίδιες μέθοδοι και χρησιμοποιούνται με τον ίδιο
+ τρόπο, ενώ οι εξαιρέσεις είναι ελάχιστες. Η λίστα περιέχει περισσότερες
+ μεθόδους, τις οποίες μπορείτε να μελετήσετε αναλυτικά στο documentation
+ της STL.</p>
+
+<p>H διαφορά της με το vector όμως είναι η πολυπλοκότητα με την οποία 
+δουλεύει κάθε μέθοδος. Αυτό είναι άμεση συνέπεια του τρόπου με τον οποίο
+ αποθηκεύονται τα δεδομένα στις δύο αυτές δομές. Για παράδειγμα, σε ένα 
+vector η προσπέλαση τυχαίου στοιχείο κοστίζει O(1) ενώ σε μία λίστα 
+O(n), όπου n είναι το πλήθος των στοιχείων της λίστας.</p>
+
+<p>Επιπλέον, η list δεν σχετίζεται καθόλου με την initializer list. Η 
+list είναι ένα κανονικό και πλήρως λειτουργικό container της STL, σε 
+αντίθεση με την initializer list που δεν έχει μεθόδους και είναι 
+βοηθητικό container.</p>
+
+<h2 id="priority_queue">priority_queue</h2>
+<p>Η ουρά προτεραιότητας είναι μια δομή δεδομένων όμοια με την ουρά. Σε 
+μία ουρά τα δεδομένα εισάγονται πάντα στο τέλος και εξάγονται πάντα από 
+την αρχή (κανόνας FIFO-first in first out). Η ουρά υπάρχει έτοιμη 
+υλοποιημένη στην STL, όμως πάντα μπορούμε να χρησιμοποιούμε list αντί 
+για queue, καθώς η λίστα υποστηρίζει τις ίδιες και περισότερες 
+δυνατότητες από την ουρά.</p>
+
+<p>Η priority_queue όμως δεν μπορεί να αντικατασταθεί από μία λίστα. Σε 
+μία priority_queue έχουμε πρόσβαση μόνο στο πρώτο στοιχείο. Επομένως η 
+ουρά προτεραιότητας υποστηρίζει τρεις βασικές μεθόδους, <code class="highlighter-rouge">top()</code> η οποία μας δίνει πρόσβαση στο πρώτο στοιχείο, <code class="highlighter-rouge">pop()</code> η οποία διαγράφει το πρώτο στοιχείο και φυσικά <code class="highlighter-rouge">push()</code> η οποία εισάγει ένα στοιχείο στην ουρά.</p>
+
+<p>Η ουρά προτεραιότητας λειτουργεί με τον απλό κανόνα ότι το πρώτο 
+στοιχείο είναι πάντα το μεγαλύτερο στην ουρά. Έτσι, όταν κάνουμε push η 
+ουρά αναδιατάσσει τα στοιχεία της ώστε το μεγαλύτερο να βρίσκεται στην 
+αρχή. Προσοχή όμως, τα δεδομένα στην ουρά προτεραιότητας δεν βρίσκονται 
+ταξινομημένα και δεν υπάρχει τρόπος να αποκτήσουμε πρόσβαση σε τυχαίο 
+στοιχείο, αν δεν διαγράψουμε πρώτα όλα τα μεγαλύτερα του.</p>
+
+<p>Σε μία ουρά προτεραιότητας σε χρονική πολυπλοκότητα η λειτουργία <code class="highlighter-rouge">top()</code> κοστίζει Ο(1), ενώ οι λειτουργίες <code class="highlighter-rouge">pop()</code> και <code class="highlighter-rouge">push()</code> κοστίζουν O(logn), όπου n το πλήθος των στοιχείων που περιέχει η ουρά.</p>
+
+<h2 id="set">set</h2>
+<p>Το set, όπως και η ουρά προτεραιότητας και το map που θα δούμε στη 
+συνέχεια είναι δενδρικές δομές δεδομένων. Σε αντίθεση με τους πίνακες 
+και τις λίστες οι δενδρικές δομές δεδομένων αναδιατάσσουν αυτόματα την 
+σειρά των στοιχείων έτσι ώστε να πετυχαίνεται η βέλτιστη πολυπλοκότητα 
+για τις διάφορες μεθόδους. Το set διέπεται από τους δύο απλούς κανόνες:</p>
+<ol>
+  <li>Τα στοιχεία είναι ταξινομημένα στο set σε αύξουσα σειρά.</li>
+  <li>Δεν υπάρχουν διπλά στοιχεία (δηλαδή στοιχεία που θεωρούνται ίσα).</li>
+</ol>
+
+<p>Το set δεν επιτρέπει άμεση προσπέλαση τυχαίου στοιχείου, παρά μόνο 
+του πρώτου και του τελευταίου. Επιτρέπεται όμως η διάσχιση διαδοχικών 
+στοιχείων, όπως ακριβώς και με μια λίστα. Σε ένα set, υπάρχουν οι 
+βασικές μέθοδοι που ειπώθηκαν στην αρχή. Χαρακτηριστική όμως είναι η 
+μέθοδος <code class="highlighter-rouge">find()</code>, που βρίσκει ένα στοιχείο με χρονική πολυπλοκότητα O(logn). Επιπλέον οι μέθοδοι <code class="highlighter-rouge">insert()</code> και <code class="highlighter-rouge">erase()</code>
+ κοστίζουν Ο(logn) εάν δεν τους δοθεί iterator ως όρισμα, διότι θα 
+πρέπει να κληθεί πρώτα η find για να βρεθεί η σωστή θέση στην οποία θα 
+γίνει εισαγωγή του νέου στοιχείου, ή να βρεθεί το στοιχείο που θα 
+διαγραφεί.</p>
+
+<h2 id="map">map</h2>
+<p>Το map είναι μια δομή που θυμίζει κλασσικό πίνακα, με την διαφορά ότι
+ το index που δίνουμε δεν είναι απαραίτητα τύπου int και μάλιστα 
+φραγμένο σε ένα κλειστό διάστημα αριθμών. Μπορούμε κάλλιστα να 
+δημιουργήσουμε map που δέχεται σαν index floats (μην το κάνετε ποτέ, 
+λόγω σφαλμάτων ακρίβειας στα floats) ή ακόμα και strings! Για να 
+χρησιμοποιήσουμε map, πρέπει να συμπεριλάβουμε στο πρόγραμμά μας την 
+βιβλιοθήκη <code class="highlighter-rouge">&lt;map&gt;</code> και κατά την δήλωση να δώσουμε τον τύπο που θα έχουν τα index και τον τύπο δεδομένων που θα αποθηκεύει το map.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;map&gt;
+#include &lt;string&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">mymap</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Για να αποκτήσουμε πρόσβαση σε ένα στοιχείο, χρησιμοποιούμε τον 
+τελεστή [], δηλαδή όπως ακριβώς κάνουμε προσπέλαση στοιχείου σε πίνακα! 
+Η μόνη διαφορά είναι στην περίπτωση που το index που δίνουμε δεν 
+αντιστοιχεί σε κανένα στοιχείο. Θυμηθείτε ότι το map είναι δυναμικό 
+container, που σημαίνει ότι το μέγεθός του αυξομειώνεται αυτόματα. Αν 
+χρησιμοποιήσουμε το παραπάνω κομμάτι κώδικα θα δηλωθεί ένα κενό map. Σε 
+αυτήν την περίπτωση λοιπόν, όποιο index και αν δώσουμε δεν θα 
+αντιστοιχεί σε κανένα στοιχείο. Κάθε φορά που γίνεται αυτό, 
+δημιουργείται καινούριο στοιχείο. Αν δεν δοθεί αρχική τιμή, το στοιχείο 
+αρχικοποιείται αυτόματα στην default τιμή (0 για int, float κλπ, κενό 
+string για string).</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;map&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">mymap</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">mymap</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">mymap</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+	<span class="n">mymap</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span><span class="n">mymap</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span><span class="n">mymap</span><span class="p">[</span><span class="mi">35</span><span class="p">]);</span> <span class="c1">// τυπώνει 1 11
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>Ας δούμε ακόμα ένα παράδειγμα:</p>
+
+<p>ΛΑΘΟΣ</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;map&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">mymap</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">mymap</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"mymap[10] exists and has a value of 0"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Σε αυτήν την περίπτωση η τιμή <code class="highlighter-rouge">mymap[10]</code>
+ δεν υπάρχει, όμως δημιουργείται αυτόματα εκείνη τη στιγμή, 
+αρχικοποιείται με 0 και έτσι τυπώνεται το μήνυμα! Για να το αποφύγουμε 
+αυτό θα χρησιμοποιήσουμε τη μέθοδο <code class="highlighter-rouge">find()</code>. H μέθοδος <code class="highlighter-rouge">find()</code>
+ επιστρέφει έναν iterator στο στοιχείο του οποίου το index δίνουμε προς 
+εύρεση, αλλιώς αν το στοιχείο δεν υπάρχει επιστρέφεται το <code class="highlighter-rouge">map.end()</code>.</p>
+
+<p>ΣΩΣΤΟ</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;map&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">mymap</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">mymap</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">!=</span> <span class="n">mymap</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">mymap</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"mymap[10] exists and has a value of 0"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Καθώς το map είναι ουσιαστικά ένα set που δέχεται pairs, οι μέθοδοι <code class="highlighter-rouge">[]</code>, <code class="highlighter-rouge">erase()</code> και <code class="highlighter-rouge">find()</code> κοστίζουν O(logn).</p>
+<h2 id="unordered_map">unordered_map</h2>
+<p>Το container αυτό υπάρχει μόνο στις εκδόσεις c++11 και νεότερες. 
+Κάνει την ίδια περίπου δουλειά με το map, με την διαφορά ότι αποθηκεύει 
+τα δεδομένα του με διαφορετικό τρόπο. Όπως δηλώνει και το όνομα του, τα 
+στοιχεία του δεν είναι ταξινομημένα. Έτσι μια διάσχιση ξεκινώντας από το
+ <code class="highlighter-rouge">begin()</code> και τελειώνοντας στο <code class="highlighter-rouge">end()</code> θα μας δώσει όλα τα στοιχεία του, όμως με κάποια τυχαία σειρά.</p>
+
+<p>Το πλεονέκτημα αυτής της δομής είναι ότι οι μέθοδοι <code class="highlighter-rouge">[]</code>, <code class="highlighter-rouge">erase()</code> και <code class="highlighter-rouge">find()</code>
+ κοστίζουν Ο(1). Πως γίνεται αυτό; Το unordered map είναι ουσιαστικά μία
+ υλοποίηση του hash_table. Κάθε κλειδί (index) αντιστοιχίζεται σε έναν 
+αριθμό ενός κλειστού διαστήματος [0,x]. Έτσι τα δεδομένα μπορούν να 
+αποθηκευτούν σε έναν πίνακα. Με την χρήση της ίδιας συνάρτησης 
+αντιστοίχισης (που τρέχει σε O(1)) μπορεί να ελεγχθεί αν υπάρχει κάποιο 
+index, ή να βρεθεί η θέση ενός στοιχείου στο hash_table.</p>
+
+<h2 id="multiset-multimap-και-unordered_multimap">multiset, multimap και unordered_multimap</h2>
+<p>Τα τρία container set, map και unordered_map δεν επιτρέπουν την 
+ύπαρξη διπλών στοιχείων. Στην περίπτωση των map και unordered_map, δεν 
+επιτρέπεται να υπάρχουν δύο στοιχεία που έχουν το ίδιο index. Τα 
+multiset, multimap και unordered_multimap είναι τα αντίστοιχα container 
+που άρουν όμως αυτόν τον περιορισμό. Προσοχή: στα containers multimap 
+και unordered_multimap δεν υπάρχει η μέθοδος <code class="highlighter-rouge">[]</code>.</p>
+
+<h2 id="σύνοψη-των-λειτουργιών-των-container">Σύνοψη των λειτουργιών των container</h2>
+
+<div class="table-wrapper dirty teaser-mode" data-index="0"><table>
+  <thead>
+    <tr>
+      <th>Μέθοδος</th>
+      <th>Χρήση</th>
+      <th>Ορίσματα</th>
+      <th style="text-align: center">vector</th>
+      <th style="text-align: center">string</th>
+      <th style="text-align: center">list</th>
+      <th style="text-align: center">set</th>
+      <th style="text-align: center">multiset</th>
+      <th style="text-align: center">map</th>
+      <th style="text-align: center">multimap</th>
+      <th style="text-align: center">unordered_map</th>
+      <th style="text-align: center">unordered_multimap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(constructror)()</td>
+      <td>Κατασκευή ενός άδειου container</td>
+      <td>-</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td>(constructor)(int n, x)</td>
+      <td>Κατασκευή container με n ίδια στοιχεία</td>
+      <td>n: πλήθος στοιχείων x: τιμή κάθε στοιχείου</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>(constructor)(iterator start, iterator stop)</td>
+      <td>Κατασκευή και αρχικοποίηση με n διαδοχικές τιμές άλλου container</td>
+      <td>start: iterator για το πρώτο στοιχείο που θα αντιγραφείstop: iterator για το πρώτο στοιχείο που δεν θα αντιγραφεί</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n) για διαδοχικές τιμές ταξινομημένες με το ίδιο κριτήριο, διαφορετικά O(nlogn)</td>
+      <td style="text-align: center">O(n) για διαδοχικές τιμές ταξινομημένες με το ίδιο κριτήριο, διαφορετικά O(nlogn)</td>
+      <td style="text-align: center">O(n) για διαδοχικές τιμές ταξινομημένες με το ίδιο κριτήριο, διαφορετικά O(nlogn)</td>
+      <td style="text-align: center">O(n) για διαδοχικές τιμές ταξινομημένες με το ίδιο κριτήριο, διαφορετικά O(nlogn)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+    </tr>
+    <tr>
+      <td>= (initializer_list il)</td>
+      <td>Εκχώρηση ή αρχικοποίηση με τα n στοιχεία της il</td>
+      <td>il: initializer_list τα οποία θα περιέχει τελικά το container</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n) για il ταξινομημένη με το ίδιο κριτήριο, διαφορετικά O(nlogn)</td>
+      <td style="text-align: center">O(n) για il ταξινομημένη με το ίδιο κριτήριο, διαφορετικά O(nlogn)</td>
+      <td style="text-align: center">O(n) για il ταξινομημένη με το ίδιο κριτήριο, διαφορετικά O(nlogn)</td>
+      <td style="text-align: center">O(n) για il ταξινομημένη με το ίδιο κριτήριο, διαφορετικά O(nlogn)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+    </tr>
+    <tr>
+      <td>= (container)</td>
+      <td>Εκχώρηση ή αρχικοποίηση με τα n στοιχεία του container</td>
+      <td>container: ένα container ίδιου τύπου με αυτό που κατασκευάζεται</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+    </tr>
+    <tr>
+      <td>begin()</td>
+      <td>Επιστρέφει iterator για το πρώτο στοιχείο</td>
+      <td>-</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+    </tr>
+    <tr>
+      <td>end()</td>
+      <td>Επιστρέφει iterator για το πρώτο στοιχείο μετά το τέλος.</td>
+      <td>-</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+    </tr>
+    <tr>
+      <td>size()</td>
+      <td>Επιστρέφει το μέγεθος του container</td>
+      <td>-</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1) *O(n) για την C++ 98</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+    </tr>
+    <tr>
+      <td>empty()</td>
+      <td>Επιστρέφει true αν το container είναι άδειο, αλλιώς false</td>
+      <td>-</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+    </tr>
+    <tr>
+      <td>[key]</td>
+      <td>Επιστρέφει reference για το στοιχείο με index key</td>
+      <td>key: index</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>front()</td>
+      <td>Επιστρέφει reference για το πρώτο στοιχείο του container</td>
+      <td>-</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>back()</td>
+      <td>Επιστρέφει reference για το τελευταίο στοιχείο του container</td>
+      <td>-</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>push_back(x)</td>
+      <td>Εισάγει ένα στοιχείο στο τέλος του container</td>
+      <td>x: το στοιχείο προς εισαγωγή</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">Ο(1)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>push_front(x)</td>
+      <td>Εισάγει ένα στοιχείο στην αρχή του container</td>
+      <td>x: το στοιχείο προς εισαγωγή</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>pop_back()</td>
+      <td>Διαγράφει το τελευταίο στοιχείο του container</td>
+      <td>-</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>pop_front()</td>
+      <td>Διαγράφει το πρώτο στοιχείο του container</td>
+      <td>-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>insert(x)</td>
+      <td>Εισάγει ένα στοιχείο στο container μεγέθους n στοιχείων</td>
+      <td>x: το στοιχείο προς εισαγωγή</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td>insert(iterator pos, x)</td>
+      <td>Εισάγει ένα στοιχείο στο container μεγέθους n στοιχείων πριν την θέση pos</td>
+      <td>pos: iterator για το στοιχείο που θα βρίσκεται μετά το x x: το στοιχείο που θα εισαχθεί</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1) αν το pos δείχνει την σωστή θέση, αλλιώς Ο(logn)</td>
+      <td style="text-align: center">O(1) αν το pos δείχνει την σωστή θέση, αλλιώς Ο(logn)</td>
+      <td style="text-align: center">O(1) αν το pos δείχνει την σωστή θέση, αλλιώς Ο(logn)</td>
+      <td style="text-align: center">O(1) αν το pos δείχνει την σωστή θέση, αλλιώς Ο(logn)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>insert(iterator pos, int m, x)</td>
+      <td>Εισάγει m ίδια στοιχεία με τιμή x στη θέση pos</td>
+      <td>pos: iterator για το στοιχείο που θα βρίσκεται μετά τα m 
+στοιχεία m: το πλήθος των στοιχείων προς εισαγωγή x: η τιμή των 
+στοιχείων</td>
+      <td style="text-align: center">Ο(n+m)</td>
+      <td style="text-align: center">O(n+m)</td>
+      <td style="text-align: center">O(m)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>insert(iterator pos, initializer_list il)</td>
+      <td>Εισάγει τα m στοιχεία της il</td>
+      <td>pos: iterator για το στοιχείο που θα βρίσκεται μετά τα m στοιχεία il: περιέχει τα στοιχεία προς εισαγωγή</td>
+      <td style="text-align: center">O(n+m)</td>
+      <td style="text-align: center">O(n+m)</td>
+      <td style="text-align: center">O(m)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>insert(initializer_list il)</td>
+      <td>Εισάγει τα m στοιχεία της il</td>
+      <td>il: περιέχει τα στοιχεία προς εισαγωγή</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">O(mlogn) Πιθανότητα βελτιστοποίησης αν il ταξινομημένη</td>
+      <td style="text-align: center">O(mlogn) Πιθανότητα βελτιστοποίησης αν il ταξινομημένη</td>
+      <td style="text-align: center">O(mlogn) Πιθανότητα βελτιστοποίησης αν il ταξινομημένη</td>
+      <td style="text-align: center">O(mlogn) Πιθανότητα βελτιστοποίησης αν il ταξινομημένη</td>
+      <td style="text-align: center">Ο(m)</td>
+      <td style="text-align: center">O(m)</td>
+    </tr>
+    <tr>
+      <td>erase(iteretor pos)</td>
+      <td>Διαγράφει ένα στοιχείο</td>
+      <td>pos: η θέση του στοιχείου προς διαγραφή</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td>erase(iterator start, iterator stop)</td>
+      <td>Διαγράφει m διαδοχικά στοιχεία</td>
+      <td>start: iterator για το πρώτο στοιχείο προς διαγραφή stop: iterator για το πρώτο στοιχείο που δεν θα διαγραφεί</td>
+      <td style="text-align: center">O(n+m)</td>
+      <td style="text-align: center">O(n+m)</td>
+      <td style="text-align: center">O(m)</td>
+      <td style="text-align: center">O(m)</td>
+      <td style="text-align: center">O(m)</td>
+      <td style="text-align: center">O(m)</td>
+      <td style="text-align: center">O(m)</td>
+      <td style="text-align: center">O(m)</td>
+      <td style="text-align: center">O(m)</td>
+    </tr>
+    <tr>
+      <td>erase(x)</td>
+      <td>Διαγράφει m στοιχεία που έχουν δοσμένη τιμή</td>
+      <td>x: η τιμή των στοιχείων που θα διαγραφούν</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">Ο(logn)</td>
+      <td style="text-align: center">O(logn + m)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn + m)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(m)</td>
+    </tr>
+    <tr>
+      <td>clear()</td>
+      <td>Διαγράφει όλα τα στοιχεία του container</td>
+      <td>-</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">Ο(n)</td>
+    </tr>
+    <tr>
+      <td>find(x)</td>
+      <td>Επιστρέφει iterator για ένα στοιχείο με τιμή x. Αν δεν υπάρχει επιστρέφεται end()</td>
+      <td>x: η τιμή προς εύρεση</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">Ο(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td>count(x)</td>
+      <td>Επιστρέφει το πλήθος m των στοιχείων που έχουν τιμή x</td>
+      <td>x: η τιμή των στοιχείων προς καταμέτρηση</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">Ο(logn)</td>
+      <td style="text-align: center">O(logn + m)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn + m)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(m)</td>
+    </tr>
+    <tr>
+      <td>lower_bound(x)</td>
+      <td>Επιστρέφει iterator για το πρώτο στοιχείο &gt;= από x</td>
+      <td>x: τιμή στοιχείου</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">Ο(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>upper_bound(x)</td>
+      <td>Επιστρέφει iterator για το πρώτο στοιχείο &gt; x</td>
+      <td>x: τιμή στοιχείου</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>equal_range(x)</td>
+      <td>Επιστρέφει ένα pair με το lower και upper bound</td>
+      <td>x: τιμή στοιχείων (έστω m)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(logn)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(m)</td>
+    </tr>
+  </tbody>
+</table><div class="table-teaser"><div class="teaser-cover"><span>Κάνε κλικ εδώ για να δεις το γράφημα</span></div><table>
+  <thead>
+    <tr>
+      <th>Μέθοδος</th>
+      <th>Χρήση</th>
+      <th>Ορίσματα</th>
+      <th style="text-align: center">vector</th>
+      <th style="text-align: center">string</th>
+      <th style="text-align: center">list</th>
+      <th style="text-align: center">set</th>
+      <th style="text-align: center">multiset</th>
+      <th style="text-align: center">map</th>
+      <th style="text-align: center">multimap</th>
+      <th style="text-align: center">unordered_map</th>
+      <th style="text-align: center">unordered_multimap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(constructror)()</td>
+      <td>Κατασκευή ενός άδειου container</td>
+      <td>-</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td>(constructor)(int n, x)</td>
+      <td>Κατασκευή container με n ίδια στοιχεία</td>
+      <td>n: πλήθος στοιχείων x: τιμή κάθε στοιχείου</td>
+      <td style="text-align: center">Ο(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </tbody>
+</table></div></div>
+
+<h2 id="algorithm">algorithm</h2>
+<p>Η STL εκτός από containers περιλαμβάνει και έτοιμους υλοποιημένους 
+αλγόριθμους με την μορφή συναρτήσεων, στη βιβλιοθήκη algorithm. Αν και η
+ algorithm περιλαμβάνει πληθώρα συναρτήσεων, οι περισσότερες είναι πολύ 
+απλές, οπότε δεν συμφέρει να μάθουμε τον τρόπο με τον οποίο 
+συντάσσονται, αλλά καλύτερα θα χρησιμοποιούμε τον δικό μας κώδικα. 
+Ωστόσο, σε αυτήν την παράγραφο θα αναφέρουμε μερικές αξιοσημείωτες 
+συναρτήσεις καθώς και τον τρόπο λειτουργίας τους.</p>
+
+<h4 id="sort">sort()</h4>
+<p>Η <code class="highlighter-rouge">sort()</code> είναι η πιο σημαντική
+ συνάρτηση της βιβλιοθήκης algorithm. Ταξινομεί n στοιχεία ενός 
+container με χρονική πολυπλοκότητα O(nlogn), δηλαδή με την βέλτιστη 
+πολυπλοκότητα για συγκριτική ταξινόμηση. Συντάσσεται με 2 τρόπους:</p>
+<ol>
+  <li>sort(iterator start, iterator stop)</li>
+  <li>sort(iterator start, iterator stop, bool(*)() compare)</li>
+</ol>
+
+<p>Στην πρώτη μορφή, η sort δέχεται δύο iterators, για το πρώτο στοιχείο
+ που θα ταξινομηθεί και για το πρώτο στοιχείο που δεν θα ταξινομηθεί. Η 
+ταξινόμηση γίνεται σε αύξουσα σειρά και η <code class="highlighter-rouge">sort()</code>
+ για να συγκρίνει δύο στοιχεία χρησιμοποιεί τον τελεστή &lt;. Στην 
+δεύτερη μορφή, το κριτήριο της ταξινόμησης δεν είναι ο τελεστής &lt; 
+αλλά μια συνάρτηση <code class="highlighter-rouge">compare()</code> την 
+οποία υλοποιούμε εμείς. Η compare πρέπει υποχρεωτικά να επιστρέφει bool,
+ να δέχεται δύο μεταβλητές ίδιου τύπου με αυτές που ταξινομούνται και να
+ επιστρέφει true αν το πρώτο στοιχείο πρέπει να τοποθετηθεί οπωσδήποτε 
+πριν από το δεύτερο.</p>
+
+<p>Ας εξηγήσουμε λίγο καλύτερα τι σημαίνει αυτό. Έστω ότι θέλουμε να 
+φτιάξουμε μια συνάρτηση compare() τέτοια ώστε τα στοιχεία να 
+ταξινομηθούν σε φθίνουσα σειρά. Τότε η συνάρτηση compare() θα είναι η 
+εξής:</p>
+
+<p>ΣΩΣΤΟ</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="nf">compare</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>	<span class="p">{</span><span class="k">return</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">;}</span>
+</code></pre></div></div>
+
+<p>Αν όμως κάναμε το παρακάτω λάθος:</p>
+
+<p>ΛΑΘΟΣ</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="nf">compare</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>	<span class="p">{</span><span class="k">return</span> <span class="n">a</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">;}</span>
+</code></pre></div></div>
+
+<p>τότε το πρόγραμμα θα εμφάνιζε runtime error. Διότι όταν δύο στοιχεία 
+είναι ίδια τότε το a δεν πρέπει να μπει οπωσδήποτε πριν το b άρα η 
+compare πρέπει να επιστρέφει false. Σε αυτήν την περίπτωση η πρώτη 
+συνάρτηση επιστρέφει false, ενώ η δεύτερη true.</p>
+
+<p>Κάτι ακόμα που πρέπει να σημειώσουμε είναι ότι η <code class="highlighter-rouge">sort()</code>
+ μπορεί να χρησιμοποιηθεί και για να ταξινομήσει απλούς πίνακες της C++,
+ και όχι μόνο containers της STL. Αντί για iterators, δίνουμε δείκτες 
+για το πρώτο στοιχείο που θα ταξινομηθεί και δεν θα ταξινομηθεί, και 
+μετατρέπονται αυτόματα σε iterators. Ακολουθεί ένα παράδειγμα 
+ταξινόμησης πίνακα και vector σε φθίνουσα σειρά.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="nf">compare</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>	<span class="p">{</span><span class="k">return</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">;}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">pin</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="n">pin</span><span class="o">+</span><span class="mi">10</span><span class="p">);</span>
+	<span class="n">sort</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="n">pin</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">compare</span><span class="p">);</span>
+	<span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="n">compare</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="n">pin</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span><span class="o">:</span><span class="n">vec</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="n">it</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Τέλος, σε περιπτώσεις που θέλουμε να πραγματοποιήσουμε ταξινόμηση με 
+διατήρηση της σχετικής θέσης των ίσων στοιχείων, υπάρχει η συνάρτηση <code class="highlighter-rouge">stable_sort()</code>, με ακριβώς την ίδια σύνταξη.</p>
+
+<h4 id="min-και-max">min() και max()</h4>
+<p>Αυτές οι συναρτήσεις επιστρέφουν το ελάχιστο και το μέγιστο στοιχείο αντίστοιχα. Συντάσσονται με δύο τρόπους:</p>
+<ol>
+  <li>min(x,y) και max(x,y)</li>
+  <li>min(initializer_list il) και max(initializer_list il)
+Στην πρώτη περίπτωση δίνουμε δύο στοιχεία ίδιου τύπου, ενώ στην δεύτερη δίνουμε μία initializer_list, όσων στοιχείων θέλουμε.</li>
+</ol>
+
+<p>Επίσης η συνάρτηση <code class="highlighter-rouge">minmax()</code> συντάσσεται με τον ίδιο τρόπο και επιστρέφει ένα pair με το μικρότερο και μεγαλύτερο στοιχείο.</p>
+
+<p>Επιπλέον, οι συναρτήσεις <code class="highlighter-rouge">min_element()</code> και <code class="highlighter-rouge">max_element()</code>
+ συντάσσονται ως:
+min/max_element(iterator start, iterator stop)
+και επιστρέφουν ένα iterator με τη θέση του μικρότερου/μεγαλύτερου 
+στοιχείου στο διάστημα [[start,stop)], δηλαδή το διάστημα που ξεκινάει 
+από τη θέση start και τελειώνει πριν τη θέση stop.</p>
+
+<h4 id="lower_bound-upper_bound-equal_range-και-binary_search">lower_bound(), upper_bound(), equal_range() και binary_search()</h4>
+<p>Συντάσσονται όλες με τον ίδιο τρόπο: χρειάζονται δύο iterators start 
+και stop και μια τιμή x. Το container ή ο πίνακας στον οποίον επιδρούν 
+πρέπει να είναι υποχρεωτικά ταξινομημένος. Αν η δομή είναι ταξινομημένη 
+με διαφορετικό τρόπο από το default, τότε χρειάζονται ακόμα ένα όρισμα, 
+έναν δείκτη για την συνάρτηση με την οποία έγινε η ταξινόμηση (όπως με 
+το sort()). Οι συναρτήσεις εκτελούν δυαδική αναζήτηση και επιστρέφουν:</p>
+<ul>
+  <li>Η <code class="highlighter-rouge">lower_bound()</code> ένα iterator για το πρώτο στοιχείο &gt;= από x</li>
+  <li>H <code class="highlighter-rouge">upper_bound()</code> ένα iterator για το πρώτο στοιχείο &gt; από x</li>
+  <li>Η <code class="highlighter-rouge">equal_range()</code> ένα pair με τις τιμές που επιστρέφουν οι <code class="highlighter-rouge">lower_bound()</code> και <code class="highlighter-rouge">upper_bound()</code></li>
+  <li>H <code class="highlighter-rouge">binary_search()</code> ένα bool, true αν βρέθηκε το στοιχείο x, αλλιώς false</li>
+</ul>
+
+<p>Όλες οι συναρτήσεις έχουν πολυπλοκότητα O(n), όπου n είναι ο αριθμός των στοιχείων ανάμεσα στο start και στο stop.</p>
+
+<h2 id="πλεονεκτήματα-και-μειονεκτήματα-των-containers-της-stl">Πλεονεκτήματα και μειονεκτήματα των containers της STL</h2>
+<p>Πράγματι η STL είναι ο λόγος που χρησιμοποιούμε την C++ και όχι την C
+ στους διαγωνισμούς. Από αυτήν θα χρησιμοποιήσουμε έτοιμους αλγόριθμους 
+και container, ορισμένα από τα οποία θα ήταν εξαιρετικά δύσκολο και 
+χρονοβόρο να τα υλοποιήσουμε μόνοι μας την ώρα του διαγωνισμού. Ορισμένα
+ από αυτά μάλιστα απαιτούν και πολύ προχωρημένες γνώσεις για την 
+υλοποίηση τους. Σε άλλες περιπτώσεις χρησιμοποιούμε την STL για λόγους 
+ευκολίας. Ωστόσο τα μειονεκτήματα της STL είναι δυο:</p>
+
+<ul>
+  <li>Το πρόγραμμα γίνεται πιο αργό (σε χρόνο εκτέλεσης)</li>
+  <li>Είναι εύκολο να κάνουμε λάθη</li>
+</ul>
+
+<p>Από τα παραπάνω συμπεραίνουμε ότι πρέπει να χρησιμοποιούμε την STL με
+ φειδώ. Δηλαδή να την αποφεύγουμε για απλές εφαρμογές που μπορούμε να 
+υλοποιήσουμε εύκολα με το συναρτησιακό κομμάτι της C++, αλλά να την 
+χρησιμοποιούμε για να κερδίζουμε χρόνο και να παρακάμπτουμε την 
+υλοποίηση δύσκολων αλγορίθμων και δομών δεδομένων.</p>
+
+    
+<h2>Σχόλια</h2>
+<div id="disqus_thread"><iframe id="dsq-app6633" name="dsq-app6633" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px ! important; min-width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 386px ! important;" src="Kallinikos_STL_files/a.html" horizontalscrolling="no" verticalscrolling="no" frameborder="0" width="100%"></iframe></div>
+
+<script>
+var disqus_config = function () {
+    this.page.url = "https://kallinikos.github.io/STL";
+    this.page.identifier = "/STL";
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//kallinikos-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+	<footer> 
+  Ο Καλλίνικος είναι μία πλατφόρμα εκμάθησης αλγορίθμων για διαγωνισμούς πληροφορικής • <a href="https://github.com/kallinikos/kallinikos.github.io"><i class="fa fa-github"></i> Github</a>
+</footer>
+  </div>
+</div>
+
+    </section>
+    <script src="Kallinikos_STL_files/jquery-3.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="Kallinikos_STL_files/popper.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="Kallinikos_STL_files/bootstrap.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="Kallinikos_STL_files/lodash.js"></script>
+    <script src="Kallinikos_STL_files/main.js"></script>
+  
+
+<iframe style="display: none;"></iframe></body></html>

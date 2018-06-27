@@ -1,0 +1,91 @@
+/**
+ * CSS File for Docutils
+ * Keegan Carruthers-Smith 2008
+ */
+
+body {
+    font-size: 13px;
+    font-family: Verdana, Helvetica, sans-serif;
+    line-height: 20px;
+    background-color: white;
+    letter-spacing: 0.01em;
+    margin:0 10px;
+}
+
+.document {
+    max-width:700px;
+    margin:50px auto 10px auto;
+}
+
+.docinfo-name {
+    /* display: none; */
+    padding-right: 15px;
+}
+
+.docinfo {
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    text-align: left;
+}
+
+a:link {
+    color: #3766c4;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #7900b6;
+}
+
+h1, h2, h3, #contents {
+    font-family: Georgia;
+    font-weight: normal;
+    letter-spacing: -0.05em;
+}
+
+h1.title {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 10;
+    text-align: center;
+}
+
+h1, #contents {
+    font-size: 23px;
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 1.1;
+    margin: 30px 0 10px 0;
+}
+
+h3 {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 10px 0 10px 0;
+}
+
+a.toc-backref {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+pre.literal-block, pre.doctest-block {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 6px;
+    background-color: #eeeeee;
+}
+
+.address {
+    margin-top: 0;
+    margin-bottom: 0;
+}

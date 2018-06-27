@@ -1,0 +1,55 @@
+				</div>
+			     <!-- /#container -->
+	        </div>
+	        <!-- /#page-content-wrapper -->
+
+	    </div>
+	    <!-- /#wrapper -->
+			
+		<!-- Menu Toggle Script -->
+	    <script>
+	    	
+		    var justPressedMenu = 0;
+		    $("#page-content-wrapper").click(function(e) {
+		    	if ( justPressedMenu != 1 ) {
+		    		$("#wrapper").removeClass("toggled");
+		    	} else
+		    		justPressedMenu = 0;
+		    });
+		   
+		    $("#menu-toggle").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper").toggleClass("toggled");
+		        justPressedMenu = 1;
+		    });
+	  
+	    </script>
+	     <!--Copyright stick to bottom -->
+	    <script>
+	    	var available = $(window).height();
+	    	var page = $("#page-content-wrapper").height();
+
+	    	if(page<available){
+	    		var h = available;
+		        $("#copy").css("top", h-h*0.05);
+	    	}				
+				
+	        $(".copyrightp").css("display","block");
+			
+			$(window).resize(function() {
+				available = $(window).height();
+				page = $("#page-content-wrapper").height();
+				
+				if(page<available){
+					var h = available;
+					$("#copy").css("top", h);
+				}else{
+					$("#copy").css("top", page+40);
+				}
+				$(".copyrightp").css("display","block");
+			 });
+			
+	    </script>
+	   
+	</body>
+</html>
