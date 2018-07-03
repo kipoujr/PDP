@@ -1,0 +1,45 @@
+
+
+
+Βασικό Segment Tree:
+--------------------
+1) Διαβάζουμε το segtrees.pdf
+2) Παίζουμε με αυτή την εφαρμογή για να καταλάβουμε πώς ακριβώς λειτουργούν τα segment trees: https://visualgo.net/en/segmenttree
+Το range update θα το δούμε παρακάτω, οπότε κάνουμε update μόνο σε συγκεκριμένη θέση (L=R).
+3) Διαβάζουμε το (Segment tree - Lazy Propagation - Tree Linearization.pdf) μέχρι τη διαφάνεια 34.
+Παρότι πολύ κακογραμμένα, δίνει αποδείξεις που δε βρίσκονται αλλού, καθώς και πολλά προβλήματα.
+4) Προαιρετικά!!! Επειδή η πιο συνηθισμένη εφαρμογή του segment tree είναι τα αθροίσματα, υπάρχει μία δομή που λύνει μόνο αυτό το πρόβλημα, αλλά με πολύ πιο απλό κώδικα.
+Η δομή αυτή λέγεται Binary Indexed Tree (αλλιώς Fenwick Tree). Έχει δύσκολη ανάλυση (δε χρειάζεται καθόλου) και τρομερά ΑΠΛΟ κώδικα (3 γραμμές Add, 5 γραμμές Sum).
+Η επεξήγηση (στις δύο τελευταίες διαφάνειες ο κώδικας) στο fenwick.pdf.
+
+Προβλήματα
+	- http://www.spoj.com/problems/DCEPC206/					Εφαρμογή
+		- http://hsin.hr/coci/archive/2011_2012/contest1_tasks.pdf Task5_Sort		Λύση και testcases στο http://hsin.hr/coci/archive/2011_2012/contest1_tasks.pdf
+			Θέλει αρχικά μία πολύ γλυκούλα παρατήρηση (αν δε τη βρείτε κοιτάξτε τη λύση). Κατόπιν λύνεται με segment tree (αν δε βρείτε πώς, κοιτάξτε κι εδώ: https://stackoverflow.com/questions/18758532/how-to-count-number-of-inversions-in-an-array-using-segment-trees)
+						- http://codeforces.com/contest/380/problem/C				 						 				Λύση εδώ: http://codeforces.com/blog/entry/15890
+							- http://hsin.hr/coci/archive/2015_2016/contest1_tasks.pdf Task5_Relativnost		Λύση και testcases στο http://hsin.hr/coci/archive/2015_2016/
+								Κάπως δύσκολο.
+											- http://hsin.hr/coci/archive/2011_2012/contest2_tasks.pdf Task6_Raspored	Λύση και testcases στο http://hsin.hr/coci/archive/2011_2012/
+												Ενδιαφέρουσα ανάλυση μέχρι να εμφανιστεί το segment tree.
+
+Lazy Propagation:
+-----------------
+1) Διαβάζουμε από το (Segment tree - Lazy Propagation - Tree Linearization.pdf) τις διαφάνειες 35-61.
+2) Παίζουμε με αυτή την εφαρμογή για να καταλάβουμε πώς ακριβώς λειτουργούν τα segment trees: https://visualgo.net/en/segmenttree
+Τώρα κάνουμε και range updates!
+2) Διαβάζουμε από το παραπάνω τη διαφάνεια 62 για να μάθουμε τι είναι τα Sparse Segment Trees (σε περίπτωση που δε μας επαρκεί ο χώρος). Απλώς κρατάμε πίνακες left και right για να βρίσκουμε τα παιδιά κάθε κόμβου.
+
+Προβλήματα
+	- http://www.spoj.com/problems/HORRIBLE/					Εφαρμογή
+		- http://hsin.hr/coci/archive/2011_2012/contest3_tasks.pdf Task5_Place		Λύση και testcases στο http://hsin.hr/coci/archive/2011_2012/
+			Είναι απλή εφαρμογή, αρκεί να θυμηθούμε τη διαφάνεια 33 του (Segment tree - Lazy Propagation - Tree Linearization.pdf)
+						- http://www.spoj.com/problems/POSTERS/				 								 				Λύση στο http://codeforces.com/blog/entry/15890
+							- http://hsin.hr/coci/archive/2012_2013/contest4_tasks.pdf Task6_Akvarij Λύση και testcases στο http://hsin.hr/coci/archive/2012_2013/
+								Κάπως δύσκολο.
+
+Persistent Segment Trees:
+-------------------------
+1) Διαβάζουμε το πρόβλημα rap.html και τη λύση του Persistency-rap.pdf
+2) Περνάμε εδώ: https://blog.anudeep2011.com/persistent-segment-trees-explained-with-spoj-problems/
+Έχει πολύ καλή επεξήγηση και συζήτηση προβλημάτων. Λύνουμε τα προβλήματα που δίνονται (μαζί με link για τις λύσεις τους).
+

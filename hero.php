@@ -21,9 +21,9 @@
 							<h3 class="center">Ύλη</h3>
 							<p class="mypad">
 								<ul><li><strong class="color1">Data Structures</strong></li>
-									<ol><li><a href="Hero-Material/Data_Structures/PQA/index.php">PQA</a></li>
+									<ol><li><a href="Hero-Material/Data_Structures/PQA/index.php">PQA</a> (ψευδώς Monotonous Deque)</li>
 										<li><a href="Hero-Material/Data_Structures/Queue2Stacks/index.php">Queue with 2 Stacks</a></li>
-										<li><a href="Hero-Material/Data_Structures/Segment_Tree/index.php">Segment Tree</a></li>
+										<li><a href="Hero-Material/Data_Structures/Leaf-Oriented_BST/index.php">Leaf-Oriented BST</a> (ψευδώς Segment Tree)</li>
 										<li><a href="Hero-Material/Data_Structures/Trie/index.php">Trie</a></li>
 										<li><a href="Hero-Material/Data_Structures/Suffix_Array/index.php">Suffix Array</a></li>
 										<li><a href="Hero-Material/Data_Structures/AhoCorasick/index.php">Aho-Corasick</a> (προαπαιτούμενα: <a href="Hero-Material/Strings/KMP/index.php">KMP</a>, <a href="Hero-Material/Data_Structures/Trie/index.php">Trie</a>)</li>

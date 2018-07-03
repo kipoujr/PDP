@@ -5,11 +5,11 @@
 					<div class="row">
 						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
 							<h3 class="center">Θεωρία</h3>
-							<p class="mypad">Η δομή αυτή κυκλοφορεί με πολλά ονόματα. Ίσως αυτό που μας δίνει να καταλάβουμε καλύτερα περί τίνος πρόκειται είναι το <strong>Monotonous Deque</strong>. Η βασική δουλειά βέβαια γίνεται από το ένα άκρο, οπότε (λανθασμένα) κυκλοφορεί και ως <em>Monotonous Stack</em>, ή και ως <em>Stack of Incomplete Subproblems</em> λόγω της πιο συνηθισμένης εφαρμογής της. Η σωστή ονομασία της είναι <strong>Priority Queue with Attrition (PQA)</strong>.</p>
+							<p class="mypad">Η δομή αυτή κυκλοφορεί με πολλά ονόματα. Ίσως αυτό που μας δίνει να καταλάβουμε καλύτερα περί τίνος πρόκειται είναι το <strong>Monotonous Dequeue</strong>. Η βασική δουλειά βέβαια γίνεται από το ένα άκρο, οπότε (λανθασμένα) κυκλοφορεί και ως <em>Monotonous Stack</em>, ή και ως <em>Stack of Incomplete Subproblems</em> λόγω της πιο συνηθισμένης εφαρμογής της. Η σωστή ονομασία της είναι <strong>Priority Queue with Attrition (PQA)</strong>.</p>
 							<p class="mypad">Οι απαιτήσεις αυτής της δομής είναι αυτές μίας απλής <strong>queue</strong> και τα ερωτήματα είναι του τύπου: Ποιο είναι το ελάχιστο στοιχείο στη δομή μας; Καταφέρνουμε να υποστηρίξουμε τα πάντα σε <strong>amortized O(1)</strong> χρόνο.</p>
 							<p class="mypad">Η βασική ιδέα είναι ο χαρακτηρισμός ενός στοιχείου X ως <em>άχρηστου</em> όταν εισήχθη πριν από κάποιο άλλο Y και είναι ταυτόχρονα μεγαλύτερο από αυτό (X&ge;Y). Το λέμε άχρηστο διότι, αφού τα operations είναι σαν της queue, θα βγει πριν το Y, και μέχρι να βγει δε θα είναι ποτέ το μικρότερο. Έτσι, όταν εισάγουμε ένα καινούριο στοιχείο, αφαιρούμε όλα τα άχρηστα που προκλήθηκαν εξαιτίας αυτού.</p>
 							<p class="mypad">Αναλυτικότερα διαβάζουμε θεωρία από <a title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Theory.html" href="https://people.cs.uct.ac.za/~ksmith/articles/sliding_window_minimum.html">εδώ</a>.</p>
-							<p class="mypad">Υποσημείωση (πλήρως άχρηστη για διαγωνισμούς): Όσα αναφέραμε μπορούν να επιτευχθούν και σε worst-case O(1) χρόνο, όπως έδειξε ο <a href="https://www.sciencedirect.com/science/article/pii/0020019089900719" title="DOI: 10.1016/0020-0190(89)90071-9">Sundar</a>.</p>
+							<p class="mypad">Υποσημείωση (πλήρως άχρηστη για διαγωνισμούς): Όσα αναφέραμε μπορούν να επιτευχθούν και σε worst-case O(1) χρόνο, όπως έδειξε ο <a href="https://www.sciencedirect.com/science/article/pii/0020019089900719" title="DOI: 10.1016/0020-0190(89)90071-9">Sundar</a>.
 						</div>
 					</div>
 					<div class="row">
