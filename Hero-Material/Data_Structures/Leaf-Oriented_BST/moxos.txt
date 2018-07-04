@@ -1,23 +1,9 @@
-4) Προαιρετικά!!! Επειδή η πιο συνηθισμένη εφαρμογή του segment tree είναι τα αθροίσματα, υπάρχει μία δομή που λύνει μόνο αυτό το πρόβλημα, αλλά με πολύ πιο απλό κώδικα.
+2) Προαιρετικά!!! Επειδή η πιο συνηθισμένη εφαρμογή του segment tree είναι τα αθροίσματα, υπάρχει μία δομή που λύνει μόνο αυτό το πρόβλημα, αλλά με πολύ πιο απλό κώδικα.
 Η δομή αυτή λέγεται Binary Indexed Tree (αλλιώς Fenwick Tree). Έχει δύσκολη ανάλυση (δε χρειάζεται καθόλου) και τρομερά ΑΠΛΟ κώδικα (3 γραμμές Add, 5 γραμμές Sum).
 Η επεξήγηση (στις δύο τελευταίες διαφάνειες ο κώδικας) στο fenwick.pdf.
+Υπάρχει και visualgo
+1) Διαβάζουμε από το παραπάνω τη διαφάνεια 62 για να μάθουμε τι είναι τα Sparse Segment Trees (σε περίπτωση που δε μας επαρκεί ο χώρος). Απλώς κρατάμε πίνακες left και right για να βρίσκουμε τα παιδιά κάθε κόμβου.
 
-Προβλήματα
-	- http://www.spoj.com/problems/DCEPC206/					Εφαρμογή
-		- http://hsin.hr/coci/archive/2011_2012/contest1_tasks.pdf Task5_Sort		Λύση και testcases στο http://hsin.hr/coci/archive/2011_2012/contest1_tasks.pdf
-			Θέλει αρχικά μία πολύ γλυκούλα παρατήρηση (αν δε τη βρείτε κοιτάξτε τη λύση). Κατόπιν λύνεται με segment tree (αν δε βρείτε πώς, κοιτάξτε κι εδώ: https://stackoverflow.com/questions/18758532/how-to-count-number-of-inversions-in-an-array-using-segment-trees)
-						- http://codeforces.com/contest/380/problem/C				 						 				Λύση εδώ: http://codeforces.com/blog/entry/15890
-							- http://hsin.hr/coci/archive/2015_2016/contest1_tasks.pdf Task5_Relativnost		Λύση και testcases στο http://hsin.hr/coci/archive/2015_2016/
-								Κάπως δύσκολο.
-											- http://hsin.hr/coci/archive/2011_2012/contest2_tasks.pdf Task6_Raspored	Λύση και testcases στο http://hsin.hr/coci/archive/2011_2012/
-												Ενδιαφέρουσα ανάλυση μέχρι να εμφανιστεί το segment tree.
-
-Lazy Propagation:
------------------
-1) Διαβάζουμε από το (Segment tree - Lazy Propagation - Tree Linearization.pdf) τις διαφάνειες 35-61.
-2) Παίζουμε με αυτή την εφαρμογή για να καταλάβουμε πώς ακριβώς λειτουργούν τα segment trees: https://visualgo.net/en/segmenttree
-Τώρα κάνουμε και range updates!
-2) Διαβάζουμε από το παραπάνω τη διαφάνεια 62 για να μάθουμε τι είναι τα Sparse Segment Trees (σε περίπτωση που δε μας επαρκεί ο χώρος). Απλώς κρατάμε πίνακες left και right για να βρίσκουμε τα παιδιά κάθε κόμβου.
 
 Προβλήματα
 	- http://www.spoj.com/problems/HORRIBLE/					Εφαρμογή
