@@ -1,36 +1,31 @@
 <?php
-	$title = "Competitive Programming - From Zero to Hero";
-	include_once($_SERVER['DOCUMENT_ROOT']."/PDP/header.php");
+	 $title = "Competitive Programming - From Zero to Hero";
+	 include_once($_SERVER['DOCUMENT_ROOT']."/PDP/header.php");
 ?>
-					<div class="row">
-						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
-							<h3 class="center">Θεωρία</h3>
-							<p class="mypad">Η δομή αυτή κυκλοφορεί με πολλά ονόματα. Ίσως αυτό που μας δίνει να καταλάβουμε καλύτερα περί τίνος πρόκειται είναι το <strong>Monotonous Dequeue</strong>. Η βασική δουλειά βέβαια γίνεται από το ένα άκρο, οπότε (λανθασμένα) κυκλοφορεί και ως <em>Monotonous Stack</em>, ή και ως <em>Stack of Incomplete Subproblems</em> λόγω της πιο συνηθισμένης εφαρμογής της. Η σωστή ονομασία της είναι <strong>Priority Queue with Attrition (PQA)</strong>.</p>
-							<p class="mypad">Οι απαιτήσεις αυτής της δομής είναι αυτές μίας απλής <strong>queue</strong> και τα ερωτήματα είναι του τύπου: Ποιο είναι το ελάχιστο στοιχείο στη δομή μας; Καταφέρνουμε να υποστηρίξουμε τα πάντα σε <strong>amortized O(1)</strong> χρόνο.</p>
-							<p class="mypad">Η βασική ιδέα είναι ο χαρακτηρισμός ενός στοιχείου X ως <em>άχρηστου</em> όταν εισήχθη πριν από κάποιο άλλο Y και είναι ταυτόχρονα μεγαλύτερο από αυτό (X&ge;Y). Το λέμε άχρηστο διότι, αφού τα operations είναι σαν της queue, θα βγει πριν το Y, και μέχρι να βγει δε θα είναι ποτέ το μικρότερο. Έτσι, όταν εισάγουμε ένα καινούριο στοιχείο, αφαιρούμε όλα τα άχρηστα που προκλήθηκαν εξαιτίας αυτού.</p>
-							<p class="mypad">Αναλυτικότερα διαβάζουμε θεωρία από <a title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Theory.html" href="https://people.cs.uct.ac.za/~ksmith/articles/sliding_window_minimum.html">εδώ</a>.</p>
-							<p class="mypad">Υποσημείωση (πλήρως άχρηστη για διαγωνισμούς): Όσα αναφέραμε μπορούν να επιτευχθούν και σε worst-case O(1) χρόνο, όπως έδειξε ο <a href="https://www.sciencedirect.com/science/article/pii/0020019089900719" title="DOI: 10.1016/0020-0190(89)90071-9">Sundar</a>.
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-9 col-lg-10 col-sm-8 col-xs-12">
-							<hr class="hr">
-						</div>
-					</div>					
 
 					<div class="row">
-						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12" >
-							<h3 class="center">Ασκήσεις</h3>
-							<ol><li><a href="http://www.boi2007.de/tasks/sound.pdf">Sound</a> | <a href="https://dmoj.ca/problem/boi2007p3">Judge</a> | <a href="http://www.boi2007.de/tasks/book.pdf">Λύση<a/> | <a href="http://www.boi2007.de/tasks/testdata-sound.tar.gz">Testcases</a> | <a href="http://www.boi2007.de/tasks/solution-sound.tar.gz">Κώδικας</a> | <a href="sound.zip">Offline</a></li>
-								<li>(*) <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/html/histogram.html">Histogra</a> | <a href="https://www.spoj.com/problems/HISTOGRA/">Judge</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/html/judge.html">Λύση<a/> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/input/histogram.in">Input</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/output/histogram.out">Output</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/solution/other/histogram_ralf_stack.cc">Κώδικας</a> | <a href="histogra.zip">Offline</a></li>
-								<li>(**) <a href="http://hsin.hr/coci/archive/2006_2007/contest2_tasks.pdf">Stol</a> | <a href="https://dmoj.ca/problem/coci06c2p5">Judge</a> | <a href="http://hsin.hr/coci/archive/2006_2007/contest2_solutions.zip">Λύση</a>... είναι O(N<sup>3</sup>). Αν εφαρμόσουμε την τεχνική του Histogram σε κάθε γραμμή (με έξυπνο preprocessing) πέφτουμε σε O(N<sup>2</sup>) | <a href="stol.cpp">Κώδικας O(N<sup>2</sup>)</a> | <a href="http://hsin.hr/coci/archive/2006_2007/contest2_testdata.zip">Testcases</a> | <a href="stol.zip">Offline</a></li>
-								<li>(**) <a href="http://hsin.hr/coci/archive/2012_2013/contest4_tasks.pdf">Razlika</a> | <a href="http://www.codah.club/tasks.php?show_task=5000001796">Judge</a> | <a href="http://hsin.hr/coci/archive/2012_2013/contest4_solutions.zip">Λύση και κώδικας<a/> | <a href="http://hsin.hr/coci/archive/2012_2013/contest4_testdata.zip">Testcases</a> | <a href="razlika.zip">Offline</a></li>
-								<li>(***) <a href="http://ceoi.inf.elte.hu/probarch/11/balzad.pdf">Balloons</a> | <a href="https://szkopul.edu.pl/problemset/problem/FM-LF_oP6i8yo3ZdJA3o5clO/site/?key=statement">Judge</a> | <a href="http://ceoi.inf.elte.hu/probarch/11/ceoi2011booklet.pdf">Λύση<a/> | <a href="http://ceoi.inf.elte.hu/probarch/11/baltst.zip">Testcases</a> | <a href="http://ceoi.inf.elte.hu/probarch/11/balprg.zip">Κώδικας</a> | <a href="balloons.zip">Offline</a></li>
-								<li>(***) <a href="http://www.ioinformatics.org/locations/ioi06/contest/day1/pyramid/pyramid.pdf">Pyramid</a> | <a href="https://vn.spoj.com/problems/MPYRAMID/">Judge</a> | <a href="http://www.ioinformatics.org/locations/ioi06/contest/day1/pyramid/pyramid_sol.pdf">Λύση<a/> | <a href="https://www.commonlounge.com/discussion/75d2b28a4d5c43eda9c34d30bb62d99b/main">Λύση - One hint at a time!</a> | <a href="http://www.ioinformatics.org/locations/ioi06/contest/day1/pyramid/pyramid_td.zip">Testcases</a> | <a href="https://github.com/keshav57/ioi-training/blob/master/IOI/2006/pyramid.cpp">Κώδικας</a> | <a href="pyramid.zip">Offline</a></li>
-							</ol>
+						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
+							<h3 class="center">Εισαγωγή</h3>
+							<p class="mypad">Ίσως η πιο σημαντική δομή δεδομένων! Πρέπει να μάθετε να την γράφετε τέλεια, γιατί θα σας λύσει τα χέρια. Καλό θα ήταν σε αυτό το κεφάλαιο να επιμείνετε πολύυυ καιρό (άνω του δίμηνου). </p>
+							<p class="mypad">Λόγω των άπειρων εφαρμογών της δομής αυτής, θα σπάσουμε το κεφάλαιο σε 4 υποκεφάλαια:</p>
+							<ol><li><a href="Intro/index.php">Βασικές εφαρμογές</a>: Τροποποιούμε ένα στοιχείο, απαντάμε για πολλά.</li>
+								<li><a href="Lazy_propagation/index.php">Lazy Propagation</a>: Τροποποιούμε και απαντάμε πολλά!</li>
+								<li><a href="Tricks/index.php">Επί της ευκαιρίας, tricks</a>: Γραμμικοποίηση δέντρου, συμπίεση συντεταγμένων, αραιά δέντρα, fenwick trees (aka binary indexed trees).</li>
+								<li><a href="Persistency/index.php">Persistency</a>: Ταξίδια στο χρόνο.</li></ol>
+							
+							<p class="mypad">Ας αναφέρουμε όμως πρώτα κάποια γενικά πράγματα που ισχύουν για όλα τα υποκεφάλαια. Η δομή αυτή μας επιτρέπει να τροποποιούμε τα στοιχεία μας και να απαντάμε ερωτήματα για πολλά στοιχεία (π.χ. τα μισά στοιχεία ενός πίνακα) σε O(logN) χρόνο! Για παράδειγμα μας επιτρέπει να αλλάξουμε σε 1025 την τιμή της θέσης 7, και να βρίσκουμε την ελάχιστη τιμή μεταξύ της θέσης 5 και της θέσης N-2, σε λογαριθμικό χρόνο. Ας την δούμε οπτικά πριν προχωρήσουμε:</p>
+							<img src="leaf-oriented_BST_example.png" />
+							<p class="mypad">Η μοναδική απαίτηση για τα ερωτήματα είναι να είναι <em>διαχωρίσιμα</em> (<a href="https://www.sciencedirect.com/science/article/pii/0020019079901170" title="DOI: 10.1016/0020-0190(79)90117-0">Decomposable</a>). Αυτό σημαίνει ότι αν μου χαρίσουν την απάντηση για το πρώτο μισό και την απάντηση για το δεύτερο μισό, μπορώ να τις συνδυάσω γρήγορα (συνήθως σε Ο(1)), και να πάρω τη συνολική απάντηση. Πολλά ερωτήματα είναι διαχωρίσιμα.	Οι κλασσικότερες εφαρμογές:</p>
+							<ul><li><strong>Άθροισμα</strong>: Συνολικό_Άθροισμα = Αριστερό_Άθροισμα + Δεξί_Άθροισμα</li>
+								<li><strong>Ελάχιστη τιμή</strong>: Συνολικό_Ελάχιστο = min(Αριστερό_Ελάχιστο, Δεξί_Ελάχιστο)</li>
+							</ul>
+							<p class="mypad">Ας αναφέρουμε και ένα χαρακτηριστικό παράδειγμα μη-διαχωρίσιμου ερωτήματος, την εύρεση του πλήθους διαφορετικών αριθμών. Βλέπουμε ότι οι πίνακες <em>[3,5,25,1]</em> και <em>[3,5,23,3]</em> δίνουν ίδιες απαντήσεις αριστερά και δεξιά (όλες ίσες με 2), αλλά η συνολική απάντηση διαφέρει (4 και 3 αντιστοίχως). Εδώ <em>δεν</em> εφαρμόζουμε Leaf-Oriented BST.</p>
+							<p class="mypad">Τονίζουμε ότι δε θα δούμε κάποια καινούρια δομή δεδομένων! Παρότι ψευδώς κυκλοφορεί με το όνομα <strong>Segment Tree</strong> ή και <em>Interval Tree</em> στους κύκλους των competitive programmers (και μόνο έτσι θα βρείτε πηγές), η αλήθεια είναι ότι πρόκειται απλώς για ένα δέντρο που η πληροφορία βρίσκεται στα φύλλα του. Περισσότερα για αυτό στο πρώτο από τα υποκεφάλαια.</p>
+							<p class="mypad">Υποσημείωση (πλήρως άχρηστη για διαγωνισμούς): Οι ονομασίες Segment Tree και Interval Tree δεν είναι απλώς περιττές, αλλά λανθασμένες, καθώς υπάρχουν ήδη 2 δομές δεδομένων με αυτά τα ονόματα (βλέπε <a href="https://www.springer.com/gp/book/9783662034279" title="DOI: 10.1007/978-3-662-03427-9">εδώ</a>) που απαντούν ερωτήματα σχετικά με ευθύγραμμα τμήματα (τα Segment Trees ερωτήματα δύο διαστάσεων, τα Interval Trees μίας διάστασης). Παρόλα αυτά κρατάμε στο νου μας την ονομασία Segment Tree για να μπορούμε να συνεννοηθούμε με όσους το ξέρουν έτσι.</p>
+							
 						</div>
 					</div>
 
 <?php
-	include 'footer.html';
+	 include 'footer.html';
 ?>
