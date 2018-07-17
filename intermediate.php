@@ -70,7 +70,6 @@
 
 									<li><strong class="color1">Κεφάλαιο 15 - Graph Theory Part II</strong>
 										<ul>
-											<li><a href="https://visualgo.net/en/cyclefinding?slide=1">Οπτική αναπαράσταση</a> εύρεσης κύκλου.</li>
 											<li><a href="https://visualgo.net/en/sssp?slide=1">Οπτική αναπαράσταση</a> εύρεσης ελάχιστου μονοπατιού.</li>
 											<li><a href="https://visualgo.net/en/mst?slide=1">Οπτική αναπαράσταση</a> εύρεσης MST (Minimum Spanning Tree).</li>
 										</ul>

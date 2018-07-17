@@ -10,7 +10,7 @@
 							<p class="mypad">Λόγω των άπειρων εφαρμογών των <strong>Leaf-Oriented BST</strong>, θα σπάσουμε το κεφάλαιο σε 4 υποκεφάλαια:</p>
 							<ol><li><a href="Intro/index.php">Βασικές εφαρμογές</a>: Τροποποιούμε ένα στοιχείο, απαντάμε για πολλά.</li>
 								<li><a href="Lazy_propagation/index.php">Lazy Propagation</a>: Τροποποιούμε και απαντάμε πολλά!</li>
-								<li><a href="Tricks/index.php">Επί της ευκαιρίας, tricks</a>: Γραμμικοποίηση δέντρου, συμπίεση συντεταγμένων, αραιά δέντρα, fenwick trees (aka binary indexed trees).</li>
+								<li><a href="Tricks/index.php">Επί της ευκαιρίας, tricks</a>: Coordinate Compression, Sparse Leaf-Oriented BST, Merge Tree, Order-Statistic Tree, Tree Linearization, Sorting Queries offline, Fenwick Tree (aka Binary Indexed Tree).</li>
 								<li><a href="Persistency/index.php">Persistency</a>: Ταξίδια στο χρόνο.</li></ol>
 							
 							<p class="mypad">Ας αναφέρουμε όμως πρώτα κάποια γενικά πράγματα που ισχύουν για όλα τα υποκεφάλαια. Η δομή αυτή μας επιτρέπει να τροποποιούμε τα στοιχεία μας και να απαντάμε ερωτήματα για πολλά στοιχεία (π.χ. τα μισά στοιχεία ενός πίνακα) σε O(logN) χρόνο! Για παράδειγμα μας επιτρέπει να αλλάξουμε σε 1025 την τιμή της θέσης 7, και να βρίσκουμε την ελάχιστη τιμή μεταξύ της θέσης 5 και της θέσης N-2, σε λογαριθμικό χρόνο. Ας την δούμε οπτικά πριν προχωρήσουμε: <img src="leaf-oriented_BST_example.png" /></p>

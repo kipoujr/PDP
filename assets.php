@@ -14,10 +14,10 @@
 								<hr class="sub-hr">
 								<br/>
 								<ul class="myUL">
-									<li>&#x265F;&nbsp;&nbsp;<a href="https://hmt.es/C%20for%20Dummies.pdf" title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Books/cfordummies.pdf">Βιβλίο - C for Dummies (2nd edition)</a> : προσοχή, όχι άλλη έκδοση.</li>
-									<li>&#x265F;&nbsp;&nbsp;<a href="https://doc.lagout.org/programmation/C/Beginning%20Programming%20with%20C%20for%20Dummies%20%5BGookin%202013-10-28%5D.pdf" title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Books/beginning_programming_for_dummies.pdf">Beginning Programming in C for Dummies</a> : συνέχεια του προηγούμενου για πιο προχωρημένα θέματα.</li>
-									<li>&#x265F;&nbsp;&nbsp;<a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwiRyrmX89zbAhVIFSwKHQAoBtgQFggmMAA&url=http%3A%2F%2Fastar.baidu.com%2Fforum%2Fforum.php%3Fmod%3Dattachment%26aid%3DNDgzfDIzNzdjMjY2fDE0OTY3MzU4OTh8MHwxMDg1&usg=AOvVaw3_v3mdTmkLRGUuu65wnE_V" title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Books/The%20C%20%20%20standard%20Library%20A%20Tutorial%20and%20reference.pdf">Βιβλίο - The C++ Standard Library, A Tutorial And Reference</a></li>
-									<li>&#x265F;&nbsp;&nbsp;<a href="Zero-Material/STL-Best%20practices.ppt">Διαφάνειες - STL και γενικότερες συμβουλές για τον κώδικα.</a></li>
+									<li>&#x265F;&nbsp;&nbsp;<a href="https://www.dummies.com/DummiesTitle/C-For-Dummies-2nd-Edition.productCd-0764570684.html" title="Παρακαλούμε αγοράστε το αντί να το κατεβάστε παράνομα, πρόκειται για εξαιρετικό βιβλίο κι έτσι ενισχύετε και τον συγγραφέα.">Βιβλίο - C for Dummies (2nd edition)</a> : προσοχή, όχι άλλη έκδοση.</li>
+									<li>&#x265F;&nbsp;&nbsp;<a href="https://www.amazon.com/Beginning-Programming-Dummies-Dan-Gookin/dp/1118737636/ref=pd_bxgy_14_img_3?_encoding=UTF8&pd_rd_i=1118737636&pd_rd_r=BAPWRX9TNCMFZC5MFSPQ&pd_rd_w=BXbeW&pd_rd_wg=B7ZQo&psc=1&refRID=BAPWRX9TNCMFZC5MFSPQ" title="Παρακαλούμε αγοράστε το αντί να το κατεβάστε παράνομα, πρόκειται για εξαιρετικό βιβλίο κι έτσι ενισχύετε και τον συγγραφέα.">Beginning Programming with C for Dummies</a> : συνέχεια του προηγούμενου για πιο προχωρημένα θέματα.</li>
+									<li>&#x265F;&nbsp;&nbsp;<a href="https://www.amazon.com/Standard-Library-Tutorial-Reference-2nd/dp/0321623215" title="Παρακαλούμε αγοράστε το αντί να το κατεβάστε παράνομα, πρόκειται για εξαιρετικό βιβλίο κι έτσι ενισχύετε και τον συγγραφέα.">Βιβλίο - The C++ Standard Library, A Tutorial And Reference</a></li>
+									<li>&#x265F;&nbsp;&nbsp;<a href="Zero-Material/STL-Best%20practices.pdf">Διαφάνειες - STL και γενικότερες συμβουλές για τον κώδικα.</a></li>
 								</ul>
 							</div>
 						</div>
@@ -30,7 +30,7 @@
 								<hr class="sub-hr">
 								<br/>
 								<ul class="myUL">
-									<li>&#x265D;&nbsp;&nbsp;<a href="http://bayanbox.ir/view/4177858657730907268/introduction-to-algorithms-3rd-edition.pdf" title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Books/introduction-to-algorithms-3rd-edition.pdf">Βιβλίο - Introduction to Algorithms</a> : Βιβλίο εισαγωγής στους αλγορίθμους, του MIT.</li>
+									<li>&#x265D;&nbsp;&nbsp;<a href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844" title="Παρακαλούμε αγοράστε το αντί να το κατεβάστε παράνομα, πρόκειται για εξαιρετικό βιβλίο κι έτσι ενισχύετε και τους συγγραφείς. Έχει μια πιο μαθηματική υφή από αυτή που χρειαζόμαστε. Παρόλα αυτό, μπορείτε απλούστατα να προσπερνάτε τα πολλά μαθηματικά, και να σας μείνει και πάλι ένα υπέροχο βιβλίο.">Βιβλίο - Introduction to Algorithms</a> : Βιβλίο εισαγωγής στους αλγορίθμους, του MIT.</li>
 									<li>&#x265D;&nbsp;&nbsp;<a href="https://visualgo.net">Σελίδα - VisuAlgo</a> : Οπτικοποίηση πολλών βασικών αλγορίθμων.</li>
 									<li>&#x265D;&nbsp;&nbsp;<a href="https://www.topcoder.com/community/data-science/data-science-tutorials/">Σελίδα - Topcoder</a> : Θεωρία και προβλήματα.</li>
 									<li>&#x265D;&nbsp;&nbsp;<a href="https://www.hackerearth.com/practice/codemonk/">Σελίδα - Code Monk</a> : Θεωρία και προβλήματα.</li>

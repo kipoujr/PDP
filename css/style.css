@@ -13,6 +13,9 @@ html, body {
 .spoiler:hover{
   color:black;
 }
+.formula{
+	display: block;
+}
 .mypad{
   padding: 0 40px;
 }
