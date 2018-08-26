@@ -35,7 +35,7 @@
 							<p class="sub "><strong class="color1">Βήμα 2ο:</strong> Παρατίθονται (σε αντιστοιχία με τα κεφάλαια του codemonk) άλλες πολύ καλές πηγές για την εκμάθηση της θεωρίας. Διαλέγουμε όποια μας φανεί βολικότερη, τόσο αυτές του codemonk όσο και οι παρατιθέμενες είναι ιδιαίτερα πλήρεις!</p>
 							<p class="mypad">
 								<ul><li><strong class="color1">Κεφάλαιο 1 - Bit Manipulation / Complexity</strong>
-										<ul><li>Διαβάζουμε <a href="Intermediate-Material/1%20-%20Basics%20of%20Programming/Bit%20Manipulation/bitsets_feedward.pdf">αυτό</a> το αρχείο που παρουσιάζει άψογα τη θεωρία (προσπερνούμε βέβαια τις ασκήσεις καθώς δεν υπάρχουν οι λύσεις!). Μια οπτική αναπαράσταση όσων συζητάμε βρίσκεται <a href="https://visualgo.net/en/bitmask?slide=1">εδώ</a>.
+										<ul><li>Διαβάζουμε <a href="Intermediate-Material/1%20-%20Basics%20of%20Programming/Bit%20Manipulation/bitsets_feedward.pdf">αυτό</a> το αρχείο που παρουσιάζει άψογα τη θεωρία (προσπερνούμε βέβαια τις ασκήσεις καθώς δεν υπάρχουν οι λύσεις!). Όσο διαβάζουμε θυμόμαστε <a href="/PDP/read_pdf.php">αυτό</a>. Μια οπτική αναπαράσταση όσων συζητάμε βρίσκεται <a href="https://visualgo.net/en/bitmask?slide=1">εδώ</a>.
 											</li>
 											<li>Ό,τι θα χρειαστείτε ποτέ για την πολυπλοκότητα βρίσκεται σε <a href="Intermediate-Material/1%20-%20Basics%20of%20Programming/Complexity/complexity-zindros.html">αυτό</a> το αρχείο.</li></ul>
 									</li>
@@ -57,7 +57,7 @@
 									</li>
 
 									<li><strong class="color1">Κεφάλαιο 10 - Hashing</strong>
-										<a href="Intermediate-Material/10%20-%20Hashing/hashing.pdf">Εδώ</a> έχουμε μία άψογη πρώτη επαφή με την έννοια του hashing. Συνεχίζουμε με τον εξαιρετικό <a title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Intermediate-Material/10%20-%20Hashing/Kallinikos_hashing.html" href="https://kallinikos.github.io/Hash-Table">Καλλίνικο</a>. Οπτική αναπαράσταση αλγορίθμων για hashing <a href="https://visualgo.net/en/hashtable?slide=1">εδώ</a>.
+										<a href="Intermediate-Material/10%20-%20Hashing/hashing.pdf">Εδώ</a> έχουμε μία άψογη πρώτη επαφή με την έννοια του hashing (θυμόμαστε <a href="/PDP/read_pdf.php">αυτό</a>). Συνεχίζουμε με τον εξαιρετικό <a title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Intermediate-Material/10%20-%20Hashing/Kallinikos_hashing.html" href="https://kallinikos.github.io/Hash-Table">Καλλίνικο</a>. Οπτική αναπαράσταση αλγορίθμων για hashing <a href="https://visualgo.net/en/hashtable?slide=1">εδώ</a>.
 									</li>
 
 									<li><strong class="color1">Κεφάλαιο 11 - Disjoint Set Union</strong>
@@ -85,6 +85,7 @@
 											<li>Τέλος βλέπουμε τον υπολογισμό διάφορων προβλημάτων <a href="https://visualgo.net/en/recursion">οπτικά</a>.
 										</ol>
 										Όταν τελειώσει αυτή η διαδικασία <strong>δε</strong> θα έχουμε μάθει DP. Η λύση είναι μία. Ξαναπαίρνουμε τη λίστα από την αρχή ξανά και ξανά, και κάθε φορά θα καταλαβαίνουμε και κάτι περισσότερο, μέχρι να έρθει η απολαυστική στιγμή που θα λύσουμε το πρώτο μας πρόβλημα! Θυμόμαστε <strong>οπωσδήποτε</strong> να ζητήσουμε βοήθεια με όποια μορφή επικοινωνίας μας ταιριάζει.
+										<p class="mypad">Πιθανώς πολύς κόσμος να βοηθηθεί κι από αυτή την συζήτηση πολλώώών dp προβλημάτων: <a href="https://www.youtube.com/watch?v=8LusJS5-AGo&list=PLrmLmBdmIlpsHaNTPP_jHHDx_os9ItYXr">Tushar Roy</a>.</p>
 									</li>									
 								</ul>
 							</p>
