@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Competitive Programming - From Zero to Hero</title>
+
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		
+        <meta name="viewport" content="width=device-width, user-scalable=false;"> 
+		<link href="./css/style.css" rel="stylesheet">
+		<link href="./css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+		<script src="PDP/js/modernizr.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- include javascript, jQuery FIRST -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?keypNtVooHR6ApHKSuIDxcY0Hjr&sensor=false"></script>
+	
+
+	</head>
+	<body>
+		<div id="wrapper">
+
+	        <!-- Sidebar -->
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="./index.html">
+	                        Competitive Programming
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="./index.html">Αρχική</a>
+	                </li>
+	                <li>
+	                    <a href="./zero.html">Zero</a>
+	                </li>
+					<li>
+	                    <a href="./intermediate.html">Intermediate</a>
+	                </li>
+					<li>
+						<a href="./hero.html">Hero</a>
+					</li>
+	                <li>
+	                    <a href="./assets.html">Χρήσιμο Υλικό</a>
+	                </li>	               
+	            </ul>
+	        </div>
+	        <!-- /#sidebar-wrapper -->
+
+	        <!-- Page Content -->
+	        <div id="page-content-wrapper">
+	            <div class="container">
+	            	<div class="row hidden-lg hidden-md hidden-sm">
+	            		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+	            	</div>
+		            <div id ="copy" class="row copyright">
+		            		<p class="copyrightp">Copyright &copy;2018. All rights reserved. Created by <a href="http://www.codev.gr" target="_blank">CoDev</a></p>            
+		            </div>
+
+					<div class="row">
+						<div class="col-md-9 col-lg-10 col-sm-8 col-xs-12" >
+							<h3 class="center">Κινούμαστε με βελάκια!</h3>
+							<p class="mypad">Για να διαβαστεί αποδοτικά το pdf πρέπει να πλοηγούμαστε σωστά σε αυτό, δηλαδή <strong>όχι</strong> με τη ροδέλα!</p>
+							<p class="mypad">Θέλουμε πατώντας τα βελάκια (αριστερά και δεξιά) να μας αλλάζει στην προηγούμενη/επόμενη σελίδα, καθώς πολλές διαφάνειες είναι ίδιες με τις προηγούμενες με μία μικρή προσθήκη (προσομοιώνοντας έτσι ένα animation). Θέλουμε λοιπόν να αλλάζουμε αμέσως σελίδα, ώστε το μάτι μας να εντοπίζει άμεσα τις διαφορές.</p>
+							<p class="mypad">Ανάλογα με το πρόγραμμα που χρησιμοποιούμε για προβολή pdf η διαδικασία αλλάζει. Σε γενικές γραμμές, αρκεί να δοκιμάσουμε μία μία όλες τις επιλογές για ζουμ (Fit Page, Automatic, Fit Width, Actual Size, etc) και να κάνουμε κλικ μέσα στη διαφάνεια. Κατόπιν δοκιμάζουμε τα βελάκια να δούμε αν μας αλλάζουν αυτόματα σελίδα.</p>
+							<p class="mypad">Ζητάμε συγγνώμη για την απλοϊκή οδηγία. Πιστέψτε μας, δε θα την δίναμε αν δεν είχαμε διαπιστώσει ότι κάτι τόσο απλό βοηθάει τόσο πολύ.</p>
+						</div>
+					</div>
+
+					</div>
+			     <!-- /#container -->
+	        </div>
+	        <!-- /#page-content-wrapper -->
+
+	    </div>
+	    <!-- /#wrapper -->
+			
+		<!-- Menu Toggle Script -->
+	    <script>
+	    	
+		    var justPressedMenu = 0;
+		    $("#page-content-wrapper").click(function(e) {
+		    	if ( justPressedMenu != 1 ) {
+		    		$("#wrapper").removeClass("toggled");
+		    	} else
+		    		justPressedMenu = 0;
+		    });
+		   
+		    $("#menu-toggle").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper").toggleClass("toggled");
+		        justPressedMenu = 1;
+		    });
+	  
+	    </script>
+	     <!--Copyright stick to bottom -->
+	    <script>
+	    	var available = $(window).height();
+	    	var page = $("#page-content-wrapper").height();
+
+	    	if(page<available){
+	    		var h = available;
+		        $("#copy").css("top", h-h*0.05);
+	    	}				
+				
+	        $(".copyrightp").css("display","block");
+			
+			$(window).resize(function() {
+				available = $(window).height();
+				page = $("#page-content-wrapper").height();
+				
+				if(page<available){
+					var h = available;
+					$("#copy").css("top", h);
+				}else{
+					$("#copy").css("top", page+40);
+				}
+				$(".copyrightp").css("display","block");
+			 });
+			
+	    </script>
+	   
+	</body>
+</html>
