@@ -1,7 +1,73 @@
-<?php
-	$title = "Competitive Programming - From Zero to Hero";
-	include_once($_SERVER['DOCUMENT_ROOT']."/PDP/header.php");
-?>
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Competitive Programming - From Zero to Hero</title>
+
+		<link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+		
+        <meta name="viewport" content="width=device-width, user-scalable=false;"> 
+		<link href="../../../../css/style.css" rel="stylesheet">
+		<link href="../../../../css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+		<script src="../../../../js/modernizr.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- include javascript, jQuery FIRST -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?keypNtVooHR6ApHKSuIDxcY0Hjr&sensor=false"></script>
+	
+
+	</head>
+	<body>
+		<div id="wrapper">
+
+	        <!-- Sidebar -->
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="../../../../index.html">
+	                        Competitive Programming
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="../../../../index.html">Αρχική</a>
+	                </li>
+	                <li>
+	                    <a href="../../../../zero.html">Zero</a>
+	                </li>
+					<li>
+	                    <a href="../../../../intermediate.html">Intermediate</a>
+	                </li>
+					<li>
+						<a href="../../../../hero.html">Hero</a>
+					</li>
+	                <li>
+	                    <a href="../../../../assets.html">Χρήσιμο Υλικό</a>
+	                </li>	               
+	            </ul>
+	        </div>
+	        <!-- /#sidebar-wrapper -->
+
+	        <!-- Page Content -->
+	        <div id="page-content-wrapper">
+	            <div class="container">
+	            	<div class="row hidden-lg hidden-md hidden-sm">
+	            		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+	            	</div>
+		            <div id ="copy" class="row copyright">
+		            		<p class="copyrightp">Copyright &copy;2018. All rights reserved. Created by <a href="http://www.codev.gr" target="_blank">CoDev</a></p>            
+		            </div>
+
 					<div class="row">
 						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
 							<h3 class="center">Εισαγωγή</h3>
@@ -54,7 +120,7 @@
 								<em class="formula">left=2*v, right=2*v+1</em>
 								Αντ' αυτού, ο κάθε κόμβος θα έχει πέρα από τις γνωστές τιμές και τα πεδία left και right που μας λένε σε ποια θέση του πίνακα είναι αποθηκευμένα το αριστερό και το δεξί του παιδί.
 							</p>
-							<p class="mypad">Έτσι, όταν θέλουμε να πάμε στο αριστερό παιδί, είτε ξέρουμε πού βρίσκεται (έχουμε ξαναπάει) είτε δεν ξέρουμε. Αν δεν ξέρουμε σημαίνει ότι δεν έχουμε ξαναπάει εκεί, κι άρα δημιουργούμε αυτή τη στιγμή τον κόμβο του αριστερού παιδιού. Πού; Στην πρώτη αχρησιμοποίητη θέση του πίνακα (σαν push_back σε vector). Αυτή ακριβώς την θέση θα δώσουμε και στο πεδίο left του κόμβου. Ας θυμηθούμε ότι αυτό τον τρόπο ακριβώς χρησιμοποιούμε και σε άλλες δομές, όπως τα <a href="../../Trie/index.php">Tries</a>.</p>
+							<p class="mypad">Έτσι, όταν θέλουμε να πάμε στο αριστερό παιδί, είτε ξέρουμε πού βρίσκεται (έχουμε ξαναπάει) είτε δεν ξέρουμε. Αν δεν ξέρουμε σημαίνει ότι δεν έχουμε ξαναπάει εκεί, κι άρα δημιουργούμε αυτή τη στιγμή τον κόμβο του αριστερού παιδιού. Πού; Στην πρώτη αχρησιμοποίητη θέση του πίνακα (σαν push_back σε vector). Αυτή ακριβώς την θέση θα δώσουμε και στο πεδίο left του κόμβου. Ας θυμηθούμε ότι αυτό τον τρόπο ακριβώς χρησιμοποιούμε και σε άλλες δομές, όπως τα <a href="../../Trie/index.html">Tries</a>.</p>
 							<p class="mypad">Με τον τρόπο αυτό, όλο το δέντρο είναι δημιουργημένο στο μυαλό του προγραμματιστή, αλλά μόνο οι κόμβοι τους οποίους κάποτε επισκεφθήκαμε είναι δημιουργημένοι στον υπολογιστή. Αφού κάθε update ή query ζητά το πολύ 4*depth_of_tree κόμβους, αρκεί να έχουμε τόσες θέσεις πίνακα για κάθε operation.</p>
 							<p class="mypad">Στην περίπτωσή μας έχουμε depth_of_tree = log(1.000.000.000), περίπου 30. Έχουμε N updates και N queries, άρα θέλουμε 2*Ν*4*depth μέγεθος πίνακα. Χρειαζόμαστε λοιπόν 24.000.000 θέσεις στον πίνακά μας, έναντι των 4.000.000.000 θέσεων της παλιάς αναπαράστασης.</p>
 							<p class="mypad">Μια πιο προσεκτική ανάλυση μπορεί να δείξει ότι αυτό είναι υπερεκτίμηση και δε χρειαζόμαστε ούτε τους μισούς. Για να μη μπερδευόμαστε μπορούμε είτε να έχουμε ένα <code>vector&lt;Nodes&gt; node</code> που αναλαμβάνει αυτός να μεγαλώνει όταν δεν φτάσουν οι θέσεις, ή να δίνουμε όσο περισσότερη μνήμη επιτρέπει η εκφώνηση.</p>
@@ -131,6 +197,58 @@
 						</div>
 					</div>
 
-<?php
-	include 'footer.html';
-?>
+				</div>
+				<!-- /#container -->
+		   </div>
+		   <!-- /#page-content-wrapper -->
+
+	   </div>
+	   <!-- /#wrapper -->
+		   
+	   <!-- Menu Toggle Script -->
+	   <script>
+		   
+		   var justPressedMenu = 0;
+		   $("#page-content-wrapper").click(function(e) {
+			   if ( justPressedMenu != 1 ) {
+				   $("#wrapper").removeClass("toggled");
+			   } else
+				   justPressedMenu = 0;
+		   });
+		  
+		   $("#menu-toggle").click(function(e) {
+			   e.preventDefault();
+			   $("#wrapper").toggleClass("toggled");
+			   justPressedMenu = 1;
+		   });
+	 
+	   </script>
+		<!--Copyright stick to bottom -->
+	   <script>
+		   var available = $(window).height();
+		   var page = $("#page-content-wrapper").height();
+
+		   if(page<available){
+			   var h = available;
+			   $("#copy").css("top", h-h*0.05);
+		   }				
+			   
+		   $(".copyrightp").css("display","block");
+		   
+		   $(window).resize(function() {
+			   available = $(window).height();
+			   page = $("#page-content-wrapper").height();
+			   
+			   if(page<available){
+				   var h = available;
+				   $("#copy").css("top", h);
+			   }else{
+				   $("#copy").css("top", page+40);
+			   }
+			   $(".copyrightp").css("display","block");
+			});
+		   
+	   </script>
+	  
+   </body>
+</html>

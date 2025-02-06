@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Competitive Programming - From Zero to Hero</title>
+
+		<link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+		
+        <meta name="viewport" content="width=device-width, user-scalable=false;"> 
+		<link href="../../../../css/style.css" rel="stylesheet">
+		<link href="../../../../css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+		<script src="../../../../js/modernizr.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- include javascript, jQuery FIRST -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?keypNtVooHR6ApHKSuIDxcY0Hjr&sensor=false"></script>
+	
+
+	</head>
+	<body>
+		<div id="wrapper">
+
+	        <!-- Sidebar -->
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="../../../../index.html">
+	                        Competitive Programming
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="../../../../index.html">Αρχική</a>
+	                </li>
+	                <li>
+	                    <a href="../../../../zero.html">Zero</a>
+	                </li>
+					<li>
+	                    <a href="../../../../intermediate.html">Intermediate</a>
+	                </li>
+					<li>
+						<a href="../../../../hero.html">Hero</a>
+					</li>
+	                <li>
+	                    <a href="../../../../assets.html">Χρήσιμο Υλικό</a>
+	                </li>	               
+	            </ul>
+	        </div>
+	        <!-- /#sidebar-wrapper -->
+
+	        <!-- Page Content -->
+	        <div id="page-content-wrapper">
+	            <div class="container">
+	            	<div class="row hidden-lg hidden-md hidden-sm">
+	            		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+	            	</div>
+		            <div id ="copy" class="row copyright">
+		            		<p class="copyrightp">Copyright &copy;2018. All rights reserved. Created by <a href="http://www.codev.gr" target="_blank">CoDev</a></p>            
+		            </div>
+
+					<div class="row">
+						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
+							<h3 class="center">Θεωρία</h3>
+							<p class="mypad">Είδαμε προηγουμένως πώς να απαντάμε σε ερωτήματα για ένα συνεχόμενο διάστημα και να ανανεώνουμε την τιμή ενός στοιχείου. Επόμενο είναι να φανταστούμε ότι με παρόμοιο τρόπο μπορούμε να ανανεώνουμε όλες τις τιμές σε ένα συνεχόμενο διάστημα. Πριν περάσουμε σε λεπτομέρειες, ας δούμε πώς μοιάζει το δέντρο μας μετά από μερικές ανανεώσεις: <img src="lazy.png" /></p>
+							<p class="mypad">Η τεχνική <strong>Lazy Propagation</strong> στην ουσία δεν είναι τίποτα παραπάνω από τη χρήση post-it <img src="post-it.png" /> που μας θυμίζουν να κάνουμε την ανανέωση κάποια άλλη στιγμή.</p>
+							<p class="mypad">Στο παραπάνω παράδειγμα βλέπουμε ότι πρέπει να ανανεωθούν τα δύο φύλλα 12-5 και να αποκτήσουν τις τιμές 15-8. Αντ' αυτού κολλάμε ένα post-it στον από πάνω τους κόμβο ώστε να μας θυμίσει να το κάνουμε αυτό αργότερα. <em>Βασικό</em>: Προφανώς αυτός ο κόμβος μπορεί να φανταστεί πόσο είναι το άθροισμά του (αυξάνεται κατά 6, αφού έχει δύο φύλλα από κάτω του και το καθένα θα έπρεπε να αυξηθεί κατά 3).</p>
+							<p class="mypad">Καταλαβαίνουμε ότι κάθε κόμβος που έχει πρόγονο με post-it δεν περιέχει τη σωστή τιμή του, αφού δε γνωρίζει για αυτή την ανανέωση που γράφει το post-it. Πώς λοιπόν θα απαντήσουμε σωστά, αν έρθει ερώτημα που σχετίζεται με αυτό τον κόμβο;</p>
+							<p class="mypad">Εδώ έρχεται να μας βοηθήσει η τεχνική <strong>Propagation</strong>. Κάθε φορά που αγγίζουμε έναν κόμβο με post-it (είτε σε ανανέωση είτε σε ερώτημα) προωθούμε το post-it του στα δύο παιδιά του, όπως φαίνεται παρακάτω: <img src="propagation.png" /> Προφανώς δε χρειάζεται propagation όταν έχουμε φτάσει σε φύλλο!</p>
+							<p class="mypad">Τι καταφέραμε με αυτό τον τρόπο; Σκεφτείτε ότι διασχίζουμε ένα απλό μονοπάτι από τη ρίζα προς κάποιον κόμβο (για την ακρίβεια αυτός είναι ο μόνος τρόπος να αγγίξουμε κάποιο κόμβο!). Λόγω του Propagation σε κάθε κόμβο, το μονοπάτι αυτό θα είναι καθαρό, χωρίς post-it. Άρα όποτε αγγίζουμε έναν κόμβο έχοντας ξεκινήσει από τη ρίζα, οι πρόγονοί του δεν έχουν post-it, κι άρα αυτός δίνει τη σωστή απάντηση.</p>
+							<p class="mypad">Παρουσίαση εκτέλεσης δίνεται <a href="lazy_propagation.pdf">εδώ</a> (θυμόμαστε <a href="../../../../read_pdf.html">αυτό</a>). Ας τονίσουμε ότι αντί να διαλέγει σε ποιο παιδί θα κατέβει, πάει πάντα και στα 2, κι απλώς αν κάποιο είναι άσχετο, γυρνάει αμέσως. Μη σας μπερδέψει η διαφορετική υλοποίηση, θα μπορούσε να γίνει και με το γνωστό μας τρόπο. Επιπλέον, όπως ξαναείπαμε, λανθασμένα οι διαφάνειες αναφέρουν Segment Tree. Μάθετέ το κι έτσι για να μπορείτε να βρίσκετε πηγές!</p>
+							<p class="mypad">Οι χρόνοι παραμένουν O(logN) και για ερώτημα και για update. Ο λόγος είναι απλός. Αρκεί να προσέξουμε ότι όταν κάνουμε update σε κάποιο διάστημα, οι κόμβοι που διαπερνούμε είναι <em>ακριβώς</em> οι ίδιοι που θα διαπερνούσαμε αν κάναμε ερώτημα για εκείνο το διάστημα. Απλώς, αντί να επιστρέφουμε απάντηση, τοποθετούμε post-it.</p>
+							<p class="mypad">Για να καταλάβουμε καλύτερα τη δομή, μπορούμε να πειραματιστούμε με <a href="https://visualgo.net/en/segmenttree">αυτή</a> την εφαρμογή.</p>
+							<p class="mypad">Στο <a href="../Tricks/index.html">επόμενο</a> υποκεφάλαιο παρουσιάζονται διάφορα tricks που συχνά χρησιμοποιούμε μαζί με τα Leaf-Oriented BSTs.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-9 col-lg-10 col-sm-8 col-xs-12">
+							<hr class="hr">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12" >
+							<h3 class="center">Ασκήσεις</h3>
+							<p class="mypad">Θα δούμε μόνο εφαρμογές του Lazy-Propagation, καθώς το βασικό είναι να μάθετε να το γράφετε άψογα. Από εκεί και πέρα εμφανίζεται σαν υποπρόβλημα σε πολλά προβλήματα, κι όλη η ομορφιά είναι να αναλύσετε έτσι το πρόβλημα που να εμφανιστεί μόνο του, χωρίς να το βιάσετε.</p>
+							<ol><li><a href="https://www.spoj.com/problems/HORRIBLE" title="Offline: ./horrible.html">Horrible Queries</a> - Εκφώνηση και Judge | <a href="horrible.cpp">Κώδικας</a></li>
+								<li><a href="https://www.spoj.com/problems/LITE/" title="Offline: ./lite.html">Lite</a> - Εκφώνηση και Judge | <a href="lite.cpp">Κώδικας</a></li>
+								<li><a href="https://www.spoj.com/problems/HAYBALE/" title="Offline: ./haybale.html">Haybale</a> - Εκφώνηση και Judge | <a href="haybale.cpp">Κώδικας</a></li>
+							</ol>
+						</div>
+					</div>
+
+				</div>
+				<!-- /#container -->
+		   </div>
+		   <!-- /#page-content-wrapper -->
+
+	   </div>
+	   <!-- /#wrapper -->
+		   
+	   <!-- Menu Toggle Script -->
+	   <script>
+		   
+		   var justPressedMenu = 0;
+		   $("#page-content-wrapper").click(function(e) {
+			   if ( justPressedMenu != 1 ) {
+				   $("#wrapper").removeClass("toggled");
+			   } else
+				   justPressedMenu = 0;
+		   });
+		  
+		   $("#menu-toggle").click(function(e) {
+			   e.preventDefault();
+			   $("#wrapper").toggleClass("toggled");
+			   justPressedMenu = 1;
+		   });
+	 
+	   </script>
+		<!--Copyright stick to bottom -->
+	   <script>
+		   var available = $(window).height();
+		   var page = $("#page-content-wrapper").height();
+
+		   if(page<available){
+			   var h = available;
+			   $("#copy").css("top", h-h*0.05);
+		   }				
+			   
+		   $(".copyrightp").css("display","block");
+		   
+		   $(window).resize(function() {
+			   available = $(window).height();
+			   page = $("#page-content-wrapper").height();
+			   
+			   if(page<available){
+				   var h = available;
+				   $("#copy").css("top", h);
+			   }else{
+				   $("#copy").css("top", page+40);
+			   }
+			   $(".copyrightp").css("display","block");
+			});
+		   
+	   </script>
+	  
+   </body>
+</html>

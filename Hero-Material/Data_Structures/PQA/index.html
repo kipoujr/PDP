@@ -1,14 +1,80 @@
-<?php
-	$title = "Competitive Programming - From Zero to Hero";
-	include_once($_SERVER['DOCUMENT_ROOT']."/PDP/header.php");
-?>
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Competitive Programming - From Zero to Hero</title>
+
+		<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+		
+        <meta name="viewport" content="width=device-width, user-scalable=false;"> 
+		<link href="../../../css/style.css" rel="stylesheet">
+		<link href="../../../css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+		<script src="../../../js/modernizr.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- include javascript, jQuery FIRST -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?keypNtVooHR6ApHKSuIDxcY0Hjr&sensor=false"></script>
+	
+
+	</head>
+	<body>
+		<div id="wrapper">
+
+	        <!-- Sidebar -->
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="../../../index.html">
+	                        Competitive Programming
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="../../../index.html">Αρχική</a>
+	                </li>
+	                <li>
+	                    <a href="../../../zero.html">Zero</a>
+	                </li>
+					<li>
+	                    <a href="../../../intermediate.html">Intermediate</a>
+	                </li>
+					<li>
+						<a href="../../../hero.html">Hero</a>
+					</li>
+	                <li>
+	                    <a href="../../../assets.html">Χρήσιμο Υλικό</a>
+	                </li>	               
+	            </ul>
+	        </div>
+	        <!-- /#sidebar-wrapper -->
+
+	        <!-- Page Content -->
+	        <div id="page-content-wrapper">
+	            <div class="container">
+	            	<div class="row hidden-lg hidden-md hidden-sm">
+	            		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+	            	</div>
+		            <div id ="copy" class="row copyright">
+		            		<p class="copyrightp">Copyright &copy;2018. All rights reserved. Created by <a href="http://www.codev.gr" target="_blank">CoDev</a></p>            
+		            </div>
+
 					<div class="row">
 						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
 							<h3 class="center">Θεωρία</h3>
 							<p class="mypad">Η δομή αυτή κυκλοφορεί με πολλά ονόματα. Ίσως αυτό που μας δίνει να καταλάβουμε καλύτερα περί τίνος πρόκειται είναι το <strong>Monotonous Deque</strong>. Η βασική δουλειά βέβαια γίνεται από το ένα άκρο, οπότε (λανθασμένα) κυκλοφορεί και ως <em>Monotonous Stack</em>, ή και ως <em>Stack of Incomplete Subproblems</em> λόγω της πιο συνηθισμένης εφαρμογής της. Η σωστή ονομασία της είναι <strong>Priority Queue with Attrition (PQA)</strong>.</p>
 							<p class="mypad">Οι απαιτήσεις αυτής της δομής είναι αυτές μίας απλής <strong>queue</strong> και τα ερωτήματα είναι του τύπου: Ποιο είναι το ελάχιστο στοιχείο στη δομή μας; Καταφέρνουμε να υποστηρίξουμε τα πάντα σε <strong>amortized O(1)</strong> χρόνο. Οπτικά είναι μια deque χωρίς εισαγωγή στο αριστερό άκρο, με τα στοιχεία της ταξινομημένα (αυτό θα προκύψει με φυσικό τρόπο παρακάτω). <img src="pqa.png" /></p>
 							<p class="mypad">Η βασική ιδέα είναι ο χαρακτηρισμός ενός στοιχείου X ως <em>άχρηστου</em> όταν εισήχθη πριν από κάποιο άλλο Y και είναι ταυτόχρονα μεγαλύτερο από αυτό (X&ge;Y). Το λέμε άχρηστο διότι, αφού τα operations είναι σαν της queue, θα βγει πριν το Y, και μέχρι να βγει δε θα είναι ποτέ το μικρότερο. Έτσι, όταν εισάγουμε ένα καινούριο στοιχείο, αφαιρούμε όλα τα άχρηστα που προκλήθηκαν εξαιτίας αυτού. Αυτό διατηρεί και τη μονοτονία της δομής.</p>
-							<p class="mypad">Αναλυτικότερα διαβάζουμε θεωρία από <a title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Theory.html" href="https://people.cs.uct.ac.za/~ksmith/articles/sliding_window_minimum.html">εδώ</a>.</p>
+							<p class="mypad">Αναλυτικότερα διαβάζουμε θεωρία από <a title="Offline: ./Theory.html" href="https://people.cs.uct.ac.za/~ksmith/articles/sliding_window_minimum.html">εδώ</a>.</p>
 							<p class="mypad">Υποσημείωση (πλήρως άχρηστη για διαγωνισμούς): Όσα αναφέραμε μπορούν να επιτευχθούν και σε worst-case O(1) χρόνο, όπως έδειξε ο <a href="https://www.sciencedirect.com/science/article/pii/0020019089900719" title="DOI: 10.1016/0020-0190(89)90071-9">Sundar</a>.</p>
 						</div>
 					</div>
@@ -22,7 +88,7 @@
 						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12" >
 							<h3 class="center">Ασκήσεις</h3>
 							<ol><li><a href="http://www.boi2007.de/tasks/sound.pdf">Sound</a> | <a href="https://dmoj.ca/problem/boi2007p3">Judge</a> | <a href="http://www.boi2007.de/tasks/book.pdf">Λύση<a/> | <a href="http://www.boi2007.de/tasks/testdata-sound.tar.gz">Testcases</a> | <a href="http://www.boi2007.de/tasks/solution-sound.tar.gz">Κώδικας</a> | <a href="sound.zip">Offline</a></li>
-								<li>(*) <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/html/histogram.html">Histogra</a> | <a href="https://www.spoj.com/problems/HISTOGRA/">Judge</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/html/judge.html">Λύση<a/> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/input/histogram.in">Input</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/output/histogram.out">Output</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/solution/other/histogram_ralf_stack.cc">Κώδικας</a> | <a href="histogra.zip">Offline</a></li>
+								<li>(*) <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/html/histogram.html">Histogram</a> | <a href="https://www.spoj.com/problems/HISTOGRA/">Judge</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/html/judge.html">Λύση<a/> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/input/histogram.in">Input</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/output/histogram.out">Output</a> | <a href="https://www.informatik.uni-ulm.de/acm/Locals/2003/solution/other/histogram_ralf_stack.cc">Κώδικας</a> | <a href="histogra.zip">Offline</a></li>
 								<li>(**) <a href="http://hsin.hr/coci/archive/2006_2007/contest2_tasks.pdf">Stol</a> | <a href="https://dmoj.ca/problem/coci06c2p5">Judge</a> | <a href="http://hsin.hr/coci/archive/2006_2007/contest2_solutions.zip">Λύση</a>... είναι O(N<sup>3</sup>). Αν εφαρμόσουμε την τεχνική του Histogram σε κάθε γραμμή (με έξυπνο preprocessing) πέφτουμε σε O(N<sup>2</sup>) | <a href="stol.cpp">Κώδικας O(N<sup>2</sup>)</a> | <a href="http://hsin.hr/coci/archive/2006_2007/contest2_testdata.zip">Testcases</a> | <a href="stol.zip">Offline</a></li>
 								<li>(**) <a href="http://hsin.hr/coci/archive/2012_2013/contest4_tasks.pdf">Razlika</a> | <a href="http://www.codah.club/tasks.php?show_task=5000001796">Judge</a> | <a href="http://hsin.hr/coci/archive/2012_2013/contest4_solutions.zip">Λύση και κώδικας<a/> | <a href="http://hsin.hr/coci/archive/2012_2013/contest4_testdata.zip">Testcases</a> | <a href="razlika.zip">Offline</a></li>
 								<li>(***) <a href="http://ceoi.inf.elte.hu/probarch/11/balzad.pdf">Balloons</a> | <a href="https://szkopul.edu.pl/problemset/problem/FM-LF_oP6i8yo3ZdJA3o5clO/site/?key=statement">Judge</a> | <a href="http://ceoi.inf.elte.hu/probarch/11/ceoi2011booklet.pdf">Λύση<a/> | <a href="http://ceoi.inf.elte.hu/probarch/11/baltst.zip">Testcases</a> | <a href="http://ceoi.inf.elte.hu/probarch/11/balprg.zip">Κώδικας</a> | <a href="balloons.zip">Offline</a></li>
@@ -31,6 +97,58 @@
 						</div>
 					</div>
 
-<?php
-	include 'footer.html';
-?>
+				</div>
+				<!-- /#container -->
+		   </div>
+		   <!-- /#page-content-wrapper -->
+
+	   </div>
+	   <!-- /#wrapper -->
+		   
+	   <!-- Menu Toggle Script -->
+	   <script>
+		   
+		   var justPressedMenu = 0;
+		   $("#page-content-wrapper").click(function(e) {
+			   if ( justPressedMenu != 1 ) {
+				   $("#wrapper").removeClass("toggled");
+			   } else
+				   justPressedMenu = 0;
+		   });
+		  
+		   $("#menu-toggle").click(function(e) {
+			   e.preventDefault();
+			   $("#wrapper").toggleClass("toggled");
+			   justPressedMenu = 1;
+		   });
+	 
+	   </script>
+		<!--Copyright stick to bottom -->
+	   <script>
+		   var available = $(window).height();
+		   var page = $("#page-content-wrapper").height();
+
+		   if(page<available){
+			   var h = available;
+			   $("#copy").css("top", h-h*0.05);
+		   }				
+			   
+		   $(".copyrightp").css("display","block");
+		   
+		   $(window).resize(function() {
+			   available = $(window).height();
+			   page = $("#page-content-wrapper").height();
+			   
+			   if(page<available){
+				   var h = available;
+				   $("#copy").css("top", h);
+			   }else{
+				   $("#copy").css("top", page+40);
+			   }
+			   $(".copyrightp").css("display","block");
+			});
+		   
+	   </script>
+	  
+   </body>
+</html>
