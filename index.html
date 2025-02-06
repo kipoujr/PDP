@@ -1,7 +1,72 @@
-<?php
-	$title = "Competitive Programming - From Zero to Hero";
-	include_once($_SERVER['DOCUMENT_ROOT']."/PDP/header.php");	
-?>
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Competitive Programming - From Zero to Hero</title>
+
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		
+        <meta name="viewport" content="width=device-width, user-scalable=false;"> 
+		<link href="./css/style.css" rel="stylesheet">
+		<link href="./css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+		<script src="PDP/js/modernizr.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- include javascript, jQuery FIRST -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?keypNtVooHR6ApHKSuIDxcY0Hjr&sensor=false"></script>
+	
+
+	</head>
+	<body>
+		<div id="wrapper">
+
+	        <!-- Sidebar -->
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="./index.html">
+	                        Competitive Programming
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="./index.html">Αρχική</a>
+	                </li>
+	                <li>
+	                    <a href="./zero.html">Zero</a>
+	                </li>
+					<li>
+	                    <a href="./intermediate.html">Intermediate</a>
+	                </li>
+					<li>
+						<a href="./hero.html">Hero</a>
+					</li>
+	                <li>
+	                    <a href="./assets.html">Χρήσιμο Υλικό</a>
+	                </li>	               
+	            </ul>
+	        </div>
+	        <!-- /#sidebar-wrapper -->
+
+	        <!-- Page Content -->
+	        <div id="page-content-wrapper">
+	            <div class="container">
+	            	<div class="row hidden-lg hidden-md hidden-sm">
+	            		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+	            	</div>
+		            <div id ="copy" class="row copyright">
+		            		<p class="copyrightp">Copyright &copy;2018. All rights reserved. Created by <a href="http://www.codev.gr" target="_blank">CoDev</a></p>            
+		            </div>
 					<div class="row">
 						<div class="col-md-9 col-lg-10 col-sm-8 col-xs-12" >
 							<h3 class="center">Με λίγα λόγια</h3>
@@ -39,7 +104,7 @@
 					<div class="row">
 						<div class="col-md-9 col-lg-10 col-sm-8 col-xs-12" >
 							<h3 class="center">Επικοινωνία</h3>
-							<p class="mypad">Αποτελεί βαθιά πεποίθησή μας ότι η γνώση προχωράει μόνο <a title="Offline: <?php echo $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']); ?>/Index-Material/solitary-scientist.html" href="https://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835">συνεργατικά</a>.</p>
+							<p class="mypad">Αποτελεί βαθιά πεποίθησή μας ότι η γνώση προχωράει μόνο <a title="./Index-Material/solitary-scientist.html" href="https://theconversation.com/myth-of-the-genius-solitary-scientist-is-dangerous-87835">συνεργατικά</a>.</p>
 							<p class="mypad">Μήπως αυτό σημαίνει ότι ο παρών οδηγός είναι άχρηστος; <strong>Ναι!</strong></p>
 							<p class="mypad">Γνωρίζουμε ένα μόνο τρόπο για να τον αξιοποιήσετε δημιουργικά, κι αυτός είναι η επικοινωνία με πιο έμπειρους όταν τα βρίσκετε σκούρα.</p>
 							<div class="row">
@@ -78,6 +143,58 @@
 						</div>
 					</div>					
 
-<?php
-	include 'footer.html';
-?>
+					</div>
+			     <!-- /#container -->
+	        </div>
+	        <!-- /#page-content-wrapper -->
+
+	    </div>
+	    <!-- /#wrapper -->
+			
+		<!-- Menu Toggle Script -->
+	    <script>
+	    	
+		    var justPressedMenu = 0;
+		    $("#page-content-wrapper").click(function(e) {
+		    	if ( justPressedMenu != 1 ) {
+		    		$("#wrapper").removeClass("toggled");
+		    	} else
+		    		justPressedMenu = 0;
+		    });
+		   
+		    $("#menu-toggle").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper").toggleClass("toggled");
+		        justPressedMenu = 1;
+		    });
+	  
+	    </script>
+	     <!--Copyright stick to bottom -->
+	    <script>
+	    	var available = $(window).height();
+	    	var page = $("#page-content-wrapper").height();
+
+	    	if(page<available){
+	    		var h = available;
+		        $("#copy").css("top", h-h*0.05);
+	    	}				
+				
+	        $(".copyrightp").css("display","block");
+			
+			$(window).resize(function() {
+				available = $(window).height();
+				page = $("#page-content-wrapper").height();
+				
+				if(page<available){
+					var h = available;
+					$("#copy").css("top", h);
+				}else{
+					$("#copy").css("top", page+40);
+				}
+				$(".copyrightp").css("display","block");
+			 });
+			
+	    </script>
+	   
+	</body>
+</html>

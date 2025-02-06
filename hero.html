@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Competitive Programming - From Zero to Hero</title>
+
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		
+        <meta name="viewport" content="width=device-width, user-scalable=false;"> 
+		<link href="./css/style.css" rel="stylesheet">
+		<link href="./css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+		<script src="PDP/js/modernizr.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- include javascript, jQuery FIRST -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?keypNtVooHR6ApHKSuIDxcY0Hjr&sensor=false"></script>
+	
+
+	</head>
+	<body>
+		<div id="wrapper">
+
+	        <!-- Sidebar -->
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="./index.html">
+	                        Competitive Programming
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="./index.html">Αρχική</a>
+	                </li>
+	                <li>
+	                    <a href="./zero.html">Zero</a>
+	                </li>
+					<li>
+	                    <a href="./intermediate.html">Intermediate</a>
+	                </li>
+					<li>
+						<a href="./hero.html">Hero</a>
+					</li>
+	                <li>
+	                    <a href="./assets.html">Χρήσιμο Υλικό</a>
+	                </li>	               
+	            </ul>
+	        </div>
+	        <!-- /#sidebar-wrapper -->
+
+	        <!-- Page Content -->
+	        <div id="page-content-wrapper">
+	            <div class="container">
+	            	<div class="row hidden-lg hidden-md hidden-sm">
+	            		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+	            	</div>
+		            <div id ="copy" class="row copyright">
+		            		<p class="copyrightp">Copyright &copy;2018. All rights reserved. Created by <a href="http://www.codev.gr" target="_blank">CoDev</a></p>            
+		            </div>
+
+					<div class="row">
+						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
+							<h3 class="center">Εισαγωγή</h3>
+							<p class="mypad">Πλέον ξέρουμε τι κάνουμε. Έχουμε αποκτήσει ευχέρεια στη γλώσσα και στους βασικούς αλγορίθμους-δομές δεδομένων, και θέλουμε να εμβαθύνουμε. Παρακάτω δίνεται υλικό για κάθε θέμα της <a title="./Hero-Material/ioi-syllabus.pdf" href="https://people.ksp.sk/~misof/ioi-syllabus/ioi-syllabus.pdf">ύλης της Ολυμπιάδας</a>, με έμφαση σε απλές επεξηγήσεις και στα <strong>λυμένα</strong> παραδείγματα.</p>
+							<p class="mypad">Πιστεύουμε βαθιά στη <a title="./Hero-Material/simple_not_simpler.html" href="https://quoteinvestigator.com/2011/05/13/einstein-simple/">ρήση</a>: <q>Everything Should Be Made as Simple as Possible, But Not Simpler</q>, με την υποσημείωση ότι το <q>as possible</q> αναφέρεται στο επίπεδο του αναγνώστη. Συνεπώς συγχωρέστε μας αν μερικές φορές φλυαρούμε, τα κείμενα απευθύνονται και σε πιο αρχάριους! Ελπίζουμε ότι σπάνια προσπερνάμε κάτι ως αυτονόητο, όμως όταν δε τα καταφέρνουμε, εσείς ξέρετε τη <a href="mailto:greekcontestspdp@gmail.com">λύση</a>!</p>
+							<p class="mypad">Σχετικά με τη δομή, βάλαμε τα θέματα σε μία σειρά που μας έμοιαζε σωστή, όμως μη φοβηθείτε καθόλου να διαβάσετε με τη σειρά που βολεύει εσάς! Για την ακρίβεια, προτείνουμε αυτό τον πιο ελεύθερο τρόπο διαβάσματος.</p>
+							<p class="mypad">Εδώ πρέπει να τονιστεί κάτι <strong>σημαντικότατο</strong>. Όταν τελειώσετε αυτή την ύλη, δε σημαίνει ότι είστε έτοιμοι για χρυσό. Αυτό που θα ξεχωρίσει τον πρωταθλητή από τον ερασιτέχνη είναι οι (άπειρες) ώρες προπόνησης. Θα είστε όμως στο σημείο που δε χρειάζεται να μάθετε κάτι καινούριο από πλευράς ύλης.
+					</div>
+					<div class="row">
+						<div class="col-md-9 col-lg-10 col-sm-8 col-xs-12">
+							<hr class="hr">
+						</div>
+					</div>					
+
+					<div class="row">
+						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
+							<h3 class="center">Ύλη</h3>
+							<p class="mypad">
+								<ul><li><strong class="color1">Data Structures</strong></li>
+									<ol><li><a href="./Hero-Material/Data_Structures/PQA/index.html">PQA</a> (ψευδώς Monotonous Deque)</li>
+										<li><a href="./Hero-Material/Data_Structures/Queue2Stacks/index.html">Queue with 2 Stacks</a></li>
+										<li><a href="./Hero-Material/Data_Structures/Leaf-Oriented_BST/index.html">Στατικά Leaf-Oriented BST</a> (ψευδώς Segment Tree)</li>
+										<li><a href="./Hero-Material/Data_Structures/Trie/index.html">Trie</a></li>
+										<li><a href="./Hero-Material/Data_Structures/Suffix_Array/index.html">Suffix Array</a></li>
+										<li><a href="./Hero-Material/Data_Structures/AhoCorasick/index.html">Aho-Corasick</a> (προαπαιτούμενα: <a href="./Hero-Material/Strings/KMP/index.html">KMP</a>, <a href="./Hero-Material/Data_Structures/Trie/index.html">Trie</a>)</li>
+										<li><a href="./Hero-Material/Data_Structures/Dynamic_BSTs/index.html">Δυναμικά Node-Oriented BST</a></li>
+									</ol>
+									<li><strong class="color1">Graphs</strong></li>
+									<ol>
+									</ol>
+									<li><strong class="color1">General Techniques</strong></li>
+									<ol>
+									</ol>
+									<li><strong class="color1">Strings</strong></li>
+									<ol>
+									</ol>
+									<li><strong class="color1">DP Optimizations</strong></li>
+									<ol>
+									</ol>
+									<li><strong class="color1">Math</strong></li>
+									<ol>
+									</ol>
+									<li><strong class="color1">Geometry</strong></li>
+									<ol>
+									</ol>
+								</ul>
+							</p>
+						</div>
+					</div>
+
+					</div>
+			     <!-- /#container -->
+	        </div>
+	        <!-- /#page-content-wrapper -->
+
+	    </div>
+	    <!-- /#wrapper -->
+			
+		<!-- Menu Toggle Script -->
+	    <script>
+	    	
+		    var justPressedMenu = 0;
+		    $("#page-content-wrapper").click(function(e) {
+		    	if ( justPressedMenu != 1 ) {
+		    		$("#wrapper").removeClass("toggled");
+		    	} else
+		    		justPressedMenu = 0;
+		    });
+		   
+		    $("#menu-toggle").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper").toggleClass("toggled");
+		        justPressedMenu = 1;
+		    });
+	  
+	    </script>
+	     <!--Copyright stick to bottom -->
+	    <script>
+	    	var available = $(window).height();
+	    	var page = $("#page-content-wrapper").height();
+
+	    	if(page<available){
+	    		var h = available;
+		        $("#copy").css("top", h-h*0.05);
+	    	}				
+				
+	        $(".copyrightp").css("display","block");
+			
+			$(window).resize(function() {
+				available = $(window).height();
+				page = $("#page-content-wrapper").height();
+				
+				if(page<available){
+					var h = available;
+					$("#copy").css("top", h);
+				}else{
+					$("#copy").css("top", page+40);
+				}
+				$(".copyrightp").css("display","block");
+			 });
+			
+	    </script>
+	   
+	</body>
+</html>
